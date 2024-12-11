@@ -3,13 +3,32 @@
 ## Overview
 
 * [What is Fern?](README.md)
-* [Supported regions and currencies](overview/supported-regions-and-currencies.md)
-* [Fees and pricing](overview/fees-and-pricing.md)
+* [Supported coverage](overview/supported-coverage/README.md)
+  * [Geographies](overview/supported-coverage/geographies.md)
+  * [Crypto](overview/supported-coverage/crypto.md)
+  * [Fiat](overview/supported-coverage/fiat.md)
+* [Fees & Pricing](overview/fees-and-pricing.md)
+* [Supoprt](overview/supoprt.md)
 
-## Group 1
+## Getting started
 
-* [Page 1](group-1/page-1.md)
-* [Bank Accounts](group-1/bank-accounts.md)
+* [Quick start](getting-started/quick-start.md)
+* [Onboarding](getting-started/onboarding.md)
+* [API keys](getting-started/api-keys.md)
+* [Webhooks](getting-started/webhooks.md)
+* [Authentication](getting-started/authentication.md)
+
+## Guides
+
+* [Creating a customer](guides/creating-a-customer.md)
+* [First-party onramps](guides/first-party-onramps.md)
+* [First-party offramps](guides/first-party-offramps.md)
+* [Third-party payments](guides/third-party-payments.md)
+
+## API reference
+
+* [Page 1](api-reference/page-1.md)
+* [Bank Accounts](api-reference/bank-accounts.md)
 
 ## Gitbook pages
 
