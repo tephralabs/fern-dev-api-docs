@@ -17,10 +17,13 @@
 * [API keys](getting-started/api-keys.md)
 * [Webhooks](getting-started/webhooks.md)
 * [Authentication](getting-started/authentication.md)
+* [Developer dashboard](getting-started/developer-dashboard.md)
 
 ## Guides
 
-* [Creating a customer](guides/creating-a-customer.md)
+* [Customer creation](guides/customer-creation/README.md)
+  * [Requirements - Individuals](guides/customer-creation/requirements-individuals.md)
+  * [Requirements - Businesses](guides/customer-creation/requirements-businesses.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
 * [Third-party payments](guides/third-party-payments.md)
