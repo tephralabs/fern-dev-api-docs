@@ -1,2 +1,0 @@
-# Supported regions and currencies
-
