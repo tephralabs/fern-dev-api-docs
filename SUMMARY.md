@@ -6,8 +6,8 @@
 * [Supported coverage](overview/supported-regions-and-currencies.md)
   * [Geographies](overview/supported-coverage/geographies.md)
   * [✅ Crypto](overview/supported-coverage/crypto.md)
-  * [Fiat](overview/supported-coverage/fiat.md)
-* [Fees & Pricing](overview/fees-and-pricing.md)
+  * [✅ Fiat](overview/supported-coverage/fiat.md)
+* [🟡 Fees & Pricing](overview/fees-and-pricing.md)
 * [Support](overview/support.md)
 
 ## Getting started

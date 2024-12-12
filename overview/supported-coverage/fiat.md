@@ -1,4 +1,4 @@
-# Fiat
+# ✅ Fiat
 
 Fern utilizes a growing global network of liquidity providers to support more currencies and payment methods. Currently, the supported currencies are:
 
