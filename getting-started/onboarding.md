@@ -1,4 +1,4 @@
-# Onboarding
+# ✅ Onboarding to Fern
 
 {% stepper %}
 {% step %}

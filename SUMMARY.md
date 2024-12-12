@@ -12,7 +12,7 @@
 
 ## Getting started
 
-* [Onboarding](getting-started/onboarding.md)
+* [✅ Onboarding to Fern](getting-started/onboarding.md)
 * [Your first transaction](group-1/page-1.md)
 * [API keys](getting-started/api-keys.md)
 * [Webhooks](getting-started/webhooks.md)
