@@ -1,5 +1,9 @@
 # Support
 
+
+
+Our Developer Success team is dedicated to ensuring a seamless integration experience with Fern. We provide an array of resources to kickstart your journey, resolve any issues, and maximize the benefits of our platform
+
 SLA:&#x20;
 
 * What is the 90th percentile SLA for developer products out there?
