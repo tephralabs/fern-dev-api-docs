@@ -7,13 +7,13 @@
   * [✅ Geographies](overview/supported-coverage/geographies.md)
   * [✅ Fiat](overview/supported-coverage/fiat.md)
   * [✅ Crypto](overview/supported-coverage/crypto.md)
-* [🟡 Fees & Pricing](overview/fees-and-pricing.md)
-* [Support](overview/support.md)
+* [✅ Fees & Pricing](overview/fees-and-pricing.md)
+* [✅ Support](overview/support.md)
 
 ## Getting started
 
-* [Quick start](group-1/page-1.md)
 * [Onboarding](getting-started/onboarding.md)
+* [Your first transaction](group-1/page-1.md)
 * [API keys](getting-started/api-keys.md)
 * [Webhooks](getting-started/webhooks.md)
 * [Authentication](getting-started/authentication.md)

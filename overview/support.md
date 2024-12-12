@@ -1,4 +1,4 @@
-# Support
+# ✅ Support
 
 We're dedicated to ensuring a seamless integration experience and ongoing support as you scale your business with Fern. For any issues, you can reach us through:
 

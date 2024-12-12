@@ -1,8 +1,4 @@
-# 🟡 Fees & Pricing
-
-### Overview
-
-<mark style="color:red;">Insert diagram</mark>
+# ✅ Fees & Pricing
 
 ### Transaction fees&#x20;
 
