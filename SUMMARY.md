@@ -33,6 +33,7 @@
 * [Bank Accounts](group-1/bank-accounts.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Introduction](api-reference/transactions/introduction.md)
+* [KYB/C](api-reference/kyb-c.md)
 
 ## Gitbook pages
 
