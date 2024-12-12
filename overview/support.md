@@ -1,27 +1,8 @@
 # Support
 
+We're dedicated to ensuring a seamless integration experience and ongoing support as you scale your business with Fern. For any issues, you can reach us through:
 
+* **Dedicated Slack/Telegram channel** with our team for any and all of your questions
+* **Email support** (support@fernhq.com)
 
-Our Developer Success team is dedicated to ensuring a seamless integration experience with Fern. We provide an array of resources to kickstart your journey, resolve any issues, and maximize the benefits of our platform
-
-SLA:&#x20;
-
-* What is the 90th percentile SLA for developer products out there?
-  * 15 min for critical issues, 4 hours for everything else?&#x20;
-  * 24 hour resolution?&#x20;
-* What can we actually commit to as a team?&#x20;
-  * Issues with API are covered by on-call issues
-  * Non-technical issues: covered by Gloria&#x20;
-  * Technical issues: covered by on-call?
-
-Slack
-
-* Benefits of Slack community
-  * Allows users to help each other troubleshoot
-  * Feels more developer-centric
-  * Possibly build our reputation if they see XYZ is using us
-* Cons of Slack community&#x20;
-  * An additional channel to manage and keep users active&#x20;
-  * Users will be able to see each other (some of them might be competitive with each other)&#x20;
-* Recommendation:
-  * Start with just individual Slack channels and create a Slack community if there are >10 developer users + demand from those users
+Our business hours are <mark style="color:red;">XXX AM to XXX PM Pacific Time</mark>, Monday to Friday. While our team prioritizes responses during these hours, we often respond outside of business hours whenever possible. For platform-wide P1 incidents, we’re here 24/7 to ensure swift resolution.
