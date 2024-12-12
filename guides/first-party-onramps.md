@@ -1,10 +1,10 @@
 # First-party onramps
 
-Fern's first-party onramps converts between fiat to crypto to your customers' wallets (e.g. their own external wallets, or an embedded wallet you have created for them). By utilizing Fern onramps, you gain access to global liquidity providers to enable the best rates for your customers.&#x20;
+Fern's first-party onramps converts between fiat to crypto to your customers' wallets (e.g. their own external wallets, or an embedded wallet you have created for them). Currently, Fern onramps are available via API, so that you can create your desired user experience within your app or service.&#x20;
 
-Currently, Fern onramps are available via API as a white-labelled solution, so that you can create your desired user experience within your app or service.&#x20;
+You can create onramps using the `Quotes` and `Transactions` APIs. Use a fiat currency as the transaction source, and a crypto currency as the destination, to specify the transaction as an onramp.&#x20;
 
-You can create onramps using the `Quotes` and `Transactions` APIs. Use a fiat currency as the transaction source, and a crypto currency as the destination, to specify the transaction as an onramp. For the latest list of supported fiat and crypto currencies and payment methods, please refer to [Supported coverage](../overview/supported-regions-and-currencies.md).
+For the latest list of supported fiat and crypto currencies and payment methods, please refer to [Supported coverage](../overview/supported-regions-and-currencies.md).
 
 ### Step-by-step guide
 
@@ -12,9 +12,7 @@ You can create onramps using the `Quotes` and `Transactions` APIs. Use a fiat cu
 {% step %}
 ### Generate quote
 
-Generate a quote for your currency route to fetch the proposed price for the conversion, using the `Quotes`endpoint. Quotes guarantee prices for X hours, and transparently communicate the receiving amount and fees charged.&#x20;
-
-Learn more about Quotes[^1] here.&#x20;
+Generate a quote for your currency route to fetch the proposed price for the conversion, using the `Quotes`endpoint. Quotes guarantee prices for X hours, and transparently communicate the receiving amount and fees charged. Learn more about Quotes[^1] here.&#x20;
 
 ```
 // Perhaps some code on how to generate quote?
@@ -24,9 +22,7 @@ Learn more about Quotes[^1] here.&#x20;
 {% step %}
 ### Submit transaction
 
-Creating a transaction using the quoteID generates an order to be fulfilled. Once the transaction is created and funds are received at the [target address](#user-content-fn-2)[^2], the destination currency will be sent to the destination address to complete the transaction, within seconds or minutes.
-
-Learn more about Transactions here.&#x20;
+Creating a transaction using the quoteID generates an order to be fulfilled. Once the transaction is created and funds are received at the [target address](#user-content-fn-2)[^2], the destination currency will be sent to the destination address to complete the transaction, within seconds or minutes. Learn more about Transactions here.&#x20;
 
 ```
 // Perhaps some code on how to submit transaction?
@@ -36,9 +32,7 @@ Learn more about Transactions here.&#x20;
 {% step %}
 ### Track transaction status
 
-&#x20;You can check on the transaction progress by calling the XXX endpoint, or visiting the developer dashboard. You can find the complete list of transaction statuses here.&#x20;
-
-You can also subscribe to Webhooks to notify you of order status changes.
+&#x20;You can check on the transaction progress by calling the XXX endpoint, or visiting the developer dashboard. You can also subscribe to Webhooks to notify you of status changes. Find the complete list of transaction statuses here.&#x20;
 
 ```
 // Perhaps some code on how to track transaction status?
