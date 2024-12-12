@@ -1,3 +1,0 @@
-# Requirements - Individuals
-
-\[If

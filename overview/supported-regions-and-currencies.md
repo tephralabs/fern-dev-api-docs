@@ -1,4 +1,16 @@
-# Supported coverage
+# ✅ Supported coverage
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Test</td><td></td><td></td><td></td></tr><tr><td>Test</td><td></td><td></td><td></td></tr><tr><td>Test</td><td></td><td></td><td></td></tr></tbody></table>
+Fern is designed to support global businesses and individuals. Whether you're:
+
+* A crypto company offering onramps and offramps to a global user base,
+* A U.S. business expanding to global markets,
+* A business enabling cross-border payments for your customers, or
+
+you can integrate a single API for seamless, comprehensive coverage.
+
+#### Supported coverage details
+
+* [Geographies](supported-coverage/geographies.md)
+* [Fiat currencies and payment methods](supported-coverage/fiat.md)
+* [Cryptocurrencies and networks](supported-coverage/crypto.md)
 

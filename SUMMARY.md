@@ -3,10 +3,10 @@
 ## Overview
 
 * [✅ What is Fern?](README.md)
-* [Supported coverage](overview/supported-regions-and-currencies.md)
-  * [Geographies](overview/supported-coverage/geographies.md)
-  * [✅ Crypto](overview/supported-coverage/crypto.md)
+* [✅ Supported coverage](overview/supported-regions-and-currencies.md)
+  * [✅ Geographies](overview/supported-coverage/geographies.md)
   * [✅ Fiat](overview/supported-coverage/fiat.md)
+  * [✅ Crypto](overview/supported-coverage/crypto.md)
 * [🟡 Fees & Pricing](overview/fees-and-pricing.md)
 * [Support](overview/support.md)
 
@@ -21,19 +21,24 @@
 
 ## Guides
 
-* [✅ Customer creation](guides/customer-creation/README.md)
-  * [Requirements - Individuals](guides/customer-creation/requirements-individuals.md)
-  * [Requirements - Businesses](guides/customer-creation/requirements-businesses.md)
+* [✅ Create a customer](guides/create-a-customer/README.md)
+  * [✅ Requirements - Individuals](guides/create-a-customer/requirements-individuals.md)
+  * [✅ Requirements - Businesses](guides/create-a-customer/requirements-businesses.md)
 * [✅ First-party onramps](guides/first-party-onramps.md)
-* [First-party offramps](guides/first-party-offramps.md)
-* [Third-party payments](guides/third-party-payments.md)
+* [✅ First-party offramps](guides/first-party-offramps.md)
+* [✅ Third-party payments (Coming soon)](guides/third-party-payments-coming-soon.md)
 
 ## API reference
 
 * [Bank Accounts](group-1/bank-accounts.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Introduction](api-reference/transactions/introduction.md)
-* [KYB/C](api-reference/kyb-c.md)
+* [Customers](api-reference/customers.md)
+
+## Advanced
+
+* [✅ Slippage & Price impact](advanced/slippage-and-price-impact.md)
+* [Rate limits](advanced/rate-limits.md)
 
 ## Gitbook pages
 
