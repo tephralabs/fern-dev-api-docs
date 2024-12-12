@@ -30,8 +30,9 @@
 
 ## API reference
 
-* [Page 1](api-reference/page-1.md)
 * [Bank Accounts](group-1/bank-accounts.md)
+* [Transactions](api-reference/transactions/README.md)
+  * [Introduction](api-reference/transactions/introduction.md)
 
 ## Gitbook pages
 
