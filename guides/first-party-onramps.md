@@ -1,4 +1,4 @@
-# First-party onramps
+# ✅ First-party onramps
 
 Fern's first-party onramps converts between fiat to crypto to your customers' wallets (e.g. their own external wallets, or an embedded wallet you have created for them). Currently, Fern onramps are available via API, so that you can create your desired user experience within your app or service.&#x20;
 

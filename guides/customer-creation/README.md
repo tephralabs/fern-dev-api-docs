@@ -1,4 +1,4 @@
-# Customer creation
+# ✅ Customer creation
 
 Customers are your end-users, and can be either businesses or individuals. &#x20;
 

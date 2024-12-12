@@ -5,7 +5,7 @@
 * [What is Fern?](README.md)
 * [Supported coverage](overview/supported-regions-and-currencies.md)
   * [Geographies](overview/supported-coverage/geographies.md)
-  * [Crypto](overview/supported-coverage/crypto.md)
+  * [✅ Crypto](overview/supported-coverage/crypto.md)
   * [Fiat](overview/supported-coverage/fiat.md)
 * [Fees & Pricing](overview/fees-and-pricing.md)
 * [Support](overview/support.md)
@@ -21,10 +21,10 @@
 
 ## Guides
 
-* [Customer creation](guides/customer-creation/README.md)
+* [✅ Customer creation](guides/customer-creation/README.md)
   * [Requirements - Individuals](guides/customer-creation/requirements-individuals.md)
   * [Requirements - Businesses](guides/customer-creation/requirements-businesses.md)
-* [First-party onramps](guides/first-party-onramps.md)
+* [✅ First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
 * [Third-party payments](guides/third-party-payments.md)
 
