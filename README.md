@@ -1,4 +1,4 @@
-# What is Fern?
+# ✅ What is Fern?
 
 ## Currency conversion and payment APIs
 

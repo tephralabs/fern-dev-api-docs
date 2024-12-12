@@ -2,7 +2,7 @@
 
 ## Overview
 
-* [What is Fern?](README.md)
+* [✅ What is Fern?](README.md)
 * [Supported coverage](overview/supported-regions-and-currencies.md)
   * [Geographies](overview/supported-coverage/geographies.md)
   * [✅ Crypto](overview/supported-coverage/crypto.md)
