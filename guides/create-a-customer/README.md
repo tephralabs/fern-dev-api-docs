@@ -23,6 +23,12 @@ Typically, individuals take 5 minutes to complete the form, and business take 10
 ### Check customer status
 
 The status of the customer will be automatically updated via webhooks. Should additional information be needed from your end-user, we will contact them directly to alleviate any action on your part.
+
+{% hint style="info" %}
+If your customer has already been verified by Fern (e.g., they are an existing Fern customer), their status will be automatically updated to **Active**.
+{% endhint %}
+
+
 {% endstep %}
 {% endstepper %}
 
