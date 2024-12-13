@@ -13,11 +13,10 @@
 ## Getting started
 
 * [✅ Onboarding to Fern](getting-started/onboarding.md)
-* [Your first transaction](group-1/page-1.md)
-* [API keys](getting-started/api-keys.md)
-* [Webhooks](getting-started/webhooks.md)
-* [Authentication](getting-started/authentication.md)
-* [Developer dashboard](getting-started/developer-dashboard.md)
+* [✅ Your first transaction](group-1/page-1.md)
+* [❓ Webhooks](getting-started/webhooks.md)
+* [❓ Authentication](getting-started/authentication.md)
+* [✅ Developer Dashboard](getting-started/developer-dashboard.md)
 
 ## Guides
 
@@ -37,8 +36,8 @@
 
 ## Advanced
 
-* [✅ Slippage & Price impact](advanced/slippage-and-price-impact.md)
-* [Rate limits](advanced/rate-limits.md)
+* [✅ Slippage & Price Impact](advanced/slippage-and-price-impact.md)
+* [✅ Rate limits](advanced/rate-limits.md)
 
 ## Gitbook pages
 

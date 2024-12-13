@@ -1,4 +1,4 @@
-# Your first transaction
+# ✅ Your first transaction
 
 Once you've completely onboarded, you can start creating your first transaction and test out Fern APIs.&#x20;
 

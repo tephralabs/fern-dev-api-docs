@@ -1,5 +1,7 @@
-# ✅ Slippage & Price impact
+# ✅ Slippage & Price Impact
 
-Converting ERC-20 tokens, especially those with smaller market caps, can result in significant price impact. To safeguard your customers and maintain competitive pricing, any offramp transaction exceeding a price impact threshold of <mark style="color:red;">**X%**</mark> will be marked as failed.&#x20;
+Converting ERC-20 tokens, particularly those with smaller market caps and volatile prices, can lead to significant price impact, especially for crypto-to-fiat flows.
 
-The <mark style="color:red;">**XXX webhook**</mark> will provide the failure reason, enabling you to take appropriate action. You can attempt the offramp again later when market conditions improve.
+To protect your customers and ensure competitive pricing, we offer a **minimum guaranteed amount** for each transaction (see **Transactions API**). If this amount cannot be achieved at the time of execution, the transaction will be canceled, and the funds will be returned to the customer's account.
+
+The **XXX webhook** will provide the reason for the failure, allowing you to take appropriate action. You can retry the offramp when market conditions improve.
