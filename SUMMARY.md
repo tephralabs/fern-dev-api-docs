@@ -29,11 +29,11 @@
 
 ## API reference
 
+* [Customers](api-reference/customers/README.md)
+  * [✅ Additional details](api-reference/customers/additional-details.md)
 * [Bank Accounts](group-1/bank-accounts.md)
 * [Transactions](api-reference/transactions/README.md)
   * [✅ Additional details](api-reference/transactions/introduction.md)
-* [Customers](api-reference/customers/README.md)
-  * [✅ Additional details](api-reference/customers/additional-details.md)
 
 ## Advanced
 
