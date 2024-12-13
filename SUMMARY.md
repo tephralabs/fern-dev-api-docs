@@ -3,7 +3,7 @@
 ## Overview
 
 * [✅ What is Fern?](README.md)
-* [✅ Supported coverage](overview/supported-regions-and-currencies.md)
+* [✅ Coverage](overview/supported-regions-and-currencies.md)
   * [✅ Geographies](overview/supported-coverage/geographies.md)
   * [✅ Fiat](overview/supported-coverage/fiat.md)
   * [✅ Crypto](overview/supported-coverage/crypto.md)
@@ -16,7 +16,7 @@
 * [✅ Your first transaction](group-1/page-1.md)
 * [❓ Webhooks](getting-started/webhooks.md)
 * [❓ Authentication](getting-started/authentication.md)
-* [✅ Developer Dashboard](getting-started/developer-dashboard.md)
+* [✅ Developer dashboard](getting-started/developer-dashboard.md)
 
 ## Guides
 
@@ -37,7 +37,7 @@
 ## Advanced
 
 * [✅ Slippage & Price Impact](advanced/slippage-and-price-impact.md)
-* [✅ Rate limits](advanced/rate-limits.md)
+* [✅ Rate Limits](advanced/rate-limits.md)
 
 ## Gitbook pages
 
