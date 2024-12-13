@@ -31,7 +31,7 @@
 
 * [Customers](api-reference/customers/README.md)
   * [✅ Additional details](api-reference/customers/additional-details.md)
-* [Bank Accounts](group-1/bank-accounts.md)
+* [Bank accounts](group-1/bank-accounts.md)
 * [Transactions](api-reference/transactions/README.md)
   * [✅ Additional details](api-reference/transactions/introduction.md)
 
@@ -39,19 +39,3 @@
 
 * [✅ Slippage & Price Impact](advanced/slippage-and-price-impact.md)
 * [✅ Rate Limits](advanced/rate-limits.md)
-
-## Gitbook pages
-
-* [Quickstart](gitbook-pages/quickstart.md)
-* [Publish your docs](gitbook-pages/publish-your-docs.md)
-* [Welcome](gitbook-pages/readme.md)
-* [What is Fern?](gitbook-pages/what-is-fern.md)
-
-## Basics
-
-* [Editor](basics/editor.md)
-* [Markdown](basics/markdown.md)
-* [Images & media](basics/images-and-media.md)
-* [Interactive blocks](basics/interactive-blocks.md)
-* [OpenAPI](basics/openapi.md)
-* [Integrations](basics/integrations.md)
