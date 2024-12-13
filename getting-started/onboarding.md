@@ -12,13 +12,13 @@ In the meantime, you’ll be set up with a dedicated Slack channel to connect di
 {% step %}
 ### Get full access to Fern Business and Developer Dashboard
 
-Once verified and approved, you'll gain full access to Fern. Visit the **Developer Dashboard** at **XXX** to get started. You can also leverage Fern's integrated on/offramps for your business needs, and add other members of your team to the account.
+Once verified and approved, you'll have full access to Fern. Get started by visiting the **Developer Dashboard**. You can also leverage Fern's integrated on/offramps for your business needs and invite other team members to join your account.
 {% endstep %}
 
 {% step %}
 ### Get API keys
 
-Our team will reach to share the API keys securely. Be sure to copy and store the key safely, as it cannot be retrieved afterward.
+Our team will reach out to share the API keys securely. Be sure to copy and store the key safely, as it cannot be retrieved afterward.
 {% endstep %}
 
 {% step %}

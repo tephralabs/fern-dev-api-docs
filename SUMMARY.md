@@ -31,8 +31,9 @@
 
 * [Bank Accounts](group-1/bank-accounts.md)
 * [Transactions](api-reference/transactions/README.md)
-  * [Introduction](api-reference/transactions/introduction.md)
-* [Customers](api-reference/customers.md)
+  * [✅ Additional details](api-reference/transactions/introduction.md)
+* [Customers](api-reference/customers/README.md)
+  * [✅ Additional details](api-reference/customers/additional-details.md)
 
 ## Advanced
 

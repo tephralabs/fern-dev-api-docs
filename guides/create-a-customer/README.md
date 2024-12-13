@@ -8,7 +8,7 @@ Customers are your end-users and can be either businesses or individuals. Before
 {% step %}
 ### Create a customer&#x20;
 
-Create either a business or individual customer via the **Customers API**.
+Create either a business or individual customer via the [**Customers API**](../../api-reference/customers/).
 {% endstep %}
 
 {% step %}

@@ -2,7 +2,7 @@
 
 ### Transaction fees&#x20;
 
-All transactions will be charged at a flat rate of 0.5% on each transaction, and a fiat transfer fee, as described below:
+All transactions will be charged at a flat rate of **0.5%** on each transaction, and a fiat transfer fee, as described below:
 
 | Currency                   | Payment method | Fiat fee |
 | -------------------------- | -------------- | -------- |

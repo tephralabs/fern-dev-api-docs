@@ -1,10 +1,14 @@
 # ✅ First-party offramps
 
+### Overview
+
+<mark style="color:red;">Insert diagram</mark>
+
 Fern's first-party offramps enable your customers to convert any ERC-20 into fiat, delivering funds to their bank account via local payment rails. &#x20;
 
-To implement offramps, use the **Quotes API** and **Transactions API**. Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
+To implement offramps, use the **Quotes API** and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
 
-For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to the **Supported Coverage** section.
+For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to the [**Supported Coverage**](../overview/supported-regions-and-currencies.md) section.
 
 ### Step-by-step guide
 
@@ -12,7 +16,7 @@ For the latest list of supported fiat and cryptocurrencies, as well as payment m
 {% step %}
 ### Add a bank account to an existing customer
 
-Use the **Bank accounts** endpoint to create a new bank account.&#x20;
+Use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account.&#x20;
 
 {% hint style="info" %}
 Ensure that the beneficiary name and account type matches the customer's details. Otherwise, the transaction will fail and funds will not be transferred.&#x20;
@@ -41,7 +45,7 @@ For more details, visit the **Quotes** section.
 
 To create a transaction, use the **quoteID** to generate an order for fulfillment. Once the transaction is initiated and funds are received at the target address, the destination currency is sent to the specified destination address via the indicated payment rail.&#x20;
 
-For more details, check out the **Transactions** section.
+For more details, check out the [**Transactions**](../api-reference/transactions/) section.
 
 ```
 // Perhaps some code on how to submit transaction?

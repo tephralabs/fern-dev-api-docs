@@ -1,5 +1,7 @@
 # ✅ Requirements - Businesses
 
+### Overview
+
 Business customers are undergo a rigorous to complete identity verification. Fern oversees the entire verification process on your behalf, eliminating the need for you to manage it directly.
 
 Here is a **sample KYC link** showing the form presented to your customers, along with a detailed list of the information collected:
@@ -30,13 +32,13 @@ If additional documents or information are needed (e.g., proof of business activ
 
 ### Formation document requirements
 
-The document must:
+#### The document must:
 
 * Include the entity name and business registration number
 * Be filed with the secretary of state or similar government body
 * Business name must match what was provided in the KYB form
 
-Accepted documents include:&#x20;
+#### Accepted documents include:&#x20;
 
 * Official Article of Incorporation / Organization
 * Official Certificate of Formation
@@ -46,7 +48,7 @@ Accepted documents include:&#x20;
 
 ### Ownership document requirements
 
-The documents must:&#x20;
+#### The documents must:&#x20;
 
 * Confirm all individual beneficial owners who own 25% or more of the underlying entity
 * Clearly account for 100% of ownership
@@ -55,7 +57,7 @@ The documents must:&#x20;
   * Capitalization tables: No signature required if produced by well-known equity management platforms like Carta, AngelList, or Securitize.
 * If the entity is has another entity as a benefiical owner, confirmation of the individuals with significant control over the entity, such as its directors or officers, will be required
 
-Accepted documents include:
+#### Accepted documents include:
 
 * Article of Incorporation (listing shareholders, not just controller)
 * Capitalization table

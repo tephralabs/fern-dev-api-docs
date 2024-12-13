@@ -13,7 +13,7 @@ Fern works with local providers and bank partners to offer global currency suppo
   * Convert between any supported fiat currency and ERC-20 token on 5 EVM chains
 * No limit to transaction sizes
 * Customized, embeddable KYC/B forms
-* Global user coverage ( businesses and individuals)
+* Global user coverage (businesses and individuals)
 * Developer-friendly pricing with no monthly minimums
 * Fully compliant solution
 
