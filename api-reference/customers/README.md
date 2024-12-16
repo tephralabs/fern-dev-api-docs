@@ -1,3 +1,9 @@
+---
+description: >-
+  Use this API to create a customer, update their details, and get their
+  details.
+---
+
 # Customers
 
 {% swagger src="../../.gitbook/assets/api.json" path="/api/v0/customers" method="post" %}
