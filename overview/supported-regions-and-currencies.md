@@ -1,4 +1,4 @@
-# ✅ Supported coverage
+# Coverage
 
 Fern is designed to support global businesses and individuals. Whether you're:
 

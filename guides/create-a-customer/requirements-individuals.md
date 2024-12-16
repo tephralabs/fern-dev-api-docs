@@ -1,4 +1,4 @@
-# ✅ Requirements - Individuals
+# Requirements - Individuals
 
 ### Overview
 

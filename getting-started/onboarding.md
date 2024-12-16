@@ -1,4 +1,4 @@
-# ✅ Onboarding to Fern
+# Onboarding to Fern
 
 Welcome and excited to have you try Fern out! Onboarding to Fern is straightforward:
 

@@ -1,4 +1,4 @@
-# ✅ Additional details
+# Additional details
 
 ### Customer statuses
 

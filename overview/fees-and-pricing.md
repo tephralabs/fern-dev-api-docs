@@ -1,4 +1,4 @@
-# ✅ Fees & Pricing
+# Fees & Pricing
 
 ### Transaction fees&#x20;
 

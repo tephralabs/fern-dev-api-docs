@@ -1,4 +1,4 @@
-# ✅ Crypto
+# Crypto
 
 ### Supported networks
 

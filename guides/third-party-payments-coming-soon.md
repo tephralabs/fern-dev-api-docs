@@ -1,4 +1,4 @@
-# ✅ Third-party payments (Coming soon)
+# Third-party payments (Coming soon)
 
 Third-party payments allow your customers to convert crypto to fiat and pay out via local payment rails. This feature is particularly useful for supporting cross-border transactions, such as contractor or vendor payments.
 

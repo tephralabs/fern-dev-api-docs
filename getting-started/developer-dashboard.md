@@ -1,4 +1,4 @@
-# ✅ Developer dashboard
+# Developer dashboard
 
 Fern's **Developer Dashboard** provides an easy-to-use GUI to view and manage your customers and transactions.&#x20;
 

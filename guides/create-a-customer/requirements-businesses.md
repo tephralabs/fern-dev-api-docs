@@ -1,4 +1,4 @@
-# ✅ Requirements - Businesses
+# Requirements - Businesses
 
 ### Overview
 

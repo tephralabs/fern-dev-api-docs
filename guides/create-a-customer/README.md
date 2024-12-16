@@ -1,4 +1,4 @@
-# ✅ Create a customer
+# Create a customer
 
 Customers are your end-users and can be either businesses or individuals. Before they can transact with Fern, each customer must complete a **Know-Your-Customer (KYC)** process. Fern manages this process to ensure secure and compliant fund transfers, giving you confidence in every transaction.
 
@@ -22,7 +22,7 @@ Typically, individuals take 5 minutes to complete the form, and business take 10
 {% step %}
 ### Check customer status
 
-The status of the customer will be automatically updated via webhooks. Should additional information be needed from your end-user, we will contact them directly to alleviate any action on your part.
+The status of the customer will be automatically updated (webhooks coming soon). Should additional information be needed from your end-user, we will contact them directly to alleviate any action on your part.
 
 {% hint style="info" %}
 If your customer has already been verified by Fern (e.g., they are an existing Fern customer), their status will be automatically updated to **Active**.

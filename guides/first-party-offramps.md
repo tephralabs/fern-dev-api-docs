@@ -1,4 +1,4 @@
-# ✅ First-party offramps
+# First-party offramps
 
 ### Overview
 
@@ -24,7 +24,7 @@ Ensure that the beneficiary name and account type matches the customer's details
 {% step %}
 ### Generate quote
 
-To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for **X hours**. Quotes provide transparent details, including:
+To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for <mark style="color:red;">**X hours**</mark>. Quotes provide transparent details, including:
 
 * the exact receiving amount,&#x20;
 * fees,&#x20;
@@ -53,7 +53,7 @@ For more details, check out the [**Transactions**](../api-reference/transactions
 {% step %}
 ### Track transaction status
 
-Track the progress of a transaction by calling the **XXX endpoint** or visiting the **Developer Dashboard**. To stay updated, you can also subscribe to **Webhooks** for real-time notifications on status changes.
+Track the progress of a transaction by calling the **XXX endpoint** or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
 
 For a full list of transaction statuses, refer to the **Transaction Statuses Documentation**.
 
