@@ -2,8 +2,6 @@
 
 ### Overview
 
-<mark style="color:red;">Insert diagram</mark>
-
 Fern's first-party onramps enable your customers to convert fiat into crypto, delivering funds directly to their wallets—whether external (e.g. Metamask) or an embedded wallet (e.g. Privy). The onramps are accessible via API, allowing you to design a seamless and customized user experience.
 
 To implement onramps, use the **Quotes API** and **Transactions API**. Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
