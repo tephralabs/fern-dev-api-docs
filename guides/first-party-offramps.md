@@ -24,7 +24,7 @@ Ensure that the beneficiary name and account type matches the customer's details
 {% step %}
 ### Generate quote
 
-To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for <mark style="color:red;">**X hours**</mark>. Quotes provide transparent details, including:
+To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for **5 min**. Quotes provide transparent details, including:
 
 * the exact receiving amount,&#x20;
 * fees,&#x20;
