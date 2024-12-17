@@ -24,7 +24,7 @@ Ensure that the beneficiary name and account type matches the customer details. 
 {% step %}
 ### Generate quote
 
-To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for <mark style="color:red;">**X hours**</mark>. Quotes provide transparent details, including the exact receiving amount and any applicable fees.
+To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for **5 mins**. Quotes provide transparent details, including the exact receiving amount and any applicable fees.
 
 ```
 // Perhaps some code on how to generate quotes?
@@ -46,7 +46,7 @@ For more details, check out the [**Transactions**](../api-reference/transactions
 {% step %}
 ### Track transaction status
 
-Track the progress of a transaction by calling the **XXX endpoint** or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
+Track the progress of a transaction by calling the **Transactions endpoint** or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
 
 For a full list of transaction statuses, refer to the **Transaction Statuses Documentation**.
 
