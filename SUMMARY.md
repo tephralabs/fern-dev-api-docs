@@ -32,6 +32,7 @@
 * [Customers](api-reference/customers/README.md)
   * [Additional details](api-reference/customers/additional-details.md)
 * [Bank accounts](group-1/bank-accounts.md)
+* [Quotes](api-reference/quotes.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Additional details](api-reference/transactions/introduction.md)
 

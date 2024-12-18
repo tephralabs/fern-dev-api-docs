@@ -6,14 +6,12 @@ Each transaction must have a minimum value of **$10**, calculated based on the s
 
 ### Transaction statuses
 
-| Status        | Definition |
-| ------------- | ---------- |
-| `Created`     |            |
-| `Validating`  |            |
-| `Initialized` |            |
-| `Processing`  |            |
-| `Completed`   |            |
-| `Failed`      |            |
+| Status       | Definition                           |
+| ------------ | ------------------------------------ |
+| `Created`    |  Validated and created successfully. |
+| `Processing` | Processing is ongoing.               |
+| `Completed`  | Successful completion.               |
+| `Failed`     | Transaction has failed.              |
 
 ### Notifications
 
