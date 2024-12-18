@@ -8,8 +8,8 @@
   * [Transaction types](overview/what-fern-supports/transaction-types.md)
   * [Fiat currencies](overview/supported-coverage/fiat.md)
   * [Cryptocurrencies and networks](overview/supported-coverage/crypto.md)
-* [Fees & Pricing](overview/fees-and-pricing.md)
-* [Support](overview/support.md)
+* [Fees](overview/fees.md)
+* [Help & support](overview/help-and-support.md)
 
 ## Getting started
 
