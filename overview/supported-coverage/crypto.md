@@ -26,7 +26,3 @@ Fern supports onramps to Circle-issued USDC on the supported networks.
 
 Fern supports offramps from any native cryptocurrency and ERC-20 on the supported networks. The token must have sufficient DeFi liquidity when swapping with USDC with minimal slippage and price impact in order to be supported for offramps.&#x20;
 
-### Crypto swaps
-
-Fern supports same-chain crypto swaps with native cryptocurrencies and ERC-20 tokens on the supported networks. The tokens must have sufficient DeFi liquidity with minimal slippage and price impact in order to be supported for crypto swaps.&#x20;
-

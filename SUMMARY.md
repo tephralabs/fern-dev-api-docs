@@ -3,11 +3,11 @@
 ## Overview
 
 * [What is Fern?](README.md)
-* [What Fern supports](overview/what-fern-supports/README.md)
-  * [Customer types](overview/what-fern-supports/customer-types.md)
+* [What Fern supports](overview/supported-regions-and-currencies.md)
+  * [Customer types](overview/supported-coverage/geographies.md)
   * [Transaction types](overview/what-fern-supports/transaction-types.md)
-  * [Fiat currencies](overview/what-fern-supports/fiat-currencies.md)
-  * [Cryptocurrencies and networks](overview/what-fern-supports/cryptocurrencies-and-networks.md)
+  * [Fiat currencies](overview/supported-coverage/fiat.md)
+  * [Cryptocurrencies and networks](overview/supported-coverage/crypto.md)
 * [Fees & Pricing](overview/fees-and-pricing.md)
 * [Support](overview/support.md)
 
