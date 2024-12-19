@@ -4,7 +4,7 @@ Fern fees include a developer subscription fee and transaction fees. The per-tra
 
 ## Subscription fee
 
-When signing up for Fern, there is no contract, term commitment, or monthly contract minimum. Instead, Fern charges a flat subscription fee of $249/month, or $2,400 annually (20% discount). Fern will provide a monthly invoice to remit payment.
+When signing up for Fern, there is no contract, term commitment, or monthly contract minimum. Instead, Fern charges a flat subscription fee. Fern will provide a monthly invoice to remit payment.
 
 ## Transaction fees
 
