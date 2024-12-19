@@ -6,7 +6,7 @@ The Fern API is currently in **private beta**. If you're interested in building 
 {% step %}
 ### Undergo business verification (KYB)
 
-Create an account on [app.fernhq.com](https://app.fernhq.com/), making sure to indicate that you plan to use Fern for your business. You'll see an option to complete KYB. It should take 10-15 min to complete. For more details on the information needed, refer to [Requirements - Businesses](../guides/create-a-customer/requirements-businesses.md).&#x20;
+Create an account on [app.fernhq.com](https://app.fernhq.com/), making sure to indicate that you plan to use Fern for your business. You'll see an option to complete KYB. It should take 10-15 min to complete. For more details on the information needed, refer to [Requirements - Businesses](../guides/create-and-verify-customers/requirements-businesses.md).&#x20;
 
 In the meantime, we will set up a dedicated Slack or Telegram channel to connect you directly with our team.
 {% endstep %}

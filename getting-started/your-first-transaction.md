@@ -6,7 +6,7 @@ Once you have onboarded successfully, you can start creating your first transact
 {% step %}
 ### Create and verify a customer
 
-All transactions must occur with a registered and verified customer. You can reference [this guide](../guides/create-a-customer/) for step-by-step instructions on how to create a customer.
+All transactions must occur with a registered and verified customer. You can reference [this guide](../guides/create-and-verify-customers/) for step-by-step instructions on how to create a customer.
 
 {% hint style="info" %}
 While you can add any customer as your first customer, we recommend starting with **yourself**, as you’ll already have pre-approval. This allows you to test other APIs immediately without waiting for customer verification.&#x20;

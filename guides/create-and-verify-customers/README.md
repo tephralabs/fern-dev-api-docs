@@ -1,6 +1,6 @@
-# Create a customer
+# Create and verify customers
 
-Customers are your end-users and can be either businesses or individuals. Before they can transact with Fern, each customer must complete a **Know-Your-Customer (KYC)** process. Fern manages this process to ensure secure and compliant fund transfers, giving you confidence in every transaction.
+Customers are your end users and can be either businesses or individuals. Before they can transact with Fern, each customer must complete a customer verification process, i.e. **Know Your Customer (KYC) or Know Your Business (KYB)**. Fern manages this process to ensure secure and compliant fund transfers, giving you confidence in every transaction.
 
 ## Step-by-step guide
 

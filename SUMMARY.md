@@ -13,18 +13,18 @@
 
 ## Getting started
 
-* [Onboarding to Fern](getting-started/onboarding.md)
+* [Onboarding to Fern](getting-started/onboarding-to-fern.md)
 * [Core API concepts](getting-started/core-api-concepts.md)
-* [Your first transaction](group-1/page-1.md)
+* [Your first transaction](getting-started/your-first-transaction.md)
 * [❓ Webhooks](getting-started/webhooks.md)
 * [❓ Authentication](getting-started/authentication.md)
 * [Developer dashboard](getting-started/developer-dashboard.md)
 
 ## Guides
 
-* [Create a customer](guides/create-a-customer/README.md)
-  * [Requirements - Individuals](guides/create-a-customer/requirements-individuals.md)
-  * [Requirements - Businesses](guides/create-a-customer/requirements-businesses.md)
+* [Create and verify customers](guides/create-and-verify-customers/README.md)
+  * [Requirements - Individuals](guides/create-and-verify-customers/requirements-individuals.md)
+  * [Requirements - Businesses](guides/create-and-verify-customers/requirements-businesses.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
 * [Third-party payments (Coming soon)](guides/third-party-payments-coming-soon.md)
