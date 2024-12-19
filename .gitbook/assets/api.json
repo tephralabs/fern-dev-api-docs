@@ -613,12 +613,6 @@
                                                 "description": "The bank account ID when sending from a bank account.",
                                                 "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                             },
-                                            "walletAddress": {
-                                                "type": "string",
-                                                "maxLength": 42,
-                                                "description": "The wallet address when sending from a crypto wallet.",
-                                                "example": "0xbf50fb9c99233f95bce213044507e58485cf9eba5"
-                                            },
                                             "paymentRail": {
                                                 "anyOf": [
                                                     {
@@ -1413,10 +1407,24 @@
                                             "description": "Current status of the transaction",
                                             "example": "PROCESSING"
                                         },
-                                        "receivingAmount": {
-                                            "type": "number",
-                                            "description": "Final amount customer will receive after all deductions",
-                                            "example": 100.5
+                                        "receivingAmountDetails": {
+                                            "type": "object",
+                                            "properties": {
+                                                "amount": {
+                                                    "type": "number",
+                                                    "description": "Final amount customer will receive after all deductions",
+                                                    "example": 100.5
+                                                },
+                                                "currency": {
+                                                    "type": "string",
+                                                    "description": "Currency code of the receiving amount",
+                                                    "example": "USDC"
+                                                }
+                                            },
+                                            "required": [
+                                                "amount",
+                                                "currency"
+                                            ]
                                         },
                                         "correlationId": {
                                             "type": "string",
@@ -1505,7 +1513,7 @@
                                         },
                                         "exchangeRate": {
                                             "type": "number",
-                                            "description": "Conversion rate applied to the transaction",
+                                            "description": "The rate at which the source currency is multiplied to determine the equivalent amount in the destination currency",
                                             "example": 1.2
                                         },
                                         "transferInstructions": {
@@ -1639,7 +1647,7 @@
                                         "quoteId",
                                         "transactionId",
                                         "status",
-                                        "receivingAmount",
+                                        "receivingAmountDetails",
                                         "fees",
                                         "exchangeRate",
                                         "transferInstructions"
@@ -1654,7 +1662,10 @@
                                             "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96",
                                             "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
                                             "status": "PROCESSING",
-                                            "receivingAmount": 79.5,
+                                            "receivingAmountDetails": {
+                                                "amount": 79.5,
+                                                "currency": "USD"
+                                            },
                                             "fees": {
                                                 "fernFee": {
                                                     "type": "fern",
@@ -1687,17 +1698,22 @@
                                             "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
                                             "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
                                             "status": "AWAITING_TRANSFER",
-                                            "receivingAmount": 99.25,
+                                            "receivingAmountDetails": {
+                                                "amount": 99.25,
+                                                "currency": "USDC"
+                                            },
                                             "fees": {
                                                 "fernFee": {
                                                     "type": "fern",
-                                                    "currency": "USD",
-                                                    "amount": 0.75
+                                                    "currency": "USDC",
+                                                    "amount": 0.75,
+                                                    "usdAmount": 0.75
                                                 },
-                                                "gasFee": {
-                                                    "type": "gas",
-                                                    "currency": "USD",
-                                                    "amount": 0
+                                                "developerFee": {
+                                                    "type": "developer",
+                                                    "currency": "USDC",
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             },
                                             "exchangeRate": 1,
@@ -1766,10 +1782,24 @@
                                             "description": "Current status of the transaction",
                                             "example": "PROCESSING"
                                         },
-                                        "receivingAmount": {
-                                            "type": "number",
-                                            "description": "Final amount customer will receive after all deductions",
-                                            "example": 100.5
+                                        "receivingAmountDetails": {
+                                            "type": "object",
+                                            "properties": {
+                                                "amount": {
+                                                    "type": "number",
+                                                    "description": "Final amount customer will receive after all deductions",
+                                                    "example": 100.5
+                                                },
+                                                "currency": {
+                                                    "type": "string",
+                                                    "description": "Currency code of the receiving amount",
+                                                    "example": "USDC"
+                                                }
+                                            },
+                                            "required": [
+                                                "amount",
+                                                "currency"
+                                            ]
                                         },
                                         "correlationId": {
                                             "type": "string",
@@ -1858,7 +1888,7 @@
                                         },
                                         "exchangeRate": {
                                             "type": "number",
-                                            "description": "Conversion rate applied to the transaction",
+                                            "description": "The rate at which the source currency is multiplied to determine the equivalent amount in the destination currency",
                                             "example": 1.2
                                         },
                                         "transferInstructions": {
@@ -1992,7 +2022,7 @@
                                         "quoteId",
                                         "transactionId",
                                         "status",
-                                        "receivingAmount",
+                                        "receivingAmountDetails",
                                         "fees",
                                         "exchangeRate",
                                         "transferInstructions"
@@ -2007,7 +2037,10 @@
                                             "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96",
                                             "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
                                             "status": "PROCESSING",
-                                            "receivingAmount": 79.5,
+                                            "receivingAmountDetails": {
+                                                "amount": 79.5,
+                                                "currency": "USD"
+                                            },
                                             "fees": {
                                                 "fernFee": {
                                                     "type": "fern",
@@ -2040,17 +2073,22 @@
                                             "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
                                             "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
                                             "status": "AWAITING_TRANSFER",
-                                            "receivingAmount": 99.25,
+                                            "receivingAmountDetails": {
+                                                "amount": 99.25,
+                                                "currency": "USDC"
+                                            },
                                             "fees": {
                                                 "fernFee": {
                                                     "type": "fern",
-                                                    "currency": "USD",
-                                                    "amount": 0.75
+                                                    "currency": "USDC",
+                                                    "amount": 0.75,
+                                                    "usdAmount": 0.75
                                                 },
-                                                "gasFee": {
-                                                    "type": "gas",
-                                                    "currency": "USD",
-                                                    "amount": 0
+                                                "developerFee": {
+                                                    "type": "developer",
+                                                    "currency": "USDC",
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             },
                                             "exchangeRate": 1,
