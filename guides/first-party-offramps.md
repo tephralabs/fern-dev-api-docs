@@ -114,7 +114,6 @@ print(data.decode("utf-8"))
 
 #### Response
 
-````json
 ```json
 {
     "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
@@ -141,7 +140,6 @@ print(data.decode("utf-8"))
     }
 }
 ```
-````
 
 
 {% endstep %}
@@ -217,7 +215,6 @@ print(data.decode("utf-8"))
 
 #### Response
 
-````json
 ```json
 {
     "id": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
@@ -243,7 +240,6 @@ print(data.decode("utf-8"))
     }
 }
 ```
-````
 
 
 {% endstep %}
@@ -302,7 +298,6 @@ print(data.decode("utf-8"))
 
 #### Response
 
-````json
 ```json
 {
     "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
@@ -328,7 +323,6 @@ print(data.decode("utf-8"))
     }
 }
 ```
-````
 
 
 {% endstep %}
