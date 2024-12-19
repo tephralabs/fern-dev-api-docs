@@ -38,7 +38,7 @@ For more details, visit the **Quotes** section.
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/'
+curl --location 'https://app.fernhq.com/api/v0/quotes/'
 --header 'Content-Type: application/json'
 --header 'Authorization: Bearer <API_TOKEN>'
 --data '{ "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5", "sendingAmount": 100, "source": { "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5", "paymentRail": "base", "currency": "USDC" }, "destination": { "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0", "paymentRail": "wire", "currency": "USD" } }'
@@ -56,7 +56,7 @@ const raw = JSON.stringify({
   "sendingAmount": 100,
   "source": {
     "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
-    "paymentRail": "sepolia",
+    "paymentRail": "ethereum",
     "currency": "USDC"
   },
   "destination": {
@@ -73,7 +73,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/", requestOptions)
+fetch("https://app.fernhq.com/api/v0/quotes/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -85,13 +85,13 @@ fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/", req
 import http.client
 import json
 
-conn = http.client.HTTPConnection("https://fern-git-feat-devprod-tephra-labs.vercel.app")
+conn = http.client.HTTPConnection("https://app.fernhq.com")
 payload = json.dumps({
   "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
   "sendingAmount": 100,
   "source": {
     "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
-    "paymentRail": "sepolia",
+    "paymentRail": "ethereum",
     "currency": "USDC"
   },
   "destination": {
@@ -156,9 +156,9 @@ For more details, check out the [**Transactions**](../api-reference/transactions
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/' \
+curl --location 'https://app.fernhq.com/api/v0/transactions/' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer fsk_ZGM5MDNmNDgtNjQzZi00NDdlLWEwNDktNjcwMDUzZGIyNWFkXzQxM2UwZTRhOWRiZjI2YjhhYzUyMjBkMzBmZWMzMzhmN2ZmOTE1NzYxMDEzYWZiNjA3OGQxNzNlNjA1YmUyMzI' \
+--header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
     "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
     "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
@@ -184,7 +184,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/", requestOptions)
+fetch("https://app.fernhq.com/api/v0/transactions/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -196,14 +196,14 @@ fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+conn = http.client.HTTPSConnection("app.fernhq.com")
 payload = json.dumps({
   "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
   "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
 })
 headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer fsk_ZGM5MDNmNDgtNjQzZi00NDdlLWEwNDktNjcwMDUzZGIyNWFkXzQxM2UwZTRhOWRiZjI2YjhhYzUyMjBkMzBmZWMzMzhmN2ZmOTE1NzYxMDEzYWZiNjA3OGQxNzNlNjA1YmUyMzI'
+  'Authorization': 'Bearer <API_TOKEN>'
 }
 conn.request("POST", "/api/v0/transactions/", payload, headers)
 res = conn.getresponse()
@@ -235,7 +235,7 @@ print(data.decode("utf-8"))
     "exchangeRate": 1,
     "transferInstructions": {
         "type": "offramp",
-        "paymentRail": "sepolia",
+        "paymentRail": "ethereum",
         "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
     }
 }
@@ -256,7 +256,7 @@ For a full list of transaction statuses, refer to the **Transaction Statuses Doc
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7' \
+curl --location 'https://app.fernhq.com/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7' \
 --header 'Authorization: Bearer <API_TOKEN>'
 ```
 {% endtab %}
@@ -272,7 +272,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7", requestOptions)
+fetch("https://app.fernhq.com/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -283,7 +283,7 @@ fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/
 ```python
 import http.client
 
-conn = http.client.HTTPConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+conn = http.client.HTTPConnection("app.fernhq.com")
 payload = ''
 headers = {
   'Authorization': 'Bearer <API_TOKEN>'
@@ -318,7 +318,7 @@ print(data.decode("utf-8"))
     "exchangeRate": 1,
     "transferInstructions": {
         "type": "offramp",
-        "paymentRail": "sepolia",
+        "paymentRail": "ethereum",
         "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
     }
 }

@@ -33,7 +33,7 @@ For more details, check out the **Quotes** section.
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/' \
+curl --location 'https://app.fernhq.com/api/v0/quotes/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
@@ -46,7 +46,7 @@ curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quo
     },
     "destination": {
         "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
-        "paymentRail": "sepolia",
+        "paymentRail": "ethereum",
         "currency": "USDC"
     }
 }'
@@ -69,7 +69,7 @@ const raw = JSON.stringify({
   },
   "destination": {
     "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
-    "paymentRail": "sepolia",
+    "paymentRail": "ethereum",
     "currency": "USDC"
   }
 });
@@ -81,7 +81,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/", requestOptions)
+fetch("https://app.fernhq.com/api/v0/quotes/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -93,7 +93,7 @@ fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/", req
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+conn = http.client.HTTPSConnection("app.fernhq.com")
 payload = json.dumps({
   "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
   "sendingAmount": 10,
@@ -104,7 +104,7 @@ payload = json.dumps({
   },
   "destination": {
     "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
-    "paymentRail": "sepolia",
+    "paymentRail": "ethereum",
     "currency": "USDC"
   }
 })
@@ -164,7 +164,7 @@ For more details, check out the [**Transactions**](../api-reference/transactions
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/' \
+curl --location 'https://app.fernhq.com/api/v0/transactions/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
@@ -192,7 +192,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/", requestOptions)
+fetch("https://app.fernhq.com/api/v0/transactions/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -204,7 +204,7 @@ fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+conn = http.client.HTTPSConnection("app.fernhq.com")
 payload = json.dumps({
   "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
   "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
@@ -269,7 +269,7 @@ For a full list of transaction statuses, refer to the **Transaction Statuses Doc
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/' \
+curl --location 'https://app.fernhq.com/api/v0/transactions/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
@@ -299,7 +299,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/", requestOptions)
+fetch("https://app.fernhq.com/api/v0/transactions/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -311,7 +311,7 @@ fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+conn = http.client.HTTPSConnection("app.fernhq.com")
 payload = json.dumps({
   "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
   "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
