@@ -1,6 +1,10 @@
 # Developer dashboard
 
-Fern's **Developer Dashboard** provides an easy-to-use GUI to view and manage your customers and transactions.&#x20;
+Fern's **developer dashboard** is an easy-to-use UI to view and manage your customers and transactions. You will gain access to the developer dashboard once you've completed the relevant [Onboarding steps](onboarding.md). The dashboard is accessible at [app.fernhq.com](https://app.fernhq.com).
 
-Once you are fully onboarded to Fern, you gain full access to the developer dashboard, together with Fern Business, at [app.fernhq.com](https://app.fernhq.com/).&#x20;
+Core features of the dashboard:
 
+* Customers table that displays your customers and their status
+* Transactions table that displays all transactions initiated by your customers
+* Quick link to the docs
+* More coming soon!

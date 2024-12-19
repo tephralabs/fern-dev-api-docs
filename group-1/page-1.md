@@ -4,7 +4,7 @@ Once you have onboarded successfully, you can start creating your first transact
 
 {% stepper %}
 {% step %}
-### Create a customer
+### Create and verify a customer
 
 All transactions must occur with a registered and verified customer. You can reference [this guide](../guides/create-a-customer/) for step-by-step instructions on how to create a customer.
 
@@ -14,10 +14,8 @@ While you can add any customer as your first customer, we recommend starting wit
 {% endstep %}
 
 {% step %}
-### Create a transaction&#x20;
+### Initiate your first transaction
 
-
-
-The step-by-step guides here walk you through creating an [onramp](../guides/first-party-onramps.md) or [offramp](../guides/first-party-offramps.md), depending on the fund flow you wish to support. Alternatively, you can refer directly to the [**Bank Accounts API**](bank-accounts.md), **Quotes API**, and [**Transactions API**](../api-reference/transactions/) for more detailed implementation.
+Follow the guides for creating an [onramp](../guides/first-party-onramps.md) or [offramp](../guides/first-party-offramps.md). You're off to the races!
 {% endstep %}
 {% endstepper %}
