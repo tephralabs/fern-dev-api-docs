@@ -41,7 +41,7 @@ For more details, visit the **Quotes** section.
 curl --location 'https://app.fernhq.com/api/v0/quotes/'
 --header 'Content-Type: application/json'
 --header 'Authorization: Bearer <API_TOKEN>'
---data '{ "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8", "sendingAmount": 100, "source": { "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA", "paymentRail": "base", "currency": "USDC" }, "destination": { "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77", "paymentRail": "wire", "currency": "USD" } }'
+--data '{ "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8", "sendingAmount": 100, "source": { "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba", "paymentRail": "base", "currency": "USDC" }, "destination": { "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77", "paymentRail": "wire", "currency": "USD" } }'
 ```
 {% endtab %}
 
@@ -55,7 +55,7 @@ const raw = JSON.stringify({
   "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "sendingAmount": 100,
   "source": {
-    "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
+    "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
     "paymentRail": "ethereum",
     "currency": "USDC"
   },
@@ -90,7 +90,7 @@ payload = json.dumps({
   "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "sendingAmount": 100,
   "source": {
-    "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
+    "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
     "paymentRail": "ethereum",
     "currency": "USDC"
   },
@@ -236,7 +236,7 @@ print(data.decode("utf-8"))
     "transferInstructions": {
         "type": "offramp",
         "paymentRail": "ethereum",
-        "transferWalletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA"
+        "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba"
     }
 }
 ```
@@ -319,7 +319,7 @@ print(data.decode("utf-8"))
     "transferInstructions": {
         "type": "offramp",
         "paymentRail": "ethereum",
-        "transferWalletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA"
+        "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba"
     }
 }
 ```

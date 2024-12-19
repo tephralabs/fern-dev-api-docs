@@ -45,7 +45,7 @@ curl --location 'https://app.fernhq.com/api/v0/quotes/' \
         "currency": "USD"
     },
     "destination": {
-        "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
+        "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
         "paymentRail": "ethereum",
         "currency": "USDC"
     }
@@ -68,7 +68,7 @@ const raw = JSON.stringify({
     "currency": "USD"
   },
   "destination": {
-    "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
+    "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
     "paymentRail": "ethereum",
     "currency": "USDC"
   }
@@ -103,7 +103,7 @@ payload = json.dumps({
     "currency": "USD"
   },
   "destination": {
-    "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
+    "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
     "paymentRail": "ethereum",
     "currency": "USDC"
   }
