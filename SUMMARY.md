@@ -14,6 +14,7 @@
 ## Getting started
 
 * [Onboarding to Fern](getting-started/onboarding.md)
+* [Core API concepts](getting-started/core-api-concepts.md)
 * [Your first transaction](group-1/page-1.md)
 * [❓ Webhooks](getting-started/webhooks.md)
 * [❓ Authentication](getting-started/authentication.md)
