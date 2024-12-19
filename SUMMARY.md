@@ -23,8 +23,8 @@
 ## Guides
 
 * [Create and verify customers](guides/create-and-verify-customers/README.md)
-  * [Requirements - Individuals](guides/create-and-verify-customers/requirements-individuals.md)
-  * [Requirements - Businesses](guides/create-and-verify-customers/requirements-businesses.md)
+  * [Requirements for Individuals](guides/create-and-verify-customers/requirements-for-individuals.md)
+  * [Requirements for Businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
 * [Third-party payments (Coming soon)](guides/third-party-payments-coming-soon.md)
