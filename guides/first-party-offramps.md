@@ -2,22 +2,22 @@
 
 ## Overview
 
-Fern's first-party offramps enable your customers to convert any ERC-20 into fiat, delivering funds to their bank account via local payment rails. &#x20;
+Fern's first-party offramps enable your customers to convert any ERC-20 token into a fiat currency, delivering funds to their bank account via local payment rails.
 
-To implement offramps, use the [**Quotes API**](../api-reference/quotes.md) and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
+To implement offramps, use the [**Bank Accounts API**](../group-1/bank-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
 
-For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to the [**Supported Coverage**](../overview/supported-regions-and-currencies.md) section.
+For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to [**What Fern supports**](../overview/supported-regions-and-currencies.md).
 
 ## Step-by-step guide
 
 {% stepper %}
 {% step %}
-### Add a bank account to an existing customer
+### Create a bank account for a verified customer
 
-Use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account.&#x20;
+Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account for the customer.&#x20;
 
 {% hint style="info" %}
-Ensure that the beneficiary name and account type matches the customer's details. Otherwise, the transaction will fail and funds will not be transferred.&#x20;
+Ensure that the beneficiary name matches your customer's name and the account type is accurate. Otherwise, there is a risk the funds will be returned to the sending wallet.&#x20;
 {% endhint %}
 {% endstep %}
 
@@ -142,7 +142,7 @@ print(data.decode("utf-8"))
 {% step %}
 ### Submit transaction
 
-To create a transaction, use the **quoteID** to generate an order for fulfillment. Once the transaction is initiated and funds are received at the target address, the destination currency is sent to the specified destination address via the indicated payment rail.&#x20;
+To create a transaction, use the **quote ID** to generate an offramp transaction. Once the transaction is initiated and funds are received at the transfer wallet address, the destination currency is sent to the specified destination address via the indicated payment rail.&#x20;
 
 For more details, check out the [**Transactions**](../api-reference/transactions/) section.
 
@@ -250,9 +250,9 @@ print(data.decode("utf-8"))
 {% endstep %}
 
 {% step %}
-### Track transaction status
+### Monitor transaction status
 
-Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
+Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the **Developer dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
 
 For a full list of transaction statuses, refer to [**Transaction Statuses**](../api-reference/transactions/introduction.md#transaction-statuses).
 

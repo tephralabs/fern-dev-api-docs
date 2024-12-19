@@ -2,22 +2,22 @@
 
 ## Overview
 
-Fern's first-party onramps enable your customers to convert fiat into crypto, delivering funds directly to their wallets—whether external (e.g. Metamask) or an embedded wallet (e.g. Privy). The onramps are accessible via API, allowing you to design a seamless and customized user experience.
+Fern's first-party onramps enable your customers to convert fiat into crypto, delivering funds directly to their wallets. Fern onramps are accessible via API, allowing you to design a seamless and customized user experience.
 
-To implement onramps, use the [**Quotes API**](../api-reference/quotes.md) and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
+To implement onramps, use the [**Bank Accounts API**](../group-1/bank-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
 
-For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to the [**Supported Coverage**](../overview/supported-regions-and-currencies.md) section.
+For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to [**What Fern supports**](../overview/supported-regions-and-currencies.md).
 
 ## Step-by-step guide
 
 {% stepper %}
 {% step %}
-### Add a bank account to an existing customer
+### Create a bank account for a verified customer
 
-Use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account.&#x20;
+Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account for the customer.&#x20;
 
 {% hint style="info" %}
-Ensure that the beneficiary name and account type matches the customer details. Otherwise, the funds will be returned to the sending bank account.&#x20;
+Ensure that the beneficiary name matches your customer's name and the account type is accurate. Otherwise, there is a risk the funds will be returned to the sending bank account.&#x20;
 {% endhint %}
 {% endstep %}
 
@@ -152,7 +152,7 @@ print(data.decode("utf-8"))
 {% step %}
 ### Submit transaction
 
-To create a transaction, use the **quoteID** to generate an order for fulfillment. Once the transaction is initiated and funds are received at the target address, the destination currency is sent to the specified destination address, completing the transaction within seconds or minutes.
+To create a transaction, use the **quote ID** to generate an onramp transaction. Once the transaction is created, you'll receive transfer instructions to share with your customer. Once funds are received at the transfer bank account, the destination currency is sent to the specified destination address, completing the transaction within seconds or minutes.
 
 For more details, check out the [**Transactions**](../api-reference/transactions/) section.
 
@@ -261,9 +261,9 @@ print(data.decode("utf-8"))
 {% endstep %}
 
 {% step %}
-### Track transaction status
+### Monitor transaction status
 
-Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
+Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the [**Developer dashboard**](../getting-started/developer-dashboard.md). You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
 
 For a full list of transaction statuses, refer to [**Transaction Statuses**](../api-reference/transactions/introduction.md#transaction-statuses).
 
@@ -275,8 +275,6 @@ For a full list of transaction statuses, refer to [**Transaction Statuses**](../
 curl --location 'https://app.fernhq.com/api/v0/transactions/908c4092-3a5e-44c8-ac4e-ad47993f00e9' \
 --header 'Authorization: Bearer <API_TOKEN>'
 ```
-
-
 {% endtab %}
 
 {% tab title="JavaScript" %}

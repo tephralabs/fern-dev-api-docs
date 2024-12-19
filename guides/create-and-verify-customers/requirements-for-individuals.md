@@ -1,8 +1,10 @@
 # Requirements for Individuals
 
+## Overview
+
 Individual customers are required to provide certain information to complete identity verification. Fern oversees the entire verification process on your behalf, eliminating the need for you to manage it directly.
 
-**Information collected:**
+## Information collected
 
 * First name
 * Last name
@@ -16,4 +18,4 @@ Individual customers are required to provide certain information to complete ide
 
 **Typical time to approval:** <5 min to 1 business day
 
-If additional documents or information are needed (e.g. uploaded ID has expired), the Fern compliance team will contact your end customer directly to complete the verification process.
+If additional documents or information are needed (e.g. if the uploaded ID has expired), the Fern compliance team will contact your end customer directly to complete the verification process.

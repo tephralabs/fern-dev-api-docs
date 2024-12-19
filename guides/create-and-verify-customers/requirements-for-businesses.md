@@ -1,8 +1,10 @@
 # Requirements for Businesses
 
+## Overview
+
 Business customers must complete verification of the nature of the business, business registration, and associated persons. Fern oversees the entire verification process on your behalf, eliminating the need for you to manage it directly.
 
-**Information collected:**
+## Information collected
 
 * **Business details**
   * Business name
@@ -34,8 +36,6 @@ Business customers must complete verification of the nature of the business, bus
 **Typical time to approval:** 1-3 business days
 
 If additional documents or information are needed (e.g., proof of business activities), our compliance team will contact your end-customer directly to complete the verification process.
-
-
 
 ## Specific document requirements
 
