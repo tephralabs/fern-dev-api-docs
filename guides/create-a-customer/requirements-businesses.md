@@ -1,6 +1,6 @@
 # Requirements - Businesses
 
-### Overview
+## Overview
 
 Business customers are undergo a rigorous to complete identity verification. Fern oversees the entire verification process on your behalf, eliminating the need for you to manage it directly.
 
@@ -30,7 +30,7 @@ Here is a **sample KYC link** showing the form presented to your customers, alon
 
 If additional documents or information are needed (e.g., proof of business activities), our compliance team will contact your end-customer directly to complete the verification process.
 
-### Formation document requirements
+## Formation document requirements
 
 #### The document must:
 
@@ -46,7 +46,7 @@ If additional documents or information are needed (e.g., proof of business activ
 * Legal Entity Formation (for DAOs)
 * Trust Deed or Trust Agreement (for Trusts)
 
-### Ownership document requirements
+## Ownership document requirements
 
 #### The documents must:&#x20;
 

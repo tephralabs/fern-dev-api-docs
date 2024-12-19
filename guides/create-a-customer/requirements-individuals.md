@@ -1,6 +1,6 @@
 # Requirements - Individuals
 
-### Overview
+## Overview
 
 Individual customers are required to provide certain information to complete identity verification. Fern oversees the entire verification process on your behalf, eliminating the need for you to manage it directly.
 

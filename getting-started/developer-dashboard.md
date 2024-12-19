@@ -4,5 +4,3 @@ Fern's **Developer Dashboard** provides an easy-to-use GUI to view and manage yo
 
 Once you are fully onboarded to Fern, you gain full access to the developer dashboard, together with Fern Business, at [app.fernhq.com](https://app.fernhq.com/).&#x20;
 
-<mark style="color:red;">insert screenshot of developer dashboard</mark>
-
