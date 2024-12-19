@@ -16,16 +16,8 @@
     },
     "servers": [
         {
-            "url": "https://localhost:3000",
-            "description": "Local"
-        },
-        {
-            "url": "https://fern-git-gdb-effect-to-zod-tephra-labs.vercel.app",
-            "description": "Dev"
-        },
-        {
-            "url": "https://fern-git-feat-devprod-tephra-labs.vercel.app",
-            "description": "Test"
+            "url": "https://app.fernhq.com",
+            "description": "Prod"
         }
     ],
     "security": [
@@ -70,7 +62,6 @@
     "paths": {
         "/api/v0/bankAccounts": {
             "post": {
-                "description": "Create a new bank account",
                 "tags": [
                     "Bank Accounts"
                 ],
@@ -83,7 +74,7 @@
                                     "customerId": {
                                         "type": "string",
                                         "description": "Unique identifier of the customer",
-                                        "example": "cust_123abc"
+                                        "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
                                     },
                                     "beneficiary": {
                                         "type": "object",
@@ -231,7 +222,7 @@
                                         "id": {
                                             "type": "string",
                                             "description": "Unique identifier of the bank account",
-                                            "example": "ba_123abc"
+                                            "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                         },
                                         "accountMask": {
                                             "type": "string",
@@ -295,7 +286,6 @@
         },
         "/api/v0/bankAccounts/{bankAccountId}": {
             "get": {
-                "description": "Get bank account details",
                 "tags": [
                     "Bank Accounts"
                 ],
@@ -304,7 +294,7 @@
                         "schema": {
                             "type": "string",
                             "description": "Unique identifier of the bank account",
-                            "example": "ba_123abc"
+                            "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                         },
                         "required": true,
                         "name": "bankAccountId",
@@ -322,7 +312,7 @@
                                         "id": {
                                             "type": "string",
                                             "description": "Unique identifier of the bank account",
-                                            "example": "ba_123abc"
+                                            "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                         },
                                         "accountMask": {
                                             "type": "string",
@@ -384,7 +374,6 @@
                 }
             },
             "patch": {
-                "description": "Update bank account details",
                 "tags": [
                     "Bank Accounts"
                 ],
@@ -393,7 +382,7 @@
                         "schema": {
                             "type": "string",
                             "description": "Unique identifier of the bank account",
-                            "example": "ba_123abc"
+                            "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                         },
                         "required": true,
                         "name": "bankAccountId",
@@ -409,7 +398,7 @@
                                     "customerId": {
                                         "type": "string",
                                         "description": "Unique identifier of the customer",
-                                        "example": "cust_123abc"
+                                        "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
                                     },
                                     "beneficiary": {
                                         "type": "object",
@@ -538,7 +527,7 @@
                                         "id": {
                                             "type": "string",
                                             "description": "Unique identifier of the bank account",
-                                            "example": "ba_123abc"
+                                            "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                         },
                                         "accountMask": {
                                             "type": "string",
@@ -602,7 +591,6 @@
         },
         "/api/v0/quotes": {
             "post": {
-                "description": "Create a new quote for a transaction",
                 "tags": [
                     "Quotes"
                 ],
@@ -615,7 +603,7 @@
                                     "customerId": {
                                         "type": "string",
                                         "description": "A unique identifier for the customer initiating the transaction.",
-                                        "example": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5"
+                                        "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
                                     },
                                     "source": {
                                         "type": "object",
@@ -623,13 +611,13 @@
                                             "bankAccountId": {
                                                 "type": "string",
                                                 "description": "The bank account ID when sending from a bank account.",
-                                                "example": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0"
+                                                "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                             },
                                             "walletAddress": {
                                                 "type": "string",
                                                 "maxLength": 42,
                                                 "description": "The wallet address when sending from a crypto wallet.",
-                                                "example": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
+                                                "example": "0xbf50fb9c99233f95bce213044507e58485cf9eba5"
                                             },
                                             "paymentRail": {
                                                 "anyOf": [
@@ -675,13 +663,13 @@
                                             "bankAccountId": {
                                                 "type": "string",
                                                 "description": "The bank account ID when sending to a bank account.",
-                                                "example": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0"
+                                                "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                             },
                                             "walletAddress": {
                                                 "type": "string",
                                                 "maxLength": 42,
                                                 "description": "The wallet address when sending to a crypto wallet.",
-                                                "example": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a"
+                                                "example": "0xbf50fb9c99233f95bce213044507e58485cf9eba"
                                             },
                                             "paymentRail": {
                                                 "anyOf": [
@@ -712,16 +700,18 @@
                                             },
                                             "currency": {
                                                 "type": "string",
-                                                "description": "The currency to receive (e.g., USD, ETH, USDC)",
-                                                "example": "USD"
+                                                "description": "The currency to receive (e.g., USD, USDC)",
+                                                "example": "USDC"
                                             },
                                             "wireMessage": {
                                                 "type": "string",
-                                                "description": "Optional message for wire transfers"
+                                                "maxLength": 140,
+                                                "description": "Optional message for wire transfers, relayed to destination bank (max 140 characters)"
                                             },
                                             "achReference": {
                                                 "type": "string",
-                                                "description": "Optional reference for ACH transfers"
+                                                "maxLength": 80,
+                                                "description": "Optional reference for ACH transfers, relayed to destination bank (max 80 characters)"
                                             }
                                         },
                                         "required": [
@@ -732,8 +722,32 @@
                                     "sendingAmount": {
                                         "type": "number",
                                         "minimum": 0,
-                                        "description": "The amount to convert and send, expressed in decimals.",
+                                        "description": "The amount to convert and send, expressed in decimals and denominated in the source currency",
                                         "example": 100
+                                    },
+                                    "developerFee": {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "usd_spread"
+                                                ],
+                                                "description": "The type of fee"
+                                            },
+                                            "amount": {
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "description": "Amount of this fee that was applied",
+                                                "example": 5.45
+                                            }
+                                        },
+                                        "required": [
+                                            "type",
+                                            "amount"
+                                        ],
+                                        "description": "Specifies additional fees which the developer can charge on top of fern fees",
+                                        "title": "Developer Fees"
                                     }
                                 },
                                 "required": [
@@ -742,22 +756,22 @@
                                     "destination",
                                     "sendingAmount"
                                 ],
-                                "description": "Request to create a quote for converting and transferring funds between currencies.",
-                                "title": "Create Quote Request"
+                                "description": "Get a proposed price for your specified currency route (price guaranteed for 5 mins)",
+                                "title": "Create a new quote"
                             },
                             "examples": {
                                 "example1": {
                                     "summary": "Create a quote for an offramp transaction",
                                     "value": {
-                                        "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+                                        "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
                                         "sendingAmount": 100,
                                         "source": {
-                                            "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+                                            "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba5",
                                             "paymentRail": "ethereum",
                                             "currency": "USDC"
                                         },
                                         "destination": {
-                                            "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+                                            "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
                                             "paymentRail": "wire",
                                             "currency": "USD"
                                         }
@@ -766,15 +780,15 @@
                                 "example2": {
                                     "summary": "Create a quote for an onramp transaction",
                                     "value": {
-                                        "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account1",
+                                        "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
                                         "sendingAmount": 100,
                                         "source": {
-                                            "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+                                            "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
                                             "paymentRail": "wire",
                                             "currency": "USD"
                                         },
                                         "destination": {
-                                            "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+                                            "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba5",
                                             "paymentRail": "ethereum",
                                             "currency": "USDC"
                                         }
@@ -801,7 +815,7 @@
                                             "type": "number",
                                             "minimum": 0,
                                             "exclusiveMinimum": true,
-                                            "description": "The rate at which the source currency will be converted to the destination currency"
+                                            "description": "The rate at which the source currency is multiplied to determine the equivalent amount in the destination currency"
                                         },
                                         "receivingAmount": {
                                             "type": "number",
@@ -830,8 +844,7 @@
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -844,24 +857,29 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
+                                                        },
+                                                        "usdAmount": {
+                                                            "type": "number",
+                                                            "description": "Amount of this fee that was applied in USD",
+                                                            "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
                                                     "description": "Fee charged by Fern"
                                                 },
-                                                "fiatFee": {
+                                                "developerFee": {
                                                     "type": "object",
                                                     "properties": {
                                                         "type": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -874,46 +892,25 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "type",
-                                                        "currency",
-                                                        "amount"
-                                                    ],
-                                                    "description": "Fiat processing fee"
-                                                },
-                                                "gasFee": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "type": {
-                                                            "type": "string",
-                                                            "enum": [
-                                                                "fern",
-                                                                "fiat",
-                                                                "gas"
-                                                            ],
-                                                            "description": "The type of fee"
                                                         },
-                                                        "currency": {
-                                                            "type": "string",
-                                                            "description": "Currency the fee is denominated in",
-                                                            "example": "USD"
-                                                        },
-                                                        "amount": {
+                                                        "usdAmount": {
                                                             "type": "number",
-                                                            "description": "Amount of this fee that was applied",
+                                                            "description": "Amount of this fee that was applied in USD",
                                                             "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
-                                                    "description": "Gas fee for the transaction"
+                                                    "description": "Fee charged by application developer"
                                                 }
                                             },
+                                            "required": [
+                                                "fernFee"
+                                            ],
                                             "description": "Detailed breakdown of all fees associated with the transaction",
                                             "title": "Transaction Fees"
                                         }
@@ -942,17 +939,14 @@
                                                 "fernFee": {
                                                     "type": "fern",
                                                     "currency": "USD",
-                                                    "amount": 0.5
+                                                    "amount": 20.5,
+                                                    "usdAmount": 20.5
                                                 },
-                                                "fiatFee": {
-                                                    "type": "fiat",
+                                                "developerFee": {
+                                                    "type": "developer",
                                                     "currency": "USD",
-                                                    "amount": 20
-                                                },
-                                                "gasFee": {
-                                                    "type": "gas",
-                                                    "currency": "USD",
-                                                    "amount": 0
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             }
                                         }
@@ -969,17 +963,14 @@
                                                 "fernFee": {
                                                     "type": "fern",
                                                     "currency": "USDC",
-                                                    "amount": 0.075
+                                                    "amount": 0.075,
+                                                    "usdAmount": 0.08
                                                 },
-                                                "fiatFee": {
-                                                    "type": "fiat",
+                                                "developerFee": {
+                                                    "type": "developer",
                                                     "currency": "USDC",
-                                                    "amount": 0
-                                                },
-                                                "gasFee": {
-                                                    "type": "gas",
-                                                    "currency": "USDC",
-                                                    "amount": 0
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             }
                                         }
@@ -993,7 +984,6 @@
         },
         "/api/v0/quotes/{quoteId}": {
             "get": {
-                "description": "Get quote details",
                 "tags": [
                     "Quotes"
                 ],
@@ -1002,7 +992,7 @@
                         "schema": {
                             "type": "string",
                             "description": "The unique identifier for the quote to retrieve",
-                            "example": "quote_abc123"
+                            "example": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
                         },
                         "required": true,
                         "name": "quoteId",
@@ -1026,7 +1016,7 @@
                                             "type": "number",
                                             "minimum": 0,
                                             "exclusiveMinimum": true,
-                                            "description": "The rate at which the source currency will be converted to the destination currency"
+                                            "description": "The rate at which the source currency is multiplied to determine the equivalent amount in the destination currency"
                                         },
                                         "receivingAmount": {
                                             "type": "number",
@@ -1055,8 +1045,7 @@
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -1069,24 +1058,29 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
+                                                        },
+                                                        "usdAmount": {
+                                                            "type": "number",
+                                                            "description": "Amount of this fee that was applied in USD",
+                                                            "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
                                                     "description": "Fee charged by Fern"
                                                 },
-                                                "fiatFee": {
+                                                "developerFee": {
                                                     "type": "object",
                                                     "properties": {
                                                         "type": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -1099,46 +1093,25 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "type",
-                                                        "currency",
-                                                        "amount"
-                                                    ],
-                                                    "description": "Fiat processing fee"
-                                                },
-                                                "gasFee": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "type": {
-                                                            "type": "string",
-                                                            "enum": [
-                                                                "fern",
-                                                                "fiat",
-                                                                "gas"
-                                                            ],
-                                                            "description": "The type of fee"
                                                         },
-                                                        "currency": {
-                                                            "type": "string",
-                                                            "description": "Currency the fee is denominated in",
-                                                            "example": "USD"
-                                                        },
-                                                        "amount": {
+                                                        "usdAmount": {
                                                             "type": "number",
-                                                            "description": "Amount of this fee that was applied",
+                                                            "description": "Amount of this fee that was applied in USD",
                                                             "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
-                                                    "description": "Gas fee for the transaction"
+                                                    "description": "Fee charged by application developer"
                                                 }
                                             },
+                                            "required": [
+                                                "fernFee"
+                                            ],
                                             "description": "Detailed breakdown of all fees associated with the transaction",
                                             "title": "Transaction Fees"
                                         }
@@ -1167,17 +1140,14 @@
                                                 "fernFee": {
                                                     "type": "fern",
                                                     "currency": "USD",
-                                                    "amount": 0.5
+                                                    "amount": 20.5,
+                                                    "usdAmount": 20.5
                                                 },
-                                                "fiatFee": {
-                                                    "type": "fiat",
+                                                "developerFee": {
+                                                    "type": "developer",
                                                     "currency": "USD",
-                                                    "amount": 20
-                                                },
-                                                "gasFee": {
-                                                    "type": "gas",
-                                                    "currency": "USD",
-                                                    "amount": 0
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             }
                                         }
@@ -1194,17 +1164,14 @@
                                                 "fernFee": {
                                                     "type": "fern",
                                                     "currency": "USDC",
-                                                    "amount": 0.075
+                                                    "amount": 0.075,
+                                                    "usdAmount": 0.08
                                                 },
-                                                "fiatFee": {
-                                                    "type": "fiat",
+                                                "developerFee": {
+                                                    "type": "developer",
                                                     "currency": "USDC",
-                                                    "amount": 0
-                                                },
-                                                "gasFee": {
-                                                    "type": "gas",
-                                                    "currency": "USDC",
-                                                    "amount": 0
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             }
                                         }
@@ -1218,7 +1185,6 @@
         },
         "/api/v0/customers": {
             "post": {
-                "description": "Create a new customer and get their KYC verification link",
                 "tags": [
                     "KYB/C"
                 ],
@@ -1285,7 +1251,7 @@
                                         "customerId": {
                                             "type": "string",
                                             "description": "Unique identifier for the created customer",
-                                            "example": "cust_123abc"
+                                            "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
                                         },
                                         "customerStatus": {
                                             "type": "string",
@@ -1316,7 +1282,6 @@
         },
         "/api/v0/customers/{customerId}": {
             "get": {
-                "description": "Get customer details",
                 "tags": [
                     "KYB/C"
                 ],
@@ -1325,7 +1290,7 @@
                         "schema": {
                             "type": "string",
                             "description": "Unique identifier of the customer",
-                            "example": "cust_123abc"
+                            "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
                         },
                         "required": true,
                         "name": "customerId",
@@ -1379,7 +1344,6 @@
         },
         "/api/v0/transactions": {
             "post": {
-                "description": "Create a new transaction",
                 "tags": [
                     "Transactions"
                 ],
@@ -1392,18 +1356,18 @@
                                     "quoteId": {
                                         "type": "string",
                                         "description": "Identifier of the quote to initiate the transaction",
-                                        "example": "quote123"
+                                        "example": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
                                     },
                                     "customerId": {
                                         "type": "string",
                                         "description": "Unique identifier of the customer",
-                                        "example": "customer456"
+                                        "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
                                     },
                                     "correlationId": {
                                         "type": "string",
                                         "nullable": true,
-                                        "description": "Unique identifier for transaction tracking",
-                                        "example": "correlation789"
+                                        "description": "Optional: You can add your own correlationId to match the transaction to your own internal records.",
+                                        "example": "03b7030f-6da1-4e76-3352-3debd82112c8"
                                     }
                                 },
                                 "required": [
@@ -1414,7 +1378,7 @@
                                 "title": "Create Transaction Schema"
                             },
                             "example": {
-                                "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+                                "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
                                 "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
                             }
                         }
@@ -1428,10 +1392,15 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
+                                        "quoteId": {
+                                            "type": "string",
+                                            "description": "Identifier of the quote to initiate the transaction",
+                                            "example": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+                                        },
                                         "transactionId": {
                                             "type": "string",
                                             "description": "Unique identifier of the transaction",
-                                            "example": "transaction101"
+                                            "example": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7"
                                         },
                                         "status": {
                                             "type": "string",
@@ -1451,8 +1420,8 @@
                                         },
                                         "correlationId": {
                                             "type": "string",
-                                            "description": "Unique identifier for transaction tracking",
-                                            "example": "correlation789"
+                                            "description": "Optional: You can add your own correlationId to match the transaction to your own internal records.",
+                                            "example": "03b7030f-6da1-4e76-3352-3debd82112c8"
                                         },
                                         "fees": {
                                             "type": "object",
@@ -1464,8 +1433,7 @@
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -1478,24 +1446,29 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
+                                                        },
+                                                        "usdAmount": {
+                                                            "type": "number",
+                                                            "description": "Amount of this fee that was applied in USD",
+                                                            "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
                                                     "description": "Fee charged by Fern"
                                                 },
-                                                "fiatFee": {
+                                                "developerFee": {
                                                     "type": "object",
                                                     "properties": {
                                                         "type": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -1508,46 +1481,25 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "type",
-                                                        "currency",
-                                                        "amount"
-                                                    ],
-                                                    "description": "Fiat processing fee"
-                                                },
-                                                "gasFee": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "type": {
-                                                            "type": "string",
-                                                            "enum": [
-                                                                "fern",
-                                                                "fiat",
-                                                                "gas"
-                                                            ],
-                                                            "description": "The type of fee"
                                                         },
-                                                        "currency": {
-                                                            "type": "string",
-                                                            "description": "Currency the fee is denominated in",
-                                                            "example": "USD"
-                                                        },
-                                                        "amount": {
+                                                        "usdAmount": {
                                                             "type": "number",
-                                                            "description": "Amount of this fee that was applied",
+                                                            "description": "Amount of this fee that was applied in USD",
                                                             "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
-                                                    "description": "Gas fee for the transaction"
+                                                    "description": "Fee charged by application developer"
                                                 }
                                             },
+                                            "required": [
+                                                "fernFee"
+                                            ],
                                             "description": "Detailed breakdown of all fees associated with the transaction",
                                             "title": "Transaction Fees"
                                         },
@@ -1585,12 +1537,33 @@
                                                             "pattern": "^0x[a-fA-F0-9]{40}$",
                                                             "description": "Wallet address to which funds should be sent (valid EVM address)",
                                                             "example": "0x123abc123abc123abc123abc123abc123abc123a"
+                                                        },
+                                                        "sendingAmountDetails": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "amount": {
+                                                                    "type": "number",
+                                                                    "description": "Amount of the sending currency to send",
+                                                                    "example": 0.5
+                                                                },
+                                                                "currency": {
+                                                                    "type": "string",
+                                                                    "description": "Currency code of the sending currency",
+                                                                    "example": "USDC"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "amount",
+                                                                "currency"
+                                                            ],
+                                                            "description": "Details of the sending currency"
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "paymentRail",
-                                                        "transferWalletAddress"
+                                                        "transferWalletAddress",
+                                                        "sendingAmountDetails"
                                                     ],
                                                     "description": "Instructions for the customer to initiate the offramp",
                                                     "title": "Transfer Instructions"
@@ -1663,6 +1636,7 @@
                                         }
                                     },
                                     "required": [
+                                        "quoteId",
                                         "transactionId",
                                         "status",
                                         "receivingAmount",
@@ -1677,32 +1651,40 @@
                                     "example1": {
                                         "summary": "Offramp transaction response",
                                         "value": {
-                                            "id": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
+                                            "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96",
+                                            "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
                                             "status": "PROCESSING",
                                             "receivingAmount": 79.5,
                                             "fees": {
                                                 "fernFee": {
                                                     "type": "fern",
                                                     "currency": "USD",
-                                                    "amount": 0.5
+                                                    "amount": 20.5,
+                                                    "usdAmount": 20.5
                                                 },
-                                                "gasFee": {
-                                                    "type": "gas",
+                                                "developerFee": {
+                                                    "type": "developer",
                                                     "currency": "USD",
-                                                    "amount": 0
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             },
                                             "exchangeRate": 1,
                                             "transferInstructions": {
                                                 "type": "offramp",
                                                 "paymentRail": "ethereum",
-                                                "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
+                                                "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba5",
+                                                "sendingAmountDetails": {
+                                                    "amount": 100,
+                                                    "currency": "USDC"
+                                                }
                                             }
                                         }
                                     },
                                     "example2": {
                                         "summary": "Onramp transaction response",
                                         "value": {
+                                            "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
                                             "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
                                             "status": "AWAITING_TRANSFER",
                                             "receivingAmount": 99.25,
@@ -1740,7 +1722,6 @@
         },
         "/api/v0/transactions/{transactionId}": {
             "get": {
-                "description": "Get transaction",
                 "tags": [
                     "Transactions"
                 ],
@@ -1749,7 +1730,7 @@
                         "schema": {
                             "type": "string",
                             "description": "Unique identifier of the transaction",
-                            "example": "tx_123abc"
+                            "example": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7"
                         },
                         "required": true,
                         "name": "transactionId",
@@ -1764,10 +1745,15 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
+                                        "quoteId": {
+                                            "type": "string",
+                                            "description": "Identifier of the quote to initiate the transaction",
+                                            "example": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+                                        },
                                         "transactionId": {
                                             "type": "string",
                                             "description": "Unique identifier of the transaction",
-                                            "example": "transaction101"
+                                            "example": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7"
                                         },
                                         "status": {
                                             "type": "string",
@@ -1787,8 +1773,8 @@
                                         },
                                         "correlationId": {
                                             "type": "string",
-                                            "description": "Unique identifier for transaction tracking",
-                                            "example": "correlation789"
+                                            "description": "Optional: You can add your own correlationId to match the transaction to your own internal records.",
+                                            "example": "03b7030f-6da1-4e76-3352-3debd82112c8"
                                         },
                                         "fees": {
                                             "type": "object",
@@ -1800,8 +1786,7 @@
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -1814,24 +1799,29 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
+                                                        },
+                                                        "usdAmount": {
+                                                            "type": "number",
+                                                            "description": "Amount of this fee that was applied in USD",
+                                                            "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
                                                     "description": "Fee charged by Fern"
                                                 },
-                                                "fiatFee": {
+                                                "developerFee": {
                                                     "type": "object",
                                                     "properties": {
                                                         "type": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "fern",
-                                                                "fiat",
-                                                                "gas"
+                                                                "developer"
                                                             ],
                                                             "description": "The type of fee"
                                                         },
@@ -1844,46 +1834,25 @@
                                                             "type": "number",
                                                             "description": "Amount of this fee that was applied",
                                                             "example": 5.45
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "type",
-                                                        "currency",
-                                                        "amount"
-                                                    ],
-                                                    "description": "Fiat processing fee"
-                                                },
-                                                "gasFee": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "type": {
-                                                            "type": "string",
-                                                            "enum": [
-                                                                "fern",
-                                                                "fiat",
-                                                                "gas"
-                                                            ],
-                                                            "description": "The type of fee"
                                                         },
-                                                        "currency": {
-                                                            "type": "string",
-                                                            "description": "Currency the fee is denominated in",
-                                                            "example": "USD"
-                                                        },
-                                                        "amount": {
+                                                        "usdAmount": {
                                                             "type": "number",
-                                                            "description": "Amount of this fee that was applied",
+                                                            "description": "Amount of this fee that was applied in USD",
                                                             "example": 5.45
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "currency",
-                                                        "amount"
+                                                        "amount",
+                                                        "usdAmount"
                                                     ],
-                                                    "description": "Gas fee for the transaction"
+                                                    "description": "Fee charged by application developer"
                                                 }
                                             },
+                                            "required": [
+                                                "fernFee"
+                                            ],
                                             "description": "Detailed breakdown of all fees associated with the transaction",
                                             "title": "Transaction Fees"
                                         },
@@ -1921,12 +1890,33 @@
                                                             "pattern": "^0x[a-fA-F0-9]{40}$",
                                                             "description": "Wallet address to which funds should be sent (valid EVM address)",
                                                             "example": "0x123abc123abc123abc123abc123abc123abc123a"
+                                                        },
+                                                        "sendingAmountDetails": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "amount": {
+                                                                    "type": "number",
+                                                                    "description": "Amount of the sending currency to send",
+                                                                    "example": 0.5
+                                                                },
+                                                                "currency": {
+                                                                    "type": "string",
+                                                                    "description": "Currency code of the sending currency",
+                                                                    "example": "USDC"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "amount",
+                                                                "currency"
+                                                            ],
+                                                            "description": "Details of the sending currency"
                                                         }
                                                     },
                                                     "required": [
                                                         "type",
                                                         "paymentRail",
-                                                        "transferWalletAddress"
+                                                        "transferWalletAddress",
+                                                        "sendingAmountDetails"
                                                     ],
                                                     "description": "Instructions for the customer to initiate the offramp",
                                                     "title": "Transfer Instructions"
@@ -1999,6 +1989,7 @@
                                         }
                                     },
                                     "required": [
+                                        "quoteId",
                                         "transactionId",
                                         "status",
                                         "receivingAmount",
@@ -2013,32 +2004,40 @@
                                     "example1": {
                                         "summary": "Offramp transaction response",
                                         "value": {
-                                            "id": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
+                                            "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96",
+                                            "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
                                             "status": "PROCESSING",
                                             "receivingAmount": 79.5,
                                             "fees": {
                                                 "fernFee": {
                                                     "type": "fern",
                                                     "currency": "USD",
-                                                    "amount": 0.5
+                                                    "amount": 20.5,
+                                                    "usdAmount": 20.5
                                                 },
-                                                "gasFee": {
-                                                    "type": "gas",
+                                                "developerFee": {
+                                                    "type": "developer",
                                                     "currency": "USD",
-                                                    "amount": 0
+                                                    "amount": 0,
+                                                    "usdAmount": 0
                                                 }
                                             },
                                             "exchangeRate": 1,
                                             "transferInstructions": {
                                                 "type": "offramp",
-                                                "paymentRail": "ethereum",
-                                                "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
+                                                "paymentRail": "sepolia",
+                                                "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+                                                "sendingAmountDetails": {
+                                                    "amount": 100,
+                                                    "currency": "USDC"
+                                                }
                                             }
                                         }
                                     },
                                     "example2": {
                                         "summary": "Onramp transaction response",
                                         "value": {
+                                            "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
                                             "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
                                             "status": "AWAITING_TRANSFER",
                                             "receivingAmount": 99.25,
