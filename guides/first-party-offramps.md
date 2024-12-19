@@ -41,7 +41,7 @@ For more details, visit the **Quotes** section.
 curl --location 'https://app.fernhq.com/api/v0/quotes/'
 --header 'Content-Type: application/json'
 --header 'Authorization: Bearer <API_TOKEN>'
---data '{ "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5", "sendingAmount": 100, "source": { "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5", "paymentRail": "base", "currency": "USDC" }, "destination": { "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0", "paymentRail": "wire", "currency": "USD" } }'
+--data '{ "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8", "sendingAmount": 100, "source": { "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA", "paymentRail": "base", "currency": "USDC" }, "destination": { "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77", "paymentRail": "wire", "currency": "USD" } }'
 ```
 {% endtab %}
 
@@ -52,15 +52,15 @@ myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", "Bearer <API_TOKEN>");
 
 const raw = JSON.stringify({
-  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "sendingAmount": 100,
   "source": {
-    "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+    "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
     "paymentRail": "ethereum",
     "currency": "USDC"
   },
   "destination": {
-    "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+    "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
     "paymentRail": "wire",
     "currency": "USD"
   }
@@ -87,15 +87,15 @@ import json
 
 conn = http.client.HTTPConnection("https://app.fernhq.com")
 payload = json.dumps({
-  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "sendingAmount": 100,
   "source": {
-    "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+    "walletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA",
     "paymentRail": "ethereum",
     "currency": "USDC"
   },
   "destination": {
-    "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+    "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
     "paymentRail": "wire",
     "currency": "USD"
   }
@@ -160,7 +160,7 @@ curl --location 'https://app.fernhq.com/api/v0/transactions/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
-    "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+    "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
     "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
 }'
 ```
@@ -173,7 +173,7 @@ myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", "Bearer fsk_ZGM5MDNmNDgtNjQzZi00NDdlLWEwNDktNjcwMDUzZGIyNWFkXzQxM2UwZTRhOWRiZjI2YjhhYzUyMjBkMzBmZWMzMzhmN2ZmOTE1NzYxMDEzYWZiNjA3OGQxNzNlNjA1YmUyMzI");
 
 const raw = JSON.stringify({
-  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
 });
 
@@ -198,7 +198,7 @@ import json
 
 conn = http.client.HTTPSConnection("app.fernhq.com")
 payload = json.dumps({
-  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
 })
 headers = {
@@ -236,7 +236,7 @@ print(data.decode("utf-8"))
     "transferInstructions": {
         "type": "offramp",
         "paymentRail": "ethereum",
-        "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
+        "transferWalletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA"
     }
 }
 ```
@@ -319,7 +319,7 @@ print(data.decode("utf-8"))
     "transferInstructions": {
         "type": "offramp",
         "paymentRail": "ethereum",
-        "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5"
+        "transferWalletAddress": "0xBF50FB9C99233f95bcE213044507e58485Cf9EBA"
     }
 }
 ```
