@@ -27,7 +27,7 @@
   * [Requirements for Businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
-* [Third-party payments (Coming soon)](guides/third-party-payments-coming-soon.md)
+* [Third-party payments (coming soon)](guides/third-party-payments-coming-soon.md)
 
 ## API reference
 

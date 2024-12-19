@@ -1,7 +1,7 @@
-# Third-party payments (Coming soon)
+# Third-party payments (coming soon)
 
 Third-party payments allow your customers to convert crypto to fiat and pay out via local payment rails. This feature is particularly useful for supporting cross-border transactions, such as contractor or vendor payments.
 
 To initiate a third-party payment to another beneficiary, use the [**Quotes API**](../api-reference/quotes.md) and [**Transactions API**](../api-reference/transactions/), just as you would for onramps and offramps.
 
-If you're interested in enabling this feature, please contact us at support@fernhq.com.
+If you're interested in enabling this feature, please contact us at [hello@fernhq.com](mailto:hello@fernhq.com).
