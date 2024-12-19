@@ -116,28 +116,25 @@ print(data.decode("utf-8"))
 
 ```json
 {
-    "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
-    "exchangeRate": 1,
-    "receivingAmount": 79.5,
-    "minGuaranteedReceivingAmount": 79.5,
-    "expiresAt": "2024-12-19T00:29:27.355Z",
-    "fees": {
-        "fernFee": {
-            "type": "fern",
-            "currency": "USD",
-            "amount": 0.5
-        },
-        "fiatFee": {
-            "type": "fiat",
-            "currency": "USD",
-            "amount": 20
-        },
-        "gasFee": {
-            "type": "gas",
-            "currency": "USD",
-            "amount": 0
-        }
-    }
+  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
+  "exchangeRate": 1,
+  "receivingAmount": 79.5,
+  "minGuaranteedReceivingAmount": 79.5,
+  "expiresAt": "2024-12-19T00:29:27.355Z",
+  "fees": {
+    "fernFee": {
+      "type": "fern",
+      "currency": "USD",
+      "amount": 20.5,
+      "usdAmount": 20.5
+    },
+    "developerFee": {
+      "type": "developer",
+      "currency": "USD",
+      "amount": 0,
+      "usdAmount": 0,
+    },
+  }
 }
 ```
 
@@ -217,27 +214,34 @@ print(data.decode("utf-8"))
 
 ```json
 {
-    "id": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
-    "status": "PROCESSING",
-    "receivingAmount": 79.5,
-    "fees": {
-        "fernFee": {
-            "type": "fern",
-            "currency": "USD",
-            "amount": 0.5
-        },
-        "gasFee": {
-            "type": "gas",
-            "currency": "USD",
-            "amount": 0
-        }
+  "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
+  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
+  "status": "PROCESSING",
+  "receivingAmount": 79.5,
+  "fees": {
+    "fernFee": {
+      "type": "fern",
+      "currency": "USD",
+      "amount": 20.5,
+      "usdAmount": 20.5
     },
-    "exchangeRate": 1,
-    "transferInstructions": {
-        "type": "offramp",
-        "paymentRail": "ethereum",
-        "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba"
+    "developerFee": {
+      "type": "developer",
+      "currency": "USD",
+      "amount": 0,
+      "usdAmount": 0,
+    },
+  }
+  "exchangeRate": 1,
+  "transferInstructions": {
+    "type": "offramp",
+    "paymentRail": "ethereum",
+    "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
+    "sendingAmountDetails": {
+      "amount": 100,
+      "currency": "USDC",
     }
+  }
 }
 ```
 
@@ -300,27 +304,34 @@ print(data.decode("utf-8"))
 
 ```json
 {
-    "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
-    "status": "PROCESSING",
-    "receivingAmount": 79.5,
-    "fees": {
-        "fernFee": {
-            "type": "fern",
-            "currency": "USD",
-            "amount": 0.5
-        },
-        "gasFee": {
-            "type": "gas",
-            "currency": "USD",
-            "amount": 0
-        }
+  "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
+  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
+  "status": "PROCESSING",
+  "receivingAmount": 79.5,
+  "fees": {
+    "fernFee": {
+      "type": "fern",
+      "currency": "USD",
+      "amount": 20.5,
+      "usdAmount": 20.5
     },
-    "exchangeRate": 1,
-    "transferInstructions": {
-        "type": "offramp",
-        "paymentRail": "ethereum",
-        "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba"
+    "developerFee": {
+      "type": "developer",
+      "currency": "USD",
+      "amount": 0,
+      "usdAmount": 0,
+    },
+  }
+  "exchangeRate": 1,
+  "transferInstructions": {
+    "type": "offramp",
+    "paymentRail": "ethereum",
+    "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
+    "sendingAmountDetails": {
+      "amount": 100,
+      "currency": "USDC",
     }
+  }
 }
 ```
 

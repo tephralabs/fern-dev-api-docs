@@ -38,7 +38,7 @@ curl --location 'https://app.fernhq.com/api/v0/quotes/' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
     "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
-    "sendingAmount": 10,
+    "sendingAmount": 100,
     "source": {
         "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
         "paymentRail": "wire",
@@ -124,28 +124,25 @@ print(data.decode("utf-8"))
 
 ```json
 {
-    "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
-    "exchangeRate": 1,
-    "receivingAmount": 9.925,
-    "minGuaranteedReceivingAmount": 9.925,
-    "expiresAt": "2024-12-19T01:04:54.783Z",
-    "fees": {
-        "fernFee": {
-            "type": "fern",
-            "currency": "USDC",
-            "amount": 0.075
-        },
-        "fiatFee": {
-            "type": "fiat",
-            "currency": "USDC",
-            "amount": 0
-        },
-        "gasFee": {
-            "type": "gas",
-            "currency": "USDC",
-            "amount": 0
-        }
+  "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
+  "exchangeRate": 1,
+  "receivingAmount": 99.25,
+  "minGuaranteedReceivingAmount": 99.25,
+  "expiresAt": "2024-12-19T01:04:54.783Z",
+  "fees": {
+    "fernFee": {
+      "type": "fern",
+      "currency": "USDC",
+      "amount": 0.75,
+      "usdAmount": 0.75
+    },
+    "developerFee": {
+      "type": "developer",
+      "currency": "USDC",
+      "amount": 0,
+      "usdAmount": 0
     }
+  }
 }
 ```
 
@@ -225,26 +222,29 @@ print(data.decode("utf-8"))
 
 ```json
 {
+  "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
   "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
   "status": "AWAITING_TRANSFER",
   "receivingAmount": 99.25,
   "fees": {
     "fernFee": {
       "type": "fern",
-      "currency": "USD",
-      "amount": 0.75
+      "currency": "USDC",
+      "amount": 0.75,
+      "usdAmount": 0.75
     },
-    "gasFee": {
-      "type": "gas",
-      "currency": "USD",
-      "amount": 0
+    "developerFee": {
+      "type": "developer",
+      "currency": "USDC",
+      "amount": 0,
+      "usdAmount": 0
     }
   },
   "exchangeRate": 1,
   "transferInstructions": {
     "type": "onramp",
     "paymentRail": "wire",
-    "transferMessage": "test onramp",
+    "transferMessage": "Test onramp wire",
     "transferBankName": "Chase",
     "transferBankAddress": "10 Downing Steet",
     "transferBankRoutingNumber": "1234",
@@ -315,26 +315,29 @@ print(data.decode("utf-8"))
 
 ```json
 {
+  "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
   "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
   "status": "AWAITING_TRANSFER",
   "receivingAmount": 99.25,
   "fees": {
     "fernFee": {
       "type": "fern",
-      "currency": "USD",
-      "amount": 0.75
+      "currency": "USDC",
+      "amount": 0.75,
+      "usdAmount": 0.75
     },
-    "gasFee": {
-      "type": "gas",
-      "currency": "USD",
-      "amount": 0
+    "developerFee": {
+      "type": "developer",
+      "currency": "USDC",
+      "amount": 0,
+      "usdAmount": 0
     }
   },
   "exchangeRate": 1,
   "transferInstructions": {
     "type": "onramp",
     "paymentRail": "wire",
-    "transferMessage": "test onramp",
+    "transferMessage": "Test onramp wire",
     "transferBankName": "Chase",
     "transferBankAddress": "10 Downing Steet",
     "transferBankRoutingNumber": "1234",
