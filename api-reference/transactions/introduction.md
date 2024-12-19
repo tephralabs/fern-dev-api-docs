@@ -6,22 +6,38 @@ Each transaction must have a minimum value of **$10**, calculated based on the s
 
 ## Transaction statuses
 
-| Status       | Definition                                                              |
-| ------------ | ----------------------------------------------------------------------- |
-| `Created`    |  Validated and created successfully.                                    |
-| `Processing` | Processing is ongoing.                                                  |
-| `Completed`  | Successful completion.                                                  |
-| `Failed`     | Transaction has failed, and funds are returned to the sending address.  |
+| Status       | Definition                                                            |
+| ------------ | --------------------------------------------------------------------- |
+| `Created`    | Validated and created successfully                                    |
+| `Processing` | Processing is ongoing, funds have been received                       |
+| `Completed`  | Successful completion                                                 |
+| `Failed`     | Transaction has failed, and funds are returned to the sending address |
 
 ## Notifications
 
-Fern notifies customers via email at <mark style="color:red;">all steps</mark> of the transaction (except `Processing`) to keep them fully aware of the progress.
+Fern notifies customers via email at various steps of the transaction to keep them fully aware of the progress.
 
-Additionally, you can use webhook events to trigger your own notifications, offering in-context guidance and next steps tailored to each customer state.
+**Onramps:**&#x20;
+
+| Status       | Email content                                    |
+| ------------ | ------------------------------------------------ |
+| `Created`    | Transfer instructions are sent to the customer   |
+| `Processing` | Funds have been received at the transfer address |
+| `Completed`  | Transaction has been completed                   |
+
+**Offramps:**
+
+| Status       | Email content                                    |
+| ------------ | ------------------------------------------------ |
+| `Processing` | Funds have been received at the transfer address |
+| `Completed`  | Transaction has been completed                   |
+| `Failed`     | Transaction has failed                           |
+
+Additionally, you can use webhook events to trigger your own notifications, offering in-context guidance and next steps tailored to each customer state. (Coming soon)
 
 ## Transaction failures
 
-In rare instances, transactions may fail. When this happens, any received funds will be returned to the sending address, and the transaction will need to be re-initiated. The **GET /transactions** endpoint provides the failure reason, allowing you to address the issue and take corrective action.
+In rare instances, transactions may fail. When this happens, any received funds will be returned to the sending address, and the transaction will need to be re-initiated. The **GET /transactions** endpoint provides the failure reason, allowing you to address the issue and take corrective action. The failure reason will also be available in the developer dashboard.&#x20;
 
 ### Possible failure reasons
 

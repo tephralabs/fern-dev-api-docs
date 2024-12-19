@@ -16,7 +16,9 @@ Create either a business or individual customer via the [**Customers API**](../.
 
 Upon successful customer creation, a hosted KYC link requesting the required information to fill in will be generated. This may be distributed to your end-user for completion, or it can be completed on the customer's behalf by your team.&#x20;
 
-Typically, individuals take 5 minutes to complete the form, and business take 10-15 minutes. ([Sample KYC link](https://app.gitbook.com/o/tqA83i7VnVJ0rFiSNcBO/s/PNfGZh0Pi9izjESrZ2DP/) | [Sample KYB link](https://app.gitbook.com/u/Js7P0SWRFOVcMapukd7GzE5D63w2))&#x20;
+Typically, individuals take 5 minutes to complete the form, and business take 10-15 minutes.&#x20;
+
+<mark style="color:red;">Put screenshots</mark>
 {% endstep %}
 
 {% step %}
@@ -25,7 +27,7 @@ Typically, individuals take 5 minutes to complete the form, and business take 10
 The status of the customer will be automatically updated (webhooks coming soon). Should additional information be needed from your end-user, we will contact them directly to alleviate any action on your part.
 
 {% hint style="info" %}
-If your customer has already been verified by Fern (e.g., they are an existing Fern customer), their status will be automatically updated to **Active**.
+If your customer has already been verified by Fern (e.g. they are an existing Fern customer), their status will be automatically updated from **Created** to **Active**.
 {% endhint %}
 
 
