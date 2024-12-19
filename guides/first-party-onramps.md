@@ -28,9 +28,130 @@ To fetch a proposed price for a currency conversion, use the **Quotes** endpoint
 
 For more details, check out the **Quotes** section.
 
+#### Request
+
+{% tabs %}
+{% tab title="cURL" %}
 ```
-// Perhaps some code on how to generate quotes?
+curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API_TOKEN>' \
+--data '{
+    "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+    "sendingAmount": 10,
+    "source": {
+        "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+        "paymentRail": "wire",
+        "currency": "USD"
+    },
+    "destination": {
+        "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+        "paymentRail": "sepolia",
+        "currency": "USDC"
+    }
+}'
 ```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Bearer <API_TOKEN>");
+
+const raw = JSON.stringify({
+  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "sendingAmount": 10,
+  "source": {
+    "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+    "paymentRail": "wire",
+    "currency": "USD"
+  },
+  "destination": {
+    "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+    "paymentRail": "sepolia",
+    "currency": "USDC"
+  }
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/quotes/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import http.client
+import json
+
+conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+payload = json.dumps({
+  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "sendingAmount": 10,
+  "source": {
+    "bankAccountId": "a79f75i1-d2a5-49ca-8bb4-5edf0b965cd8user5bank0",
+    "paymentRail": "wire",
+    "currency": "USD"
+  },
+  "destination": {
+    "walletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
+    "paymentRail": "sepolia",
+    "currency": "USDC"
+  }
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer <API_TOKEN>'
+}
+conn.request("POST", "/api/v0/quotes/", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+```
+{% endtab %}
+{% endtabs %}
+
+#### Response
+
+````json
+```json
+{
+    "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96",
+    "exchangeRate": 1,
+    "receivingAmount": 9.925,
+    "minGuaranteedReceivingAmount": 9.925,
+    "expiresAt": "2024-12-19T01:04:54.783Z",
+    "fees": {
+        "fernFee": {
+            "type": "fern",
+            "currency": "USDC",
+            "amount": 0.075
+        },
+        "fiatFee": {
+            "type": "fiat",
+            "currency": "USDC",
+            "amount": 0
+        },
+        "gasFee": {
+            "type": "gas",
+            "currency": "USDC",
+            "amount": 0
+        }
+    }
+}
+```
+````
+
+
 {% endstep %}
 
 {% step %}
@@ -40,9 +161,104 @@ To create a transaction, use the **quoteID** to generate an order for fulfillmen
 
 For more details, check out the [**Transactions**](../api-reference/transactions/) section.
 
+#### Request
+
+{% tabs %}
+{% tab title="cURL" %}
 ```
-// Perhaps some code on how to submit transaction?
+curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API_TOKEN>' \
+--data '{
+    "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+    "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+}'
 ```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Bearer <API_TOKEN>");
+
+const raw = JSON.stringify({
+  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import http.client
+import json
+
+conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+payload = json.dumps({
+  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer <API_TOKEN>'
+}
+conn.request("POST", "/api/v0/transactions/", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+```
+{% endtab %}
+{% endtabs %}
+
+#### Response
+
+````json
+```json
+{
+  "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
+  "status": "AWAITING_TRANSFER",
+  "receivingAmount": 99.25,
+  "fees": {
+    "fernFee": {
+      "type": "fern",
+      "currency": "USD",
+      "amount": 0.75
+    },
+    "gasFee": {
+      "type": "gas",
+      "currency": "USD",
+      "amount": 0
+    }
+  },
+  "exchangeRate": 1,
+  "transferInstructions": {
+    "type": "onramp",
+    "paymentRail": "wire",
+    "transferMessage": "test onramp",
+    "transferBankName": "Chase",
+    "transferBankAddress": "10 Downing Steet",
+    "transferBankRoutingNumber": "1234",
+    "transferBankAccountNumber": "10029000",
+    "transferBankBeneficiaryName": "Fern Money"
+  }
+}
+```
+````
+
+
 {% endstep %}
 
 {% step %}
@@ -52,9 +268,106 @@ Track the progress of a transaction by calling the **Transactions endpoint** or 
 
 For a full list of transaction statuses, refer to the **Transaction Statuses Documentation**.
 
+#### Request
+
+{% tabs %}
+{% tab title="cURL" %}
 ```
-// Perhaps some code on how to track transaction status?
+curl --location 'https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API_TOKEN>' \
+--data '{
+    "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+    "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+}'
 ```
+
+
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Bearer <API_TOKEN>");
+
+const raw = JSON.stringify({
+  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://fern-git-feat-devprod-tephra-labs.vercel.app/api/v0/transactions/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import http.client
+import json
+
+conn = http.client.HTTPSConnection("fern-git-feat-devprod-tephra-labs.vercel.app")
+payload = json.dumps({
+  "customerId": "c2b7c8d0-5c3a-11ec-8d3d-0242ac1account5",
+  "quoteId": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer <API_TOKEN>'
+}
+conn.request("POST", "/api/v0/transactions/", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+```
+{% endtab %}
+{% endtabs %}
+
+#### Response
+
+````json
+```json
+{
+  "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
+  "status": "AWAITING_TRANSFER",
+  "receivingAmount": 99.25,
+  "fees": {
+    "fernFee": {
+      "type": "fern",
+      "currency": "USD",
+      "amount": 0.75
+    },
+    "gasFee": {
+      "type": "gas",
+      "currency": "USD",
+      "amount": 0
+    }
+  },
+  "exchangeRate": 1,
+  "transferInstructions": {
+    "type": "onramp",
+    "paymentRail": "wire",
+    "transferMessage": "test onramp",
+    "transferBankName": "Chase",
+    "transferBankAddress": "10 Downing Steet",
+    "transferBankRoutingNumber": "1234",
+    "transferBankAccountNumber": "10029000",
+    "transferBankBeneficiaryName": "Fern Money"
+  }
+}
+```
+````
+
+
 {% endstep %}
 {% endstepper %}
 
