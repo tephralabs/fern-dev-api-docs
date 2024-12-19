@@ -215,7 +215,10 @@ print(data.decode("utf-8"))
   "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
   "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
   "status": "PROCESSING",
-  "receivingAmount": 79.5,
+  "receivingAmountDetails": {
+    "amount" : 79.5,
+    "currency": "USD",
+  },
   "fees": {
     "fernFee": {
       "type": "fern",
@@ -305,7 +308,10 @@ print(data.decode("utf-8"))
   "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
   "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
   "status": "PROCESSING",
-  "receivingAmount": 79.5,
+  "receivingAmountDetails": {
+    "amount" : 79.5,
+    "currency": "USD",
+  },
   "fees": {
     "fernFee": {
       "type": "fern",

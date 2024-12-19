@@ -225,7 +225,10 @@ print(data.decode("utf-8"))
   "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
   "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
   "status": "AWAITING_TRANSFER",
-  "receivingAmount": 99.25,
+  "receivingAmountDetails": {
+    "amount": 99.25,
+    "currency": "USDC",
+  },
   "fees": {
     "fernFee": {
       "type": "fern",
@@ -318,7 +321,10 @@ print(data.decode("utf-8"))
   "quoteId": "072a8b7b-3356-48b5-b2bb-6fca7b618c96",
   "transactionId": "908c4092-3a5e-44c8-ac4e-ad47993f00e9",
   "status": "AWAITING_TRANSFER",
-  "receivingAmount": 99.25,
+  "receivingAmountDetails": {
+    "amount": 99.25,
+    "currency": "USDC",
+  },
   "fees": {
     "fernFee": {
       "type": "fern",
