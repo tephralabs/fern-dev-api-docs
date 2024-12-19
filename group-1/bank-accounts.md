@@ -7,13 +7,19 @@ description: >-
 
 # Bank accounts
 
+## Create a bank account
+
 {% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts" method="post" %}
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
 
+## Update bank account details
+
 {% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts/{bankAccountId}" method="patch" %}
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
+
+## Get bank  account details
 
 {% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts/{bankAccountId}" method="get" %}
 [api.json](../.gitbook/assets/api.json)

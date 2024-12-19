@@ -6,9 +6,15 @@ description: >-
 
 # Transactions
 
+## Create a transaction
+
+Creates a transaction using a given quoteID. QuoteID must be valid and not expired.&#x20;
+
 {% swagger src="../../.gitbook/assets/api.json" path="/api/v0/transactions" method="post" %}
 [api.json](../../.gitbook/assets/api.json)
 {% endswagger %}
+
+## Get transaction details
 
 {% swagger src="../../.gitbook/assets/api.json" path="/api/v0/transactions/{transactionId}" method="get" %}
 [api.json](../../.gitbook/assets/api.json)
