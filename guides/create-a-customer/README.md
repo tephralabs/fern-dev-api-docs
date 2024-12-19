@@ -18,13 +18,15 @@ Upon successful customer creation, a hosted KYC link requesting the required inf
 
 Typically, individuals take 5 minutes to complete the form, and business take 10-15 minutes.&#x20;
 
-<mark style="color:red;">Put screenshots</mark>
+<figure><img src="../../.gitbook/assets/KYC link-1.png" alt=""><figcaption><p>Preview of the hosted KYC link that will be generated. {Company} will be replaced with your business name.</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Check customer status
 
-The status of the customer will be automatically updated (webhooks coming soon). Should additional information be needed from your end-user, we will contact them directly to alleviate any action on your part.
+The status of the customer will be automatically updated (webhooks coming soon). Should additional information be needed from your end-user, we will contact them directly to alleviate any action on your part.&#x20;
+
+For a full list of customer statuses, refer to [**Customer Statuses**](../../api-reference/customers/additional-details.md#customer-statuses).
 
 {% hint style="info" %}
 If your customer has already been verified by Fern (e.g. they are an existing Fern customer), their status will be automatically updated from **Created** to **Active**.

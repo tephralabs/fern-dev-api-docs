@@ -9,7 +9,7 @@
   * [Fiat currencies](overview/supported-coverage/fiat.md)
   * [Cryptocurrencies and networks](overview/supported-coverage/crypto.md)
 * [Fees](overview/fees.md)
-* [Help & support](overview/help-and-support.md)
+* [Help & Support](overview/help-and-support.md)
 
 ## Getting started
 

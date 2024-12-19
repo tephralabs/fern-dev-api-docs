@@ -4,7 +4,7 @@
 
 Fern's first-party offramps enable your customers to convert any ERC-20 into fiat, delivering funds to their bank account via local payment rails. &#x20;
 
-To implement offramps, use the **Quotes API** and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
+To implement offramps, use the [**Quotes API**](../api-reference/quotes.md) and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
 
 For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to the [**Supported Coverage**](../overview/supported-regions-and-currencies.md) section.
 
@@ -24,14 +24,14 @@ Ensure that the beneficiary name and account type matches the customer's details
 {% step %}
 ### Generate quote
 
-To fetch a proposed price for a currency conversion, use the **Quotes** endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for **5 min**. Quotes provide transparent details, including:
+To fetch a proposed price for a currency conversion, use the [**Quotes**](../api-reference/quotes.md) endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for **5 min**. Quotes provide transparent details, including:
 
 * the exact receiving amount,&#x20;
 * fees,&#x20;
 * minimum guaranteed amount,
 * price impact (if applicable).
 
-For more details, visit the **Quotes** section.
+For more details, visit the [**Quotes**](../api-reference/quotes.md) section.
 
 #### Request
 
@@ -249,9 +249,9 @@ print(data.decode("utf-8"))
 {% step %}
 ### Track transaction status
 
-Track the progress of a transaction by calling the **XXX endpoint** or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
+Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the **Developer Dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
 
-For a full list of transaction statuses, refer to the **Transaction Statuses Documentation**.
+For a full list of transaction statuses, refer to [**Transaction Statuses**](../api-reference/transactions/introduction.md#transaction-statuses).
 
 #### Request
 
