@@ -41,12 +41,12 @@ curl --location 'https://app.fernhq.com/api/v0/quotes/' \
     "sendingAmount": 100,
     "source": {
         "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-        "paymentRail": "wire",
+        "paymentMethod": "wire",
         "currency": "USD"
     },
     "destination": {
         "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
-        "paymentRail": "ethereum",
+        "paymentMethod": "ethereum",
         "currency": "USDC"
     }
 }'
@@ -64,12 +64,12 @@ const raw = JSON.stringify({
   "sendingAmount": 10,
   "source": {
     "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-    "paymentRail": "wire",
+    "paymentMethod": "wire",
     "currency": "USD"
   },
   "destination": {
     "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
-    "paymentRail": "ethereum",
+    "paymentMethod": "ethereum",
     "currency": "USDC"
   }
 });
@@ -99,12 +99,12 @@ payload = json.dumps({
   "sendingAmount": 10,
   "source": {
     "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-    "paymentRail": "wire",
+    "paymentMethod": "wire",
     "currency": "USD"
   },
   "destination": {
     "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
-    "paymentRail": "ethereum",
+    "paymentMethod": "ethereum",
     "currency": "USDC"
   }
 })
@@ -246,7 +246,7 @@ print(data.decode("utf-8"))
   "exchangeRate": 1,
   "transferInstructions": {
     "type": "onramp",
-    "paymentRail": "wire",
+    "paymentMethod": "wire",
     "transferMessage": "Test onramp wire",
     "transferBankName": "Chase",
     "transferBankAddress": "10 Downing Steet",
@@ -340,7 +340,7 @@ print(data.decode("utf-8"))
   "exchangeRate": 1,
   "transferInstructions": {
     "type": "onramp",
-    "paymentRail": "wire",
+    "paymentMethod": "wire",
     "transferMessage": "Test onramp wire",
     "transferBankName": "Chase",
     "transferBankAddress": "10 Downing Steet",

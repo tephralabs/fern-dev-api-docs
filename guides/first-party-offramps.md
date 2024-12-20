@@ -41,7 +41,8 @@ For more details, visit the [**Quotes**](../api-reference/quotes.md) section.
 curl --location 'https://app.fernhq.com/api/v0/quotes/'
 --header 'Content-Type: application/json'
 --header 'Authorization: Bearer <API_TOKEN>'
---data '{ "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8", "sendingAmount": 100, "source": { "paymentRail": "base", "currency": "USDC" }, "destination": { "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77", "paymentRail": "wire", "currency": "USD" } }'
+--data '{ "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8", "sendingAmount": 100, "source": { "paymentMethod": "base", "currency": "USDC" }, "destination": { "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77", "paymentMethod": "wire", "currency": "USD" } }'
+
 ```
 {% endtab %}
 
@@ -55,12 +56,12 @@ const raw = JSON.stringify({
   "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "sendingAmount": 100,
   "source": {
-    "paymentRail": "ethereum",
+    "paymentMethod": "ethereum",
     "currency": "USDC"
   },
   "destination": {
     "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-    "paymentRail": "wire",
+    "paymentMethod": "wire",
     "currency": "USD"
   }
 });
@@ -89,12 +90,12 @@ payload = json.dumps({
   "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "sendingAmount": 100,
   "source": {
-    "paymentRail": "ethereum",
+    "paymentMethod": "ethereum",
     "currency": "USDC"
   },
   "destination": {
     "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-    "paymentRail": "wire",
+    "paymentMethod": "wire",
     "currency": "USD"
   }
 })
@@ -236,7 +237,7 @@ print(data.decode("utf-8"))
   "exchangeRate": 1,
   "transferInstructions": {
     "type": "offramp",
-    "paymentRail": "ethereum",
+    "paymentMethod": "ethereum",
     "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
     "sendingAmountDetails": {
       "amount": 100,
@@ -329,7 +330,7 @@ print(data.decode("utf-8"))
   "exchangeRate": 1,
   "transferInstructions": {
     "type": "offramp",
-    "paymentRail": "ethereum",
+    "paymentMethod": "ethereum",
     "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
     "sendingAmountDetails": {
       "amount": 100,
