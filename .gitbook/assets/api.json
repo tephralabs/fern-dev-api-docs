@@ -613,7 +613,7 @@
                                                 "description": "The bank account ID when sending from a bank account.",
                                                 "example": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77"
                                             },
-                                            "paymentRail": {
+                                            "paymentMethod": {
                                                 "anyOf": [
                                                     {
                                                         "type": "string",
@@ -622,7 +622,8 @@
                                                             "ach_same_day",
                                                             "wire"
                                                         ],
-                                                        "description": "The payment rail for the source funds (fiat)",
+                                                        "description": "The payment method for the source funds (fiat)",
+                                                        "title": "Fiat Payment Method",
                                                         "example": "ach"
                                                     },
                                                     {
@@ -634,11 +635,12 @@
                                                             "optimism",
                                                             "polygon"
                                                         ],
-                                                        "description": "The payment rail for the source funds (crypto)",
+                                                        "description": "The payment method for the source funds (crypto)",
+                                                        "title": "Crypto Payment Method",
                                                         "example": "ethereum"
                                                     }
                                                 ],
-                                                "description": "The payment rail for the source funds (crypto or fiat)"
+                                                "description": "The payment method for the source funds (crypto or fiat)"
                                             },
                                             "currency": {
                                                 "type": "string",
@@ -647,7 +649,7 @@
                                             }
                                         },
                                         "required": [
-                                            "paymentRail",
+                                            "paymentMethod",
                                             "currency"
                                         ]
                                     },
@@ -665,7 +667,7 @@
                                                 "description": "The wallet address when sending to a crypto wallet.",
                                                 "example": "0xbf50fb9c99233f95bce213044507e58485cf9eba"
                                             },
-                                            "paymentRail": {
+                                            "paymentMethod": {
                                                 "anyOf": [
                                                     {
                                                         "type": "string",
@@ -674,7 +676,8 @@
                                                             "ach_same_day",
                                                             "wire"
                                                         ],
-                                                        "description": "The payment rail for the destination (fiat)",
+                                                        "description": "The payment method for the source funds (fiat)",
+                                                        "title": "Fiat Payment Method",
                                                         "example": "ach"
                                                     },
                                                     {
@@ -686,11 +689,12 @@
                                                             "optimism",
                                                             "polygon"
                                                         ],
-                                                        "description": "The payment rail for the destination (crypto)",
+                                                        "description": "The payment method for the source funds (crypto)",
+                                                        "title": "Crypto Payment Method",
                                                         "example": "ethereum"
                                                     }
                                                 ],
-                                                "description": "The payment rail for the destination (crypto or fiat)"
+                                                "description": "The payment method for the source funds (crypto or fiat)"
                                             },
                                             "currency": {
                                                 "type": "string",
@@ -709,7 +713,7 @@
                                             }
                                         },
                                         "required": [
-                                            "paymentRail",
+                                            "paymentMethod",
                                             "currency"
                                         ]
                                     },
@@ -760,13 +764,12 @@
                                         "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
                                         "sendingAmount": 100,
                                         "source": {
-                                            "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba5",
-                                            "paymentRail": "ethereum",
+                                            "paymentMethod": "ethereum",
                                             "currency": "USDC"
                                         },
                                         "destination": {
                                             "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-                                            "paymentRail": "wire",
+                                            "paymentMethod": "wire",
                                             "currency": "USD"
                                         }
                                     }
@@ -778,12 +781,12 @@
                                         "sendingAmount": 100,
                                         "source": {
                                             "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-                                            "paymentRail": "wire",
+                                            "paymentMethod": "wire",
                                             "currency": "USD"
                                         },
                                         "destination": {
                                             "walletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba5",
-                                            "paymentRail": "ethereum",
+                                            "paymentMethod": "ethereum",
                                             "currency": "USDC"
                                         }
                                     }
@@ -840,7 +843,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -875,7 +879,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1041,7 +1046,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1076,7 +1082,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1257,6 +1264,7 @@
                                                 "deactivated"
                                             ],
                                             "description": "Current status of the customer account",
+                                            "title": "Customer Status",
                                             "example": "pending"
                                         }
                                     },
@@ -1352,11 +1360,6 @@
                                         "description": "Identifier of the quote to initiate the transaction",
                                         "example": "c88ebfc2-3356-48b5-b2bb-6fca7b618c96"
                                     },
-                                    "customerId": {
-                                        "type": "string",
-                                        "description": "Unique identifier of the customer",
-                                        "example": "03b7030f-6da1-4d76-9352-cdebd82112c8"
-                                    },
                                     "correlationId": {
                                         "type": "string",
                                         "nullable": true,
@@ -1365,8 +1368,7 @@
                                     }
                                 },
                                 "required": [
-                                    "quoteId",
-                                    "customerId"
+                                    "quoteId"
                                 ],
                                 "description": "Schema for creating a new transaction",
                                 "title": "Create Transaction Schema"
@@ -1405,6 +1407,7 @@
                                                 "FAILED"
                                             ],
                                             "description": "Current status of the transaction",
+                                            "title": "Transaction State",
                                             "example": "PROCESSING"
                                         },
                                         "receivingAmountDetails": {
@@ -1443,7 +1446,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1478,7 +1482,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1528,7 +1533,7 @@
                                                             ],
                                                             "example": "offramp"
                                                         },
-                                                        "paymentRail": {
+                                                        "paymentMethod": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "arbitrum",
@@ -1538,6 +1543,7 @@
                                                                 "polygon"
                                                             ],
                                                             "description": "The chain to deposit funds on",
+                                                            "title": "Crypto Payment Method",
                                                             "example": "ethereum"
                                                         },
                                                         "transferWalletAddress": {
@@ -1569,7 +1575,7 @@
                                                     },
                                                     "required": [
                                                         "type",
-                                                        "paymentRail",
+                                                        "paymentMethod",
                                                         "transferWalletAddress",
                                                         "sendingAmountDetails"
                                                     ],
@@ -1585,14 +1591,15 @@
                                                                 "onramp"
                                                             ]
                                                         },
-                                                        "paymentRail": {
+                                                        "paymentMethod": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "ach",
                                                                 "ach_same_day",
                                                                 "wire"
                                                             ],
-                                                            "description": "The fiat payment rail used for the transaction"
+                                                            "description": "The fiat payment Method used for the transaction",
+                                                            "title": "Fiat Payment Method"
                                                         },
                                                         "transferMessage": {
                                                             "type": "string",
@@ -1627,7 +1634,7 @@
                                                     },
                                                     "required": [
                                                         "type",
-                                                        "paymentRail",
+                                                        "paymentMethod",
                                                         "transferMessage",
                                                         "transferBankName",
                                                         "transferBankAddress",
@@ -1683,7 +1690,7 @@
                                             "exchangeRate": 1,
                                             "transferInstructions": {
                                                 "type": "offramp",
-                                                "paymentRail": "ethereum",
+                                                "paymentMethod": "ethereum",
                                                 "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba5",
                                                 "sendingAmountDetails": {
                                                     "amount": 100,
@@ -1719,7 +1726,7 @@
                                             "exchangeRate": 1,
                                             "transferInstructions": {
                                                 "type": "onramp",
-                                                "paymentRail": "wire",
+                                                "paymentMethod": "wire",
                                                 "transferMessage": "test onramp",
                                                 "transferBankName": "Chase",
                                                 "transferBankAddress": "10 Downing Steet",
@@ -1780,6 +1787,7 @@
                                                 "FAILED"
                                             ],
                                             "description": "Current status of the transaction",
+                                            "title": "Transaction State",
                                             "example": "PROCESSING"
                                         },
                                         "receivingAmountDetails": {
@@ -1818,7 +1826,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1853,7 +1862,8 @@
                                                                 "fern",
                                                                 "developer"
                                                             ],
-                                                            "description": "The type of fee"
+                                                            "description": "The type of fee",
+                                                            "title": "Fee Type"
                                                         },
                                                         "currency": {
                                                             "type": "string",
@@ -1903,7 +1913,7 @@
                                                             ],
                                                             "example": "offramp"
                                                         },
-                                                        "paymentRail": {
+                                                        "paymentMethod": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "arbitrum",
@@ -1913,6 +1923,7 @@
                                                                 "polygon"
                                                             ],
                                                             "description": "The chain to deposit funds on",
+                                                            "title": "Crypto Payment Method",
                                                             "example": "ethereum"
                                                         },
                                                         "transferWalletAddress": {
@@ -1944,7 +1955,7 @@
                                                     },
                                                     "required": [
                                                         "type",
-                                                        "paymentRail",
+                                                        "paymentMethod",
                                                         "transferWalletAddress",
                                                         "sendingAmountDetails"
                                                     ],
@@ -1960,14 +1971,15 @@
                                                                 "onramp"
                                                             ]
                                                         },
-                                                        "paymentRail": {
+                                                        "paymentMethod": {
                                                             "type": "string",
                                                             "enum": [
                                                                 "ach",
                                                                 "ach_same_day",
                                                                 "wire"
                                                             ],
-                                                            "description": "The fiat payment rail used for the transaction"
+                                                            "description": "The fiat payment Method used for the transaction",
+                                                            "title": "Fiat Payment Method"
                                                         },
                                                         "transferMessage": {
                                                             "type": "string",
@@ -2002,7 +2014,7 @@
                                                     },
                                                     "required": [
                                                         "type",
-                                                        "paymentRail",
+                                                        "paymentMethod",
                                                         "transferMessage",
                                                         "transferBankName",
                                                         "transferBankAddress",
@@ -2058,7 +2070,7 @@
                                             "exchangeRate": 1,
                                             "transferInstructions": {
                                                 "type": "offramp",
-                                                "paymentRail": "sepolia",
+                                                "paymentMethod": "sepolia",
                                                 "transferWalletAddress": "0x4b6f5a3dfc911e992c3d8f38c6bb9d1563b5e9a5",
                                                 "sendingAmountDetails": {
                                                     "amount": 100,
@@ -2094,7 +2106,7 @@
                                             "exchangeRate": 1,
                                             "transferInstructions": {
                                                 "type": "onramp",
-                                                "paymentRail": "wire",
+                                                "paymentMethod": "wire",
                                                 "transferMessage": "test onramp",
                                                 "transferBankName": "Chase",
                                                 "transferBankAddress": "10 Downing Steet",
