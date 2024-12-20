@@ -6,12 +6,12 @@ Each transaction must have a minimum value of **$10**, calculated based on the s
 
 ## Transaction statuses
 
-| Status       | Definition                                                            |
-| ------------ | --------------------------------------------------------------------- |
-| `Created`    | Validated and created successfully                                    |
-| `Processing` | Processing is ongoing, funds have been received                       |
-| `Completed`  | Successful completion                                                 |
-| `Failed`     | Transaction has failed, and funds are returned to the sending address |
+| Status              | Definition                                                            |
+| ------------------- | --------------------------------------------------------------------- |
+| `Awaiting_transfer` | Validated and created successfully                                    |
+| `Processing`        | Processing is ongoing, funds have been received                       |
+| `Completed`         | Successful completion                                                 |
+| `Failed`            | Transaction has failed, and funds are returned to the sending address |
 
 ## Notifications
 
@@ -19,11 +19,11 @@ Fern notifies customers via email at various steps of the transaction to keep th
 
 **Onramps:**&#x20;
 
-| Status       | Email content                                    |
-| ------------ | ------------------------------------------------ |
-| `Created`    | Transfer instructions are sent to the customer   |
-| `Processing` | Funds have been received at the transfer address |
-| `Completed`  | Transaction has been completed                   |
+| Status              | Email content                                    |
+| ------------------- | ------------------------------------------------ |
+| `Awaiting_transfer` | Transfer instructions are sent to the customer   |
+| `Processing`        | Funds have been received at the transfer address |
+| `Completed`         | Transaction has been completed                   |
 
 **Offramps:**
 
