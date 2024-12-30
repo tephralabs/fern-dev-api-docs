@@ -57,7 +57,6 @@ This is a non-exhaustive list that will grow over time.&#x20;
 <summary>Offramps</summary>
 
 * **Price impact/slippage**: At the time of execution, the receiving amount was less than the minimum guaranteed amount due to slippage or price impact.
-* **Invalid destination bank account**: The specified destination bank account is not valid.
 * **Returned funds**: The destination bank account returned the funds.
 
 </details>
