@@ -47,8 +47,8 @@ This is a non-exhaustive list that will grow over time.&#x20;
 
 <summary>Onramps</summary>
 
-* **Funds source mismatch**: Incoming funds were sent from a bank account other than the one specified in the quote.
-* **Name mismatch**: Funds were sent from a bank account with a name that does not match the customer’s name (only first-party onramps are supported).
+* **Funds source mismatch** (`funds_source_mismatch`): Incoming funds were sent from a bank account other than the one specified in the quote.
+* **Name mismatch** (`name_mismatch`): Funds were sent from a bank account with a name that does not match the customer’s name (only first-party onramps are supported).
 
 </details>
 
@@ -56,8 +56,11 @@ This is a non-exhaustive list that will grow over time.&#x20;
 
 <summary>Offramps</summary>
 
-* **Price impact/slippage**: At the time of execution, the receiving amount was less than the minimum guaranteed amount due to slippage or price impact.
-* **Returned funds**: The destination bank account returned the funds.
+* **Price impact/slippage**  (`price_impact_or_slippage`): At the time of execution, the receiving amount was less than the minimum guaranteed amount due to slippage or price impact. Create a new quote and transaction to fetch a new price.&#x20;
+* **Returned funds** (`destination_returned_funds`): The destination bank account returned the funds. Reach out to [support@fernhq.com](mailto:support@fernhq.com) for more details.&#x20;
+* **Insufficient balance in sending wallet** (`insufficient_balance`): Ensure that there is sufficient balance in the sending wallet before initiating a subsequent offramp.&#x20;
+* **Missing chain ID** (`missing_chain_id`): The transaction had failed because the chain ID was not specified.  Create a new quote and transaction to resolve.
+* **Missing minimum guaranteed amount** (`missing_minimum_guaranteed`): The transaction had failed because the minimum guaranteed amount was not specified.  Create a new quote and transaction to resolve.
 
 </details>
 
