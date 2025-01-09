@@ -470,9 +470,7 @@
             }
           }
         }
-      }
-    },
-    "/api/v0/bankAccount": {
+      },
       "get": {
         "tags": [
           "Bank Accounts"
@@ -584,7 +582,8 @@
                         "description": "Response payload containing bank account details",
                         "title": "Bank Account Response"
                       },
-                      "description": "Bank accounts"
+                      "description": "Retrieved bank accounts",
+                      "title": "Bank Accounts"
                     },
                     "nextPageToken": {
                       "type": "string",
@@ -2408,9 +2407,7 @@
             }
           }
         }
-      }
-    },
-    "/api/v0/customer": {
+      },
       "get": {
         "tags": [
           "Customers"
@@ -2485,7 +2482,7 @@
                         "description": "Response payload after successfully creating a customer",
                         "title": "Create Customer Response"
                       },
-                      "description": "Customers"
+                      "description": "Retrieved customers"
                     },
                     "nextPageToken": {
                       "type": "string",
@@ -3583,9 +3580,7 @@
             }
           }
         }
-      }
-    },
-    "/api/v0/transaction": {
+      },
       "get": {
         "tags": [
           "Transactions"
@@ -4049,7 +4044,7 @@
                         "description": "Response schema for a transaction creation request",
                         "title": "Create Transaction Response Schema"
                       },
-                      "description": "Transaction"
+                      "description": "Retrieved transactions"
                     },
                     "nextPageToken": {
                       "type": "string",
