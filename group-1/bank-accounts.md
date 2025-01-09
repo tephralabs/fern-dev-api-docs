@@ -9,25 +9,25 @@ description: >-
 
 ## Create a bank account
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts" method="post" %}
+{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bank-accounts" method="post" %}
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
 
 ## Update bank account details
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts/{bankAccountId}" method="patch" %}
+{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bank-accounts/{bankAccountId}" method="patch" %}
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
 
 ## Get bank  account details
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts/{bankAccountId}" method="get" %}
+{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bank-accounts/{bankAccountId}" method="get" %}
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
 
 ## List bank accounts
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts" method="get" %}
+{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bank-accounts" method="get" %}
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
 
