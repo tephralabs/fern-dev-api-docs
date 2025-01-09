@@ -25,3 +25,9 @@ description: >-
 [api.json](../.gitbook/assets/api.json)
 {% endswagger %}
 
+## List bank accounts
+
+{% swagger src="../.gitbook/assets/api.json" path="/api/v0/bankAccounts" method="get" %}
+[api.json](../.gitbook/assets/api.json)
+{% endswagger %}
+

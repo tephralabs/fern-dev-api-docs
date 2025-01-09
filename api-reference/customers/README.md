@@ -20,3 +20,9 @@ Upon successful customer creation, a hosted KYC link requesting the required inf
 [api.json](../../.gitbook/assets/api.json)
 {% endswagger %}
 
+## List Customers
+
+{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/customers" method="get" %}
+[api.json](../../.gitbook/assets/api.json)
+{% endswagger %}
+

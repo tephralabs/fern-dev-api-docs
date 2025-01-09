@@ -20,3 +20,9 @@ Creates a transaction using a given quoteID. QuoteID must be valid and not expir
 [api.json](../../.gitbook/assets/api.json)
 {% endswagger %}
 
+## List transactions
+
+{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/transactions" method="get" %}
+[api.json](../../.gitbook/assets/api.json)
+{% endswagger %}
+
