@@ -19,4 +19,3 @@ Fern's core API concepts are:
   * Once you create a transaction with a quote, that quote can no longer be used. To generate a new transaction, you will have to create a new quote.
 * [**Transactions**](../api-reference/transactions/) — Transactions execute currency conversions. You create transactions using quote IDs.
 * **Contacts (coming soon)** — Contacts are third parties that your customers transact with, and can have registered bank accounts and wallets.
-* **Wallets (coming soon)** — Wallets enable you to whitelist addresses for customers and contacts to simplify transaction flows.

@@ -8,7 +8,7 @@
   * [Transaction types](overview/what-fern-supports/transaction-types.md)
   * [Fiat currencies](overview/supported-coverage/fiat.md)
   * [Cryptocurrencies and networks](overview/supported-coverage/crypto.md)
-* [Fees](overview/fees.md)
+* [Transaction fees](overview/fees.md)
 * [Help & Support](overview/help-and-support.md)
 
 ## Getting started

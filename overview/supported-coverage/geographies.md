@@ -31,15 +31,6 @@ Fern currently supports users across a majority of US states, except for:
 
 </details>
 
-<details>
-
-<summary>Prohibited regions (subject to change)</summary>
-
-* Russia
-* Ukraine
-
-</details>
-
 ## Customer industries
 
 Fern can support your business customers across a variety of industries. However, there are some industries that require enhanced due diligence or cannot currently be supported by Fern.

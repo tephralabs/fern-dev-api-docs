@@ -18,9 +18,9 @@ Once verified and approved, you'll have full access to Fern. Get started by visi
 {% endstep %}
 
 {% step %}
-### Receive API keys
+### Commercials & API keys
 
-The Fern team will reach out to share your API keys with you securely. Be sure to copy and store the key safely, as you will not be able to see the key in your Developer dashboard or other Fern interface afterwards.
+Once you have finalized commercials with the Fern team, we will reach out to share your API keys with you securely. Be sure to copy and store the key safely, as you will not be able to see the key in your Developer dashboard or other Fern interface afterwards.
 {% endstep %}
 
 {% step %}

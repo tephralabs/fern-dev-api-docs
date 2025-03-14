@@ -14,15 +14,7 @@ Fern can support conversions between cryptocurrencies and fiat currencies and cr
 
 If you are interested in additional networks (L1s, L2s, L3s, etc.), please reach out to support@fernhq.com.&#x20;
 
-## Cryptocurrencies
+## Supported cryptocurrencies
 
-Fern can support currency conversion for several cryptocurrencies on each of the supported networks. Each transaction type has a different set of supported currencies.
-
-### Onramps
-
-Fern supports onramps to Circle-issued USDC on the supported networks.
-
-### Offramps
-
-Fern supports offramps from any native cryptocurrency and ERC-20 on the supported networks. The token must have sufficient DeFi liquidity when swapping with USDC with minimal slippage and price impact in order to be supported for offramps.&#x20;
+Fern can support currency conversion for several cryptocurrencies on each of the supported networks listed above. To see if Fern can support swapping between any two asset types, use the [Quotes API](../../api-reference/quotes.md).
 
