@@ -4,7 +4,7 @@
 
 Fern's first-party onramps enable your customers to convert fiat into crypto, delivering funds directly to their wallets. Fern onramps are accessible via API, allowing you to design a seamless and customized user experience.
 
-To implement onramps, use the [**Bank Accounts API**](../group-1/bank-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
+To implement onramps, use the [**Payment Accounts API**](../group-1/bank-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
 
 For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to [**What Fern supports**](../overview/supported-regions-and-currencies.md).
 

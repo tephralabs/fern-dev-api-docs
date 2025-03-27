@@ -6,23 +6,17 @@ description: >-
 
 # Transactions
 
-## Create a transaction
+{% openapi src="https://api.fernhq.com/json" path="/transactions" method="post" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-Creates a transaction using a given quoteID. QuoteID must be valid and not expired.&#x20;
+{% openapi src="https://api.fernhq.com/json" path="/transactions/{transactionId}" method="get" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/transactions" method="post" %}
-[api.json](../../.gitbook/assets/api.json)
-{% endswagger %}
+{% openapi src="https://api.fernhq.com/json" path="/transactions" method="get" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-## Get transaction details
 
-{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/transactions/{transactionId}" method="get" %}
-[api.json](../../.gitbook/assets/api.json)
-{% endswagger %}
-
-## List transactions
-
-{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/transactions" method="get" %}
-[api.json](../../.gitbook/assets/api.json)
-{% endswagger %}
 

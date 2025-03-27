@@ -6,23 +6,19 @@ description: >-
 
 # Customers
 
-## Create a customer
-
 Upon successful customer creation, a hosted KYC link requesting the required information to fill in will be generated. This may be distributed to your end-user for completion, or it can be completed on the customer's behalf by your team.&#x20;
 
-{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/customers" method="post" %}
-[api.json](../../.gitbook/assets/api.json)
-{% endswagger %}
+{% openapi src="https://api.fernhq.com/json" path="/customers" method="post" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-## Get customer details
+{% openapi src="https://api.fernhq.com/json" path="/customers/{customerId}" method="get" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/customers/{customerId}" method="get" %}
-[api.json](../../.gitbook/assets/api.json)
-{% endswagger %}
+{% openapi src="https://api.fernhq.com/json" path="/customers" method="get" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-## List Customers
 
-{% swagger src="../../.gitbook/assets/api.json" path="/api/v0/customers" method="get" %}
-[api.json](../../.gitbook/assets/api.json)
-{% endswagger %}
 

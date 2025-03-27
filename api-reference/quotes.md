@@ -7,17 +7,11 @@ description: >-
 
 # Quotes
 
-## Create a quote
+{% openapi src="https://api.fernhq.com/json" path="/quotes" method="post" %}
+[https://api.fernhq.com/json](https://api.fernhq.com/json)
+{% endopenapi %}
 
-Creates a new quote for a transaction. This endpoint generates a quote for your specified currency route, guaranteeing the price for 5 min.&#x20;
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v0/quotes" method="post" %}
-[api.json](../.gitbook/assets/api.json)
-{% endswagger %}
 
-## Get quote details
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v0/quotes/{quoteId}" method="get" %}
-[api.json](../.gitbook/assets/api.json)
-{% endswagger %}
 
