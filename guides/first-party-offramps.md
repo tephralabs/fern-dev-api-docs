@@ -4,7 +4,7 @@
 
 Fern's first-party offramps enable your customers to convert any ERC-20 token into a fiat currency, delivering funds to their bank account via local payment rails.
 
-To implement offramps, use the [**Payment Accounts API**](../group-1/bank-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
+To implement offramps, use the [**Payment Accounts API**](../api-reference/payment-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
 
 For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to [**What Fern supports**](../overview/supported-regions-and-currencies.md).
 
@@ -14,7 +14,7 @@ For the latest list of supported fiat and cryptocurrencies, as well as payment m
 {% step %}
 ### Create a bank account for a verified customer
 
-Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account for the customer.&#x20;
+Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](broken-reference) endpoint to create a new bank account for the customer.&#x20;
 
 {% hint style="info" %}
 Ensure that the beneficiary name matches your customer's name and the account type is accurate. Otherwise, there is a risk the funds will be returned to the sending wallet.&#x20;

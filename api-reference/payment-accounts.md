@@ -19,5 +19,3 @@ description: >-
 [https://api.fernhq.com/json](https://api.fernhq.com/json)
 {% endopenapi %}
 
-
-

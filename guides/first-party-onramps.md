@@ -4,7 +4,7 @@
 
 Fern's first-party onramps enable your customers to convert fiat into crypto, delivering funds directly to their wallets. Fern onramps are accessible via API, allowing you to design a seamless and customized user experience.
 
-To implement onramps, use the [**Payment Accounts API**](../group-1/bank-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
+To implement onramps, use the [**Payment Accounts API**](../api-reference/payment-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
 
 For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to [**What Fern supports**](../overview/supported-regions-and-currencies.md).
 
@@ -14,7 +14,7 @@ For the latest list of supported fiat and cryptocurrencies, as well as payment m
 {% step %}
 ### Create a bank account for a verified customer
 
-Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](../group-1/bank-accounts.md) endpoint to create a new bank account for the customer.&#x20;
+Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](broken-reference) endpoint to create a new bank account for the customer.&#x20;
 
 {% hint style="info" %}
 Ensure that the beneficiary name matches your customer's name and the account type is accurate. Otherwise, there is a risk the funds will be returned to the sending bank account.&#x20;
