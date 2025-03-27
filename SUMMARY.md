@@ -31,9 +31,9 @@
 
 ## API reference
 
-* [Payment Accounts](api-reference/payment-accounts.md)
 * [Customers](api-reference/customers/README.md)
   * [Additional details](api-reference/customers/additional-details.md)
+* [Payment Accounts](api-reference/payment-accounts.md)
 * [Quotes](api-reference/quotes.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Additional details](api-reference/transactions/introduction.md)
