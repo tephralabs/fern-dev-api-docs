@@ -1,8 +1,8 @@
 # What is Fern?
 
-Fern is a seamless currency conversion and payments API that enables developers to integrate onramps, offramps, and third-party fiat/crypto payments into their applications.&#x20;
+Fern is a seamless currency conversion and payments API that enables developers to integrate onramps, offramps, FX, and crypto exchange into their applications.&#x20;
 
-Fern works with licensed liquidity providers and financial institutions to offer global currency support in **one standardized API**.&#x20;
+Fern works with licensed liquidity providers and financial institutions to offer global currency support in one standardized API.&#x20;
 
 ## Fern API core features
 
