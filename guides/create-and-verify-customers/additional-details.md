@@ -4,11 +4,11 @@
 
 | Status        | Definition                                                                                                                                                                                      |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `created`     | Customer object has been created.                                                                                                                                                               |
-| `pending`     | <p>Customer is pending verification. <br><br>This includes cases where the KYC link is incomplete, verification is in progress, or additional information has been requested from the user.</p> |
-| `active`      | Customer is approved and ready to transact.                                                                                                                                                     |
-| `rejected`    | Customer is rejected. The webhook will provide a list of rejection reasons.                                                                                                                     |
-| `deactivated` | Customer has been deactivated.                                                                                                                                                                  |
+| `CREATED`     | Customer object has been created.                                                                                                                                                               |
+| `PENDING`     | <p>Customer is pending verification. <br><br>This includes cases where the KYC link is incomplete, verification is in progress, or additional information has been requested from the user.</p> |
+| `ACTIVE`      | Customer is approved and ready to transact.                                                                                                                                                     |
+| `REJECTED`    | Customer is rejected. The webhook will provide a list of rejection reasons.                                                                                                                     |
+| `DEACTIVATED` | Customer has been deactivated.                                                                                                                                                                  |
 
 ### Notifications
 
