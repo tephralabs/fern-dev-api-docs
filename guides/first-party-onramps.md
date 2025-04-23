@@ -6,15 +6,13 @@ Fern's first-party onramps enable your customers to convert fiat into crypto, de
 
 To implement onramps, use the [**Payment Accounts API**](../api-reference/payment-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a fiat currency as the source and a cryptocurrency as the destination to configure the transaction as an onramp.
 
-For the latest list of supported fiat and cryptocurrencies, as well as payment methods, refer to [**What Fern supports**](broken-reference).
-
 ## Step-by-step guide
 
 {% stepper %}
 {% step %}
 ### Create a bank account for a verified customer
 
-Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](broken-reference) endpoint to create a new bank account for the customer.&#x20;
+Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](../api-reference/payment-accounts.md) endpoint to create a new bank account for the customer.&#x20;
 
 {% hint style="info" %}
 Ensure that the beneficiary name matches your customer's name and the account type is accurate. Otherwise, there is a risk the funds will be returned to the sending bank account.&#x20;
@@ -263,7 +261,7 @@ print(data.decode("utf-8"))
 {% step %}
 ### Monitor transaction status
 
-Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the [**Developer dashboard**](../getting-started/developer-dashboard.md). You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
+Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the [**Developer dashboard**](../overview/developer-dashboard.md). You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
 
 For a full list of transaction statuses, refer to [**Transaction Statuses**](../api-reference/transactions/introduction.md#transaction-statuses).
 

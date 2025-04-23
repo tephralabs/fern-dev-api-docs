@@ -2,8 +2,9 @@
 
 ## Overview
 
-* [What is Fern?](README.md)
+* [Fern overview](README.md)
 * [Earning revenue with Fern](overview/fees.md)
+* [Developer dashboard](overview/developer-dashboard.md)
 * [Help & support](overview/help-and-support.md)
 
 ## Coverage
@@ -16,17 +17,15 @@
 * [Fiat currency support](fiat-currency-support.md)
 * [Cryptocurrency support](cryptocurrency-support.md)
 
-## Getting started
+## Quickstart
 
-* [Onboarding to Fern](getting-started/onboarding-to-fern.md)
-* [Core API concepts](getting-started/core-api-concepts.md)
-* [Your first transaction](getting-started/your-first-transaction.md)
-* [❓ Webhooks](getting-started/webhooks.md)
-* [❓ Authentication](getting-started/authentication.md)
-* [Developer dashboard](getting-started/developer-dashboard.md)
+* [Your first transaction](quickstart/your-first-transaction.md)
+* [❓ Webhooks](quickstart/webhooks.md)
+* [❓ Authentication](quickstart/authentication.md)
 
 ## Guides
 
+* [Core API concepts](guides/core-api-concepts.md)
 * [Create and verify customers](guides/create-and-verify-customers/README.md)
   * [Requirements for Individuals](guides/create-and-verify-customers/requirements-for-individuals.md)
   * [Requirements for Businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
@@ -45,5 +44,5 @@
 
 ## Advanced
 
-* [Slippage & Price impact](advanced/slippage-and-price-impact.md)
+* [Slippage and price impact](advanced/slippage-and-price-impact.md)
 * [Rate limits](advanced/rate-limits.md)

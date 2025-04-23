@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Your first transaction
 
 Once you have onboarded successfully, you can start creating your first transaction and testing out the Fern APIs.&#x20;
