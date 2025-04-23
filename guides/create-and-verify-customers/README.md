@@ -10,7 +10,7 @@ Customers are your end users and can be either businesses or individuals. Before
 {% step %}
 ### Create a customer&#x20;
 
-Create either a business or individual customer via the [**Customers API**](../../api-reference/customers/).
+Create either a business or individual customer via the [**Customers API**](../../api-reference/customers.md).
 {% endstep %}
 
 {% step %}
@@ -28,7 +28,7 @@ Typically, it takes around 3 minutes for individuals to complete the form, and a
 
 The status of the customer will be automatically updated (webhooks coming soon). If any additional information is needed to verify your customer, the Fern compliance team will contact them directly to minimize compliance overhead for your team.
 
-For a full list of customer statuses, refer to [**Customer Statuses**](../../api-reference/customers/additional-details.md#customer-statuses).
+For a full list of customer statuses, refer to [**Customer Statuses**](additional-details.md#customer-statuses).
 
 {% hint style="info" %}
 If your customer has already been verified by Fern (e.g. they are an existing Fern customer), their status will automatically update from **Created** to **Active**.

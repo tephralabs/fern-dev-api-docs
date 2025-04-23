@@ -10,7 +10,7 @@ description: >-
 
 Fern's core API concepts are:
 
-* [**Customers**](../api-reference/customers/) — Using the Fern API, you can create your individual and business users as customers. Customers are uniquely identified by email address. Customers must be verified in order to use Fern quotes and transactions.
+* [**Customers**](../api-reference/customers.md) — Using the Fern API, you can create your individual and business users as customers. Customers are uniquely identified by email address. Customers must be verified in order to use Fern quotes and transactions.
 * [**Payment Accounts**](../api-reference/payment-accounts.md) — You can create payment accounts for your customers. Depending on the [fiat currency and payment method](../fiat-currency-support.md) of the account, you may need to collect different information about the customer's account to successfully link it to the customer. Once a payment account has been successfully created, you can initiate transactions with that account.&#x20;
 * [**Quotes**](../api-reference/quotes.md) — Quotes enable you to specify critical details about a transaction. You receive exchange rates and other information as part of the API response.&#x20;
   * You must create a quote before you create a transaction, and you will use the quote ID when creating a transaction.

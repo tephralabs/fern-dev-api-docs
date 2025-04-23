@@ -9,4 +9,6 @@ Core features of the dashboard:
 * Quick link to the docs
 * More coming soon!
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-04-23 at 10.45.13 AM.png" alt=""><figcaption><p>Developer dashboard without any customers added</p></figcaption></figure>
+
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Sample dev dashboard with notional customer data</p></figcaption></figure>
