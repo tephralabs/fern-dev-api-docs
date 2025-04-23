@@ -16,6 +16,11 @@ Fern cannot onboard customers from these regions for any of the Fern services:
   * Crimea
   * Donetsk
   * Luhansk
+* US:
+  * Alaska
+  * Hawaii
+  * Louisiana
+  * New York
 
 
 
