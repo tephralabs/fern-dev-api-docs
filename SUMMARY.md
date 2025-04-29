@@ -30,9 +30,9 @@
   * [Requirements for Individuals](guides/create-and-verify-customers/requirements-for-individuals.md)
   * [Requirements for Businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
   * [Customer statuses](guides/create-and-verify-customers/additional-details.md)
+  * [Country codes](guides/create-and-verify-customers/country-codes.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
-* [Third-party payments (coming soon)](guides/third-party-payments-coming-soon.md)
 
 ## API reference
 
