@@ -37,7 +37,7 @@
 ## API reference
 
 * [Customers](api-reference/customers.md)
-* [Payment Accounts](api-reference/payment-accounts.md)
+* [Payment accounts](api-reference/payment-accounts.md)
 * [Quotes](api-reference/quotes.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Additional details](api-reference/transactions/introduction.md)

@@ -1,11 +1,8 @@
 ---
-description: >-
-  Use this API to add, update and get payment accounts for an existing customer.
-  Currently, only USD bank accounts with domestic ACH/wire routing numbers are
-  supported.
+description: Use this API to add, update and get payment accounts for an existing customer.
 ---
 
-# Payment Accounts
+# Payment accounts
 
 {% openapi src="https://api.fernhq.com/json" path="/payment-accounts" method="post" %}
 [https://api.fernhq.com/json](https://api.fernhq.com/json)
