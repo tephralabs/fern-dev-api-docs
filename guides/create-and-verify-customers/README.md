@@ -70,7 +70,7 @@ You can share the hosted KYC form link directly with your end user for completio
 {% step %}
 ### Get customer status
 
-You can use the [Customers API](../../api-reference/customers.md) `GET` endpoints to check for updates to the customer status. Status updates will also be communicated via webhooks.
+You can use the [Customers API](../../api-reference/customers.md) `GET` endpoint to check for updates to the customer status. Status updates will also be communicated via webhooks.
 
 **Sample response:**
 
