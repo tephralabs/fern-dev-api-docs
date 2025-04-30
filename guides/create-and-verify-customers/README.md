@@ -31,7 +31,7 @@ Create either a business or individual customer via the [Customers API](../../ap
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+```json
 {
     "customerType": "BUSINESS",
     "email": "contact@builder.com",
