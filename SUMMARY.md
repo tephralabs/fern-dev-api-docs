@@ -10,7 +10,7 @@
 ## Coverage
 
 * [Customer types](coverage/customer-types.md)
-* [Customer geographies](coverage/customer-geographies.md)
+* [Restricted customer geographies](coverage/restricted-customer-geographies.md)
 
 ***
 
