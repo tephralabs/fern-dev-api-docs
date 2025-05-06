@@ -93,10 +93,6 @@ You can use the [Customers API](../../api-reference/customers.md) `GET` endpoint
 
 If any additional information is needed to verify your customer, the Fern compliance team will contact them directly to minimize compliance overhead for your team. Once the customer is fully approved, their status will change to `ACTIVE`. For a full list of customer statuses, refer to [Customer Statuses](additional-details.md#customer-statuses).
 
-{% hint style="info" %}
-If your customer has already been verified by Fern (e.g. they are an existing Fern customer), their status will automatically update from `CREATED` to `ACTIVE`.
-{% endhint %}
-
 
 {% endstep %}
 {% endstepper %}
