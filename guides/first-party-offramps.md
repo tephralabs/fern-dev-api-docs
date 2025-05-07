@@ -4,341 +4,69 @@
 
 Fern's first-party offramps enable your customers to convert any ERC-20 token into a fiat currency, delivering funds to their bank account via local payment rails.
 
-To implement offramps, use the [**Payment Accounts API**](../api-reference/payment-accounts.md), [**Quotes API**](../api-reference/quotes.md), and [**Transactions API**](../api-reference/transactions/). Specify a cryptocurrency as the source and a fiat currency as the destination to configure the transaction as an offramp.
-
-
-
 ## Step-by-step guide
 
 {% stepper %}
 {% step %}
-### Create a bank account for a verified customer
+### Create a customer
 
-Once your customer has been created and successfully verified, you can use the [**Bank Accounts**](../api-reference/payment-accounts.md) endpoint to create a new bank account for the customer.&#x20;
-
-{% hint style="info" %}
-Ensure that the beneficiary name matches your customer's name and the account type is accurate. Otherwise, there is a risk the funds will be returned to the sending wallet.&#x20;
-{% endhint %}
+Use the [Customer API](../api-reference/customers.md) to create your end customer in the Fern system. You must have `customerId` to proceed with the next steps in the process. Your customer does **not** need to be `ACTIVE` to have associated payment accounts and crypto wallets.
 {% endstep %}
 
 {% step %}
-### Generate quote
+### Create a payment account for your customer
 
-To fetch a proposed price for a currency conversion, use the [**Quotes**](../api-reference/quotes.md) endpoint. This endpoint generates a quote for your specified currency route, guaranteeing the price for **5 min**. Quotes provide transparent details, including:
+Once you have the customer's `customerId`, you can create a [payment account](../api-reference/payment-accounts.md) for the customer. For first-party offramps, the destination account is generally an external bank account. You can create an external bank account either by sending the relevant bank account creation details via API or by using a custom-branded hosted bank account form.
 
-* the exact receiving amount,&#x20;
-* fees,&#x20;
-* minimum guaranteed amount,
-* price impact (if applicable).
+**To create a payment account using the bank account form:**
 
-For more details, visit the [**Quotes**](../api-reference/quotes.md) section.
+* Create a payment account link using the `POST` endpoint:
+  * Set `paymentAccountType` to `EXTERNAL_BANK_ACCOUNT`
+  * Use the correct `customerId`
+  * Optionally include a `nickname`  for the account if desired
+* The response will include a URL you can share with your customer to enter their payment account details.
+* Once the customer has entered their payment account details, you will receive a webhook that the payment account has been created (which will include the `paymentAccountId`) or list all payment accounts for the customer to find the specific account and `paymentAccountId` . You will need the `paymentAccountId` for the next steps.
 
-#### Request
+**To create a payment account via API:**
 
-{% tabs %}
-{% tab title="cURL" %}
-```
-curl --location 'https://app.fernhq.com/api/v0/quotes/'
---header 'Content-Type: application/json'
---header 'Authorization: Bearer <API_TOKEN>'
---data '{ "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8", "sendingAmount": 100, "source": { "paymentMethod": "base", "currency": "USDC" }, "destination": { "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77", "paymentMethod": "wire", "currency": "USD" } }'
+* Create a payment account using the `POST` endpoint:
+  * Set `paymentAccountType` to `EXTERNAL_BANK_ACCOUNT`
+  * Use the correct `customerId`
+  * Optionally include a `nickname`  for the account if desired
+  * Include the `externalBankAccount` object with all required fields
+* The response will include the `paymentAccountId` that you can use for next steps.
+{% endstep %}
 
-```
-{% endtab %}
+{% step %}
+### Generate quote for the offramp
 
-{% tab title="Javascript" %}
-```javascript
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Bearer <API_TOKEN>");
+Before initiating an offramp transaction, you must create a [quote](../api-reference/quotes.md). The quote returns relevant information such as exchange rate, Fern fees assessed on the transaction, and a `quoteId` that you can use when creating a transaction. To create a quote for your customer, your customer needs to be `ACTIVE`. Quotes expire after 5 minutes. The exchange rates in quotes are not guaranteed and exchange will settle at market rates when a transaction is initiated.
 
-const raw = JSON.stringify({
-  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
-  "sendingAmount": 100,
-  "source": {
-    "paymentMethod": "ethereum",
-    "currency": "USDC"
-  },
-  "destination": {
-    "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-    "paymentMethod": "wire",
-    "currency": "USD"
-  }
-});
+**To create a quote for a first-party offramp:**
 
-const requestOptions = {
-  method: "POST",
-  headers: myHeaders,
-  body: raw,
-  redirect: "follow"
-};
-
-fetch("https://app.fernhq.com/api/v0/quotes/", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```ruby
-import http.client
-import json
-
-conn = http.client.HTTPConnection("https://app.fernhq.com")
-payload = json.dumps({
-  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
-  "sendingAmount": 100,
-  "source": {
-    "paymentMethod": "ethereum",
-    "currency": "USDC"
-  },
-  "destination": {
-    "bankAccountId": "072a8b7b-38c7-429a-a6cf-35dae7f2fb77",
-    "paymentMethod": "wire",
-    "currency": "USD"
-  }
-})
-headers = {
-  'Content-Type': 'application/json',
-  'Authorization': 'Bearer <API_TOKEN>'
-}
-conn.request("POST", "/api/v0/quotes/", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-```
-{% endtab %}
-{% endtabs %}
-
-#### Response
-
-```json
-{
-  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
-  "exchangeRate": 1,
-  "receivingAmount": 79.5,
-  "minGuaranteedReceivingAmount": 79.5,
-  "expiresAt": "2024-12-19T00:29:27.355Z",
-  "fees": {
-    "fernFee": {
-      "type": "fern",
-      "currency": "USD",
-      "amount": 20.5,
-      "usdAmount": 20.5
-    },
-    "developerFee": {
-      "type": "developer",
-      "currency": "USD",
-      "amount": 0,
-      "usdAmount": 0,
-    },
-  }
-}
-```
-
-
+* Create a quote using the `POST` endpoint:
+  * Include `customerId`&#x20;
+  * For the `source` object, include the `sourceCurrency`, `sourcePaymentMethod`, and `sourceAmount`. You do not need to include the `sourcePaymentAccount` for an offramp. If this is an offramp of USDC, you would enter `sourceCurrency` as `USDC` and `sourcePaymentMethod` as the source chain (e.g. `BASE`).
+  * For the `destination` object, include the `destinationPaymentAccountId` (which would be the payment account created in step 2), `destinationPaymentMethod` (associated with the payment account in question), and the `destinationCurrency`. The latter two fields can be derived from the payment account itself. If you didn't store this information, you can retrieve the payment account and find the relevant information to include in your quote.
+* The quote response will include `quoteId` , estimated exchange rate, the amount expected to receive, and the fees. You'll need `quoteId` for the next step.
 {% endstep %}
 
 {% step %}
 ### Submit transaction
 
-To create a transaction, use the **quote ID** to generate an offramp transaction. Once the transaction is initiated and funds are received at the transfer wallet address, the destination currency is sent to the specified destination address via the indicated payment rail.&#x20;
-
-For more details, check out the [**Transactions**](../api-reference/transactions/) section.
-
-#### Request
-
-{% tabs %}
-{% tab title="cURL" %}
-```javascript
-curl --location 'https://app.fernhq.com/api/v0/transactions/' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <API_TOKEN>' \
---data '{
-    "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
-    "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
-}'
-```
-{% endtab %}
-
-{% tab title="Javascript" %}
-```python
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Bearer fsk_ZGM5MDNmNDgtNjQzZi00NDdlLWEwNDktNjcwMDUzZGIyNWFkXzQxM2UwZTRhOWRiZjI2YjhhYzUyMjBkMzBmZWMzMzhmN2ZmOTE1NzYxMDEzYWZiNjA3OGQxNzNlNjA1YmUyMzI");
-
-const raw = JSON.stringify({
-  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
-  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
-});
-
-const requestOptions = {
-  method: "POST",
-  headers: myHeaders,
-  body: raw,
-  redirect: "follow"
-};
-
-fetch("https://app.fernhq.com/api/v0/transactions/", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```ruby
-import http.client
-import json
-
-conn = http.client.HTTPSConnection("app.fernhq.com")
-payload = json.dumps({
-  "customerId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
-  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7"
-})
-headers = {
-  'Content-Type': 'application/json',
-  'Authorization': 'Bearer <API_TOKEN>'
-}
-conn.request("POST", "/api/v0/transactions/", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-```
-{% endtab %}
-{% endtabs %}
-
-#### Response
-
-```json
-{
-  "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
-  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
-  "status": "PROCESSING",
-  "receivingAmountDetails": {
-    "amount" : 79.5,
-    "currency": "USD",
-  },
-  "fees": {
-    "fernFee": {
-      "type": "fern",
-      "currency": "USD",
-      "amount": 20.5,
-      "usdAmount": 20.5
-    },
-    "developerFee": {
-      "type": "developer",
-      "currency": "USD",
-      "amount": 0,
-      "usdAmount": 0,
-    },
-  }
-  "exchangeRate": 1,
-  "transferInstructions": {
-    "type": "offramp",
-    "paymentMethod": "ethereum",
-    "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
-    "sendingAmountDetails": {
-      "amount": 100,
-      "currency": "USDC",
-    }
-  }
-}
-```
-
-
+If the quote looks good to you, you can submit a [transaction](../api-reference/transactions/) using the previously generated `quoteId`. Creating a transaction in the Fern API generates a set of transfer instructions. For first-party offramps, these transfer instructions will include a crypto wallet address where you/your customer can transfer funds to initiate the rest of the transaction.
 {% endstep %}
 
 {% step %}
 ### Monitor transaction status
 
-Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the **Developer dashboard**. You can also subscribe to webhooks for real-time notifications on status changes (coming soon).
+You can track the progress of a transaction in 3 ways:
 
-For a full list of transaction statuses, refer to [**Transaction Statuses**](../api-reference/transactions/introduction.md#transaction-statuses).
+1. Call the [Transactions API](../api-reference/transactions/#get-transactions-transactionid) endpoint using the `transactionId` to see the most recent status of the transaction
+2. Subscribe to [webhooks](webhooks/) for real-time notifications on status changes
+3. Refer to the [Developer dashboard](../overview/developer-dashboard.md) to see your customers and their transactions
 
-#### Request
-
-{% tabs %}
-{% tab title="cURL" %}
-```
-curl --location 'https://app.fernhq.com/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7' \
---header 'Authorization: Bearer <API_TOKEN>'
-```
-{% endtab %}
-
-{% tab title="JavaScript" %}
-```javascript
-const myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer <API_TOKEN>");
-
-const requestOptions = {
-  method: "GET",
-  headers: myHeaders,
-  redirect: "follow"
-};
-
-fetch("https://app.fernhq.com/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-import http.client
-
-conn = http.client.HTTPConnection("app.fernhq.com")
-payload = ''
-headers = {
-  'Authorization': 'Bearer <API_TOKEN>'
-}
-conn.request("GET", "/api/v0/transactions/1d8beb26-b4d1-47ee-8e5d-0d3905f200c7", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-```
-{% endtab %}
-{% endtabs %}
-
-#### Response
-
-```json
-{
-  "transactionId": "1d8beb26-b4d1-47ee-8e5d-0d3905f200c7",
-  "quoteId": "ec823f56-fc7f-493e-8723-9583a91466a7",
-  "status": "PROCESSING",
-  "receivingAmountDetails": {
-    "amount" : 79.5,
-    "currency": "USD",
-  },
-  "fees": {
-    "fernFee": {
-      "type": "fern",
-      "currency": "USD",
-      "amount": 20.5,
-      "usdAmount": 20.5
-    },
-    "developerFee": {
-      "type": "developer",
-      "currency": "USD",
-      "amount": 0,
-      "usdAmount": 0,
-    },
-  }
-  "exchangeRate": 1,
-  "transferInstructions": {
-    "type": "offramp",
-    "paymentMethod": "ethereum",
-    "transferWalletAddress": "0xbf50fb9c99233f95bce213044507e58485cf9eba",
-    "sendingAmountDetails": {
-      "amount": 100,
-      "currency": "USDC",
-    }
-  }
-}
-```
+For a full list of transaction statuses, refer to [Transaction Statuses](../api-reference/transactions/introduction.md#transaction-statuses).
 
 
 {% endstep %}
