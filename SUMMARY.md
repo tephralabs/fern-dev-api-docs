@@ -31,6 +31,7 @@
   * [Requirements for Businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
   * [Customer statuses](guides/create-and-verify-customers/additional-details.md)
   * [Country codes](guides/create-and-verify-customers/country-codes.md)
+* [Create Fern wallets for your customers](guides/create-fern-wallets-for-your-customers.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
 
