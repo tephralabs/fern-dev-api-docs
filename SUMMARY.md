@@ -34,6 +34,11 @@
 * [Create Fern wallets for your customers](guides/create-fern-wallets-for-your-customers.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
+* [Webhooks](guides/webhooks/README.md)
+  * [Events](guides/webhooks/events.md)
+  * [Sample Payloads](guides/webhooks/sample-payloads.md)
+  * [Verification](guides/webhooks/verification.md)
+  * [Retries](guides/webhooks/retries.md)
 
 ## API reference
 
