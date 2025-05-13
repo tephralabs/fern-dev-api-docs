@@ -31,7 +31,7 @@ For more details, check out the [**Quotes**](../api-reference/quotes.md) section
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://app.fernhq.com/quotes/' \
+curl --location 'https://api.fernhq.com/quotes/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
@@ -79,7 +79,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://app.fernhq.com/quotes/", requestOptions)
+fetch("https://api.fernhq.com/quotes/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -91,7 +91,7 @@ fetch("https://app.fernhq.com/quotes/", requestOptions)
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("app.fernhq.com")
+conn = http.client.HTTPSConnection("api.fernhq.com")
 payload = json.dumps({
     "customerId": "b8643416-7a36-4437-95af-c32ba3b44257",
     "source": {
@@ -158,7 +158,7 @@ For more details, check out the [**Transactions**](../api-reference/transactions
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://app.fernhq.com/transactions/' \
+curl --location 'https://api.fernhq.com/transactions/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <API_TOKEN>' \
 --data '{
@@ -184,7 +184,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://app.fernhq.com/transactions/", requestOptions)
+fetch("https://api.fernhq.com/transactions/", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -196,7 +196,7 @@ fetch("https://app.fernhq.com/transactions/", requestOptions)
 import http.client
 import json
 
-conn = http.client.HTTPSConnection("app.fernhq.com")
+conn = http.client.HTTPSConnection("api.fernhq.com")
 payload = json.dumps({
   "quoteId": "672cec1f-8224-41ca-b77a-46307ae0f213"
 })
@@ -279,7 +279,7 @@ For a full list of transaction statuses, refer to [**Transaction Statuses**](../
 {% tabs %}
 {% tab title="cURL" %}
 ```
-curl --location 'https://app.fernhq.com/transactions/477f21e2-1b67-5828-a43d-dab19316a711' \
+curl --location 'https://api.fernhq.com/transactions/477f21e2-1b67-5828-a43d-dab19316a711' \
 --header 'Authorization: Bearer <API_TOKEN>'
 ```
 {% endtab %}
@@ -295,7 +295,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://app.fernhq.com/transactions/477f21e2-1b67-5828-a43d-dab19316a711", requestOptions)
+fetch("https://api.fernhq.com/transactions/477f21e2-1b67-5828-a43d-dab19316a711", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -306,7 +306,7 @@ fetch("https://app.fernhq.com/transactions/477f21e2-1b67-5828-a43d-dab19316a711"
 ```python
 import http.client
 
-conn = http.client.HTTPSConnection("app.fernhq.com")
+conn = http.client.HTTPSConnection("api.fernhq.com")
 payload = ''
 headers = {
   'Authorization': 'Bearer <API_TOKEN>'
