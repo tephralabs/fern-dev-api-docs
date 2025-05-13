@@ -125,8 +125,8 @@ print(data.decode("utf-8"))
     "quoteId": "672cec1f-8224-41ca-b77a-46307ae0f213",
     "expiresAt": "2025-04-08T20:36:09.129Z",
     "estimatedExchangeRate": "1",
-    "destinationAmount": "10.4789850245923121",
-    "minGuaranteedDestinationAmount": "10.4789850245923121",
+    "destinationAmount": "10.478",
+    "minGuaranteedDestinationAmount": "10.478",
     "fees": {
         "feeCurrency": {
             "label": "USD"
@@ -233,8 +233,8 @@ print(data.decode("utf-8"))
             "label": "USDC"
         },
         "exchangeRate": "1",
-        "destinationAmount": "10.47",
-        "minGuaranteedDestinationAmount": "10.4789850245923121"
+        "destinationAmount": "10.478",
+        "minGuaranteedDestinationAmount": "10.478"
     },
     "fees": {
         "feeCurrency": {
@@ -340,8 +340,8 @@ print(data.decode("utf-8"))
             "label": "USDC"
         },
         "exchangeRate": "1",
-        "destinationAmount": "10.47",
-        "minGuaranteedDestinationAmount": "10.4789850245923121"
+        "destinationAmount": "10.478",
+        "minGuaranteedDestinationAmount": "10.478"
     },
     "fees": {
         "feeCurrency": {
