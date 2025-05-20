@@ -39,6 +39,7 @@
   * [Sample Payloads](guides/webhooks/sample-payloads.md)
   * [Verification](guides/webhooks/verification.md)
   * [Retries](guides/webhooks/retries.md)
+* [Virtual accounts](guides/virtual-accounts.md)
 
 ## API reference
 
