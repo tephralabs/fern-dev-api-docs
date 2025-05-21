@@ -4,9 +4,8 @@ Below are example webhook payloads for each event type, illustrating the structu
 
 ### Customer Created Event:
 
-```
-{
-  "id": "03b7030f-6da1-4d76-9352-cdebd82112c8",
+<pre><code><strong>{
+</strong>  "id": "03b7030f-6da1-4d76-9352-cdebd82112c8",
   "apiVersion": "v1",
   "type": "customer.created",
   "createdAt": "2023-01-01T12:00:00Z",
@@ -19,9 +18,10 @@ Below are example webhook payloads for each event type, illustrating the structu
     "kycLink": "https://kyb.example.com/verify/abc123",
     "updatedAt": "2023-10-01T12:00:00Z",
     "organizationId": "8469411c-48c1-4e26-a032-44688be9cb4b"
-  }
+  },
+  "updatedAt": "2023-01-01T12:00:00Z"
 }
-```
+</code></pre>
 
 ### Customer Updated Event:
 
@@ -40,7 +40,8 @@ Below are example webhook payloads for each event type, illustrating the structu
     "kycLink": "https://kyb.example.com/verify/abc123",
     "updatedAt": "2023-10-01T12:00:00Z",
     "organizationId": "8469411c-48c1-4e26-a032-44688be9cb4b"
-  }
+  },
+  "updatedAt": "2023-01-01T12:10:00Z"
 }
 ```
 
@@ -52,11 +53,13 @@ Below are example webhook payloads for each event type, illustrating the structu
   "apiVersion": "v1",
   "type": "payment_account.created",
   "createdAt": "2023-01-03T10:15:00Z",
+  "updatedAt": "2023-01-03T10:15:00Z",
   "resource": {
     "paymentAccountId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
     "paymentAccountType": "EXTERNAL_BANK_ACCOUNT",
     "nickname": "Savings Account",
     "createdAt": "2025-04-30T23:13:57.625Z",
+    "customerId": "c3f1ec5a-4f18-4fd3-bbea-c33ebfceff0a",
     
     // These objects will only be populated if the account of that type existed:
     "externalBankAccount": {
@@ -87,15 +90,17 @@ Below are example webhook payloads for each event type, illustrating the structu
 ```
 {
   "id": "03b7030f-1111-1111-1111-cdebd82112c8",
-  "api_version": "v1",
+  "apiVersion": "v1",
   "type": "payment_account.deleted",
-  "sequence": 4,
-  "created_at": "2023-01-05T16:20:00Z",
+  "createdAt": "2023-01-03T10:15:00Z",
+  "updatedAt": "2023-01-03T10:20:00Z",
   "resource": {
     "paymentAccountId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
     "paymentAccountType": "EXTERNAL_BANK_ACCOUNT",
     "nickname": "Savings Account",
     "createdAt": "2025-04-30T23:13:57.625Z",
+    "customerId": "c3f1ec5a-4f18-4fd3-bbea-c33ebfceff0a",
+    
     // These objects will only be populated if the account of that type existed:
     "externalBankAccount": { ... },
     "externalCryptoWallet": { ... },
@@ -103,8 +108,6 @@ Below are example webhook payloads for each event type, illustrating the structu
   }
 }
 ```
-
-_Note:_ The example above shows that the payload can contain the keys (externalBankAccount, externalCryptoWallet, etc.) if those were relevant to the account.
 
 ### Transaction Created Event:
 

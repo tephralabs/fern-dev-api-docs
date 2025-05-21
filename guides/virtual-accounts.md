@@ -23,7 +23,7 @@ Fern offers virtual accounts in several currencies for business and individual c
 
 
 
-**For individuals, Fern offers named accounts that can collect, hold, and send the following fiat currencies:**
+**For individuals, Fern offers named accounts that can collect and automatically onramp the following fiat currencies:**
 
 * USD
 * EUR
