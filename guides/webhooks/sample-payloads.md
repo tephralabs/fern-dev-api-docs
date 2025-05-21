@@ -58,7 +58,7 @@ Below are example webhook payloads for each event type, illustrating the structu
     "paymentAccountId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
     "paymentAccountType": "EXTERNAL_BANK_ACCOUNT",
     "nickname": "Savings Account",
-    "createdAt": "2025-04-30T23:13:57.625Z",
+    "createdAt": "2023-01-03T10:15:00Z",
     "customerId": "c3f1ec5a-4f18-4fd3-bbea-c33ebfceff0a",
     
     // These objects will only be populated if the account of that type existed:
@@ -98,7 +98,7 @@ Below are example webhook payloads for each event type, illustrating the structu
     "paymentAccountId": "03b7030f-6da1-4d76-9352-cdebd82112c8",
     "paymentAccountType": "EXTERNAL_BANK_ACCOUNT",
     "nickname": "Savings Account",
-    "createdAt": "2025-04-30T23:13:57.625Z",
+    "createdAt": "2023-01-03T10:15:00Z",
     "customerId": "c3f1ec5a-4f18-4fd3-bbea-c33ebfceff0a",
     
     // These objects will only be populated if the account of that type existed:
