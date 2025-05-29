@@ -132,8 +132,7 @@ Below are example webhook payloads for each event type, illustrating the structu
       "destinationPaymentMethod": "ETHEREUM",
       "destinationCurrency": "USDC",
       "exchangeRate": "1.2",
-      "destinationAmount": "100",
-      "minGuaranteedDestinationAmount": "98"
+      "destinationAmount": "100"
     },
     "fees": {
       "feeCurrency": "USD",
@@ -185,8 +184,7 @@ Below are example webhook payloads for each event type, illustrating the structu
       "destinationPaymentMethod": "ETHEREUM",
       "destinationCurrency": "USDC",
       "exchangeRate": "1.2",
-      "destinationAmount": "100",
-      "minGuaranteedDestinationAmount": "98"
+      "destinationAmount": "100"
     },
     "fees": {
       "feeCurrency": "USD",
