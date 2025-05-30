@@ -44,6 +44,7 @@
   * [Nigeria](guides/country-specific-requirements/nigeria.md)
 * [Automated offramps](guides/automated-offramps.md)
 * [Exchange rates](guides/exchange-rates.md)
+* [SWIFT payouts](guides/swift-payouts.md)
 
 ## API reference
 
