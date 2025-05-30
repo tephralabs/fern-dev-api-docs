@@ -39,7 +39,9 @@
   * [Sample Payloads](guides/webhooks/sample-payloads.md)
   * [Verification](guides/webhooks/verification.md)
   * [Retries](guides/webhooks/retries.md)
-* [Virtual accounts](guides/virtual-accounts.md)
+* [Fern virtual accounts](guides/fern-virtual-accounts.md)
+* [Country-specific requirements](guides/country-specific-requirements/README.md)
+  * [Nigeria](guides/country-specific-requirements/nigeria.md)
 
 ## API reference
 
