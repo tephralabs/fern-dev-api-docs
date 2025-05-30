@@ -5,6 +5,7 @@
 | Field                        | Value                                                                                                               |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Supported payment rails      | NIBSS, NEFT                                                                                                         |
+| Settlement time              | Real-time                                                                                                           |
 | Supported transaction types  | <ul><li>First-party payin</li><li>First-party payout</li><li>Third-party payin</li><li>Third-party payout</li></ul> |
 | Supported for customer types | Business, Individual                                                                                                |
 | 2-digit ISO country code     | `NG`                                                                                                                |

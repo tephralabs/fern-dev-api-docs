@@ -45,6 +45,7 @@
 * [Automated offramps](guides/automated-offramps.md)
 * [Exchange rates](guides/exchange-rates.md)
 * [SWIFT payouts](guides/swift-payouts.md)
+* [Whitelabelling email notifications](guides/whitelabelling-email-notifications.md)
 
 ## API reference
 
