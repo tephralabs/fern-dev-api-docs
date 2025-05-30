@@ -43,6 +43,7 @@
 * [Country-specific requirements](guides/country-specific-requirements/README.md)
   * [Nigeria](guides/country-specific-requirements/nigeria.md)
 * [Automated offramps](guides/automated-offramps.md)
+* [Exchange rates](guides/exchange-rates.md)
 
 ## API reference
 
