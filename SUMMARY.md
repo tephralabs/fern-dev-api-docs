@@ -42,6 +42,7 @@
 * [Fern virtual accounts](guides/fern-virtual-accounts.md)
 * [Country-specific requirements](guides/country-specific-requirements/README.md)
   * [Nigeria](guides/country-specific-requirements/nigeria.md)
+* [Automated offramps](guides/automated-offramps.md)
 
 ## API reference
 
