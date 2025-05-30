@@ -13,6 +13,9 @@
 
 Payment account creation requires:
 
+* `bankName` must match one of the bank names referenced below
+* `bankAccountCurrency` : `NGN`
+* `bankAccountPaymentMethod` : `NG_NIBSS_NEFT`
 * `nubanNumber`
 
 
