@@ -27,9 +27,10 @@
 
 * [Core API concepts](guides/core-api-concepts.md)
 * [Create and verify customers](guides/create-and-verify-customers/README.md)
-  * [Requirements for Individuals](guides/create-and-verify-customers/requirements-for-individuals.md)
-  * [Requirements for Businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
-  * [Customer statuses](guides/create-and-verify-customers/additional-details.md)
+  * [Requirements for individuals](guides/create-and-verify-customers/requirements-for-individuals.md)
+  * [Requirements for businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
+  * [Verify customers via API](guides/create-and-verify-customers/api-verification.md)
+  * [Additional details](guides/create-and-verify-customers/additional-details.md)
   * [Country codes](guides/create-and-verify-customers/country-codes.md)
 * [Create Fern wallets](guides/create-fern-wallets.md)
 * [First-party onramps](guides/first-party-onramps.md)
