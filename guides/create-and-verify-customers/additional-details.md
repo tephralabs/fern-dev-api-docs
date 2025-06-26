@@ -1,5 +1,10 @@
 # Additional Details
 
+## Document Types
+
+- **GOVERNMENT_ID:** PASSPORT, DRIVERS_LICENSE, NATIONAL_ID
+- **PROOF_OF_ADDRESS:** UTILITY_BILL, BANK_STATEMENT, RENTAL_AGREEMENT
+
 ## Customer Statuses
 
 | Status        | Definition                                                                                                                                                                                      |
