@@ -45,13 +45,13 @@ Create a customer via the [Customers API](../../api-reference/customers.md), inc
         "documentIdNumber": "123456789",
         "issuanceDate": "2020-01-15",
         "expirationDate": "2030-01-15",
-        "frontIdImage": "actual_base64_encoded_image_data_here"
+        "frontIdImage": "data:image/jpeg;base64,..."
       },
       {
         "type": "PROOF_OF_ADDRESS",
         "subtype": "UTILITY_BILL",
         "description": "Electric bill from January 2024",
-        "proofOfAddressImage": "actual_base64_encoded_image_data_here"
+        "proofOfAddressImage": "data:application/pdf;base64,..."
       }
     ],
     "employmentStatus": "EMPLOYED",
@@ -65,6 +65,21 @@ Create a customer via the [Customers API](../../api-reference/customers.md), inc
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+**How to generate base64-encoded fields:**
+
+You can generate a base64-encoded string from a file using the following command:
+
+```sh
+echo -n 'data:<mime-type>;base64,'$(base64 -i path/to/your-file | tr -d '\n')
+```
+
+- Replace `<mime-type>` with the correct MIME type for your file (e.g., `image/jpeg`, `image/png`, `application/pdf`).
+- Replace `path/to/your-file` with your actual file path.
+- The output can be used for any field that requires a base64-encoded file.
+- **Recommended file size:** The encoded file should be **greater than 10KB and less than 3MB**.
+{% endhint %}
 {% endstep %}
 
 {% step %}
