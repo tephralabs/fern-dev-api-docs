@@ -12,7 +12,7 @@ Fern supports customer verification via API, allowing you to onboard users witho
 {% step %}
 ### Create a customer with KYC data
 
-Create a business or individual customer via the [Customers API](../../api-reference/customers.md), including the `kycData` object in your request body.
+Create a customer via the [Customers API](../../api-reference/customers.md), including the `kycData` object in your request body.
 
 **Sample individual customer with KYC data POST request :**
 
