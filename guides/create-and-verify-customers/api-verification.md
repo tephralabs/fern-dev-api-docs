@@ -79,6 +79,8 @@ echo -n 'data:<mime-type>;base64,'$(base64 -i path/to/your-file | tr -d '\n')
 - Replace `path/to/your-file` with your actual file path.
 - The output can be used for any field that requires a base64-encoded file.
 - **Recommended file size:** The encoded file should be **greater than 10KB and less than 3MB**.
+
+**⚠️ Make sure that the file type and the MIME type in the prefix match.** For example, if your file is a JPEG image, use `data:image/jpeg;base64,` and a `.jpg` or `.jpeg` file.
 {% endhint %}
 {% endstep %}
 
