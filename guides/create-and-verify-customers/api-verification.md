@@ -14,7 +14,7 @@ Fern supports customer verification via API, allowing you to onboard users witho
 
 Create a customer via the [Customers API](../../api-reference/customers.md), including the `kycData` object in your request body.
 
-**Sample individual customer with KYC data POST request :**
+**Sample individual customer with KYC data POST request:**
 
 {% tabs %}
 {% tab title="JSON" %}
@@ -143,9 +143,72 @@ See [Additional Details](./additional-details.md) for status definitions and oth
 {% endstep %}
 
 {% step %}
+### Update KYC data
+
+If you need to add KYC data to an existing customer or if additional information is requested, you can update the customer using the PATCH endpoint.
+{% hint style="warning" %}
+**Important restrictions for KYC updates:**
+
+- You cannot update KYC data while verification is in progress
+- You can submit partial KYC data updates, only including the fields you want to add or update
+{% endhint %}
+**Update customer with KYC data PATCH request:**
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X PATCH https://api.fernhq.com/customers/{customer_id} \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "kycData": {
+      "legalFirstName": "John",
+      "legalLastName": "Doe",
+      "phoneNumber": "+12223334444",
+      "dateOfBirth": "1990-01-15",
+      "address": {
+        "streetLine1": "123 Main St",
+        "city": "New York",
+        "stateRegionProvince": "NY",
+        "postalCode": "10001",
+        "countryCode": "US"
+      },
+      "taxIdNumber": "123-45-6789",
+      "documents": [
+        {
+          "type": "GOVERNMENT_ID",
+          "subtype": "DRIVERS_LICENSE",
+          "countryCode": "US",
+          "documentIdNumber": "D123456789",
+          "issuanceDate": "2020-01-15",
+          "expirationDate": "2030-01-15",
+          "frontIdImage": "data:image/jpeg;base64,...",
+          "backIdImage": "data:image/jpeg;base64,..."
+        }
+      ],
+      "employmentStatus": "EMPLOYED",
+      "mostRecentOccupation": "Software Engineer",
+      "sourceOfFunds": "SALARY",
+      "accountPurpose": "PERSONAL_EXPENSES",
+      "expectedMonthlyPaymentsUsd": "LESS_THAN_5000",
+      "isIntermediary": false
+    }
+  }'
+```
+{% endtab %}
+{% endtabs %}
+**Response:**
+The response will be the same as the create customer response, with the customer status updated to `UNDER_REVIEW` if the KYC data was successfully added.
+{% endstep %}
+
+{% step %}
 ### Handle additional information requests
 
-If more information is needed, the status will change to `NEEDS_ADDITIONAL_INFORMATION`. Submit the required documents or data as instructed (currently, this may require manual intervention).
+If more information is needed, the status will change to `NEEDS_ADDITIONAL_INFORMATION`.
+
+{% hint style="info" %}
+Currently, handling additional information requests requires manual intervention. You cannot update KYC data via API once it has been submitted. Contact support to provide additional information.
+{% endhint %}
 {% endstep %}
 
 {% step %}
@@ -157,8 +220,11 @@ Once approved, the customer status will be `ACTIVE`. If rejected, it will be `RE
 
 ## Key Points
 
-- All PII is encrypted.
-- KYC data can only be submitted once per customer via API.
-- Hosted KYC link is still returned for fallback/manual completion.
-- Status updates are available via API.
-- See [Additional Details](./additional-details.md) for status definitions and other KYC-related information.
+- All PII is encrypted
+- KYC data can only be submitted once per customer via API
+- You can use PATCH to add `kycData` to a customer that doesn't have it yet
+- Once submitted, KYC data cannot be modified via API
+- Hosted KYC link is always returned for fallback/manual completion
+- Status updates are available via API
+- The verification process starts automatically when KYC data is submitted
+- See [Additional Details](./additional-details.md) for status definitions and other KYC-related information

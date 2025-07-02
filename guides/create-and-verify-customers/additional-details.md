@@ -7,21 +7,24 @@
 
 ## Customer Statuses
 
-| Status        | Definition                                                                                                                                                                                      |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CREATED`     | Customer object has been created.                                                                                                                                                               |
-| `UNDER_REVIEW`| KYC/KYB data has been submitted (via API or form) and is under review by Fern and/or verification providers.                                                                                    |
-| `NEEDS_ADDITIONAL_INFORMATION` | Additional information or documents are required to complete verification. Customer retains limited access until requirements are met.                                         |
-| `ACTIVE`      | Customer is approved and ready to transact.                                                                                                                                                     |
-| `REJECTED`    | Customer is rejected. The webhook will provide a list of rejection reasons.                                                                                                                     |
-| `DEACTIVATED` | Customer has been deactivated.                                                                                                                                                                  |
+| Status                         | Definition                                                              | Access Level                                                 |
+| ------------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `CREATED`                      | Initial status when customer is created without KYC data                | Wallet and payment account creation                          |
+| `UNDER_REVIEW`                 | KYC data submitted and being verified by providers                      | Wallet and payment account creation                          |
+| `NEEDS_ADDITIONAL_INFORMATION` | Additional documentation required to complete verification              | Wallet and payment account creation                          |
+| `ACTIVE`                       | Verification approved, customer ready to transact                       | All services including quotes/transactions and fiat accounts |
+| `REJECTED`                     | Verification rejected by providers (webhook includes rejection reasons) | No access to services                                        |
+| `DEACTIVATED`                  | Manually deactivated by customer, provider, or Fern                     | No access to services                                        |
 
-## Status Transitions in API-based KYC Flow
+## API-Based KYC Process
 
-- When you submit KYC data via API or form, the customer status will be `UNDER_REVIEW` while verification is in progress.
-- If more information is needed, the status will change to `NEEDS_ADDITIONAL_INFORMATION`.
-- Once approved, the status will be `ACTIVE`. If rejected, it will be `REJECTED`.
-- You can monitor status via API or webhooks.
+1. Submit KYC data via API or form → Status: `UNDER_REVIEW`
+2. If additional info needed → Status: `NEEDS_ADDITIONAL_INFORMATION`
+3. Final outcome:
+   - Approved → Status: `ACTIVE`
+   - Rejected → Status: `REJECTED`
+
+You can monitor status changes via API or webhooks.
 
 ## Notifications
 
