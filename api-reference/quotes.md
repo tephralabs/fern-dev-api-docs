@@ -1,8 +1,8 @@
 ---
 description: >-
-  Use this API to create and fetch quotes for transactions. Currently, onramp
-  and offramp transaction types are supported and will be inferred from the
-  source and destination.
+  Use this API to create and fetch quotes for transactions. Currently, onramp,
+  offramp and crypto transaction types are supported and will be inferred from
+  the source and destination.
 ---
 
 # Quotes

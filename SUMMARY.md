@@ -20,8 +20,8 @@
 ## Quickstart
 
 * [Your first transaction](quickstart/your-first-transaction.md)
-* [❓ Webhooks](quickstart/webhooks.md)
-* [❓ Authentication](quickstart/authentication.md)
+* [Webhooks](quickstart/webhooks.md)
+* [Authentication](quickstart/authentication.md)
 
 ## Guides
 
