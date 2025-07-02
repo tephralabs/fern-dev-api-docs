@@ -16,6 +16,10 @@ description: Use this API to add, update and get payment accounts for an existin
 [https://api.fernhq.com/json](https://api.fernhq.com/json)
 {% endopenapi %}
 
+{% openapi-operation spec="fern-api" path="/payment-accounts/{paymentAccountId}/balance" method="get" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
+
 {% openapi-operation spec="fern-api" path="/payment-accounts/{paymentAccountId}" method="delete" %}
-[Broken link](broken-reference)
+[OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
