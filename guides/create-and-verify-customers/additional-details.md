@@ -7,14 +7,19 @@
 
 ## Customer Statuses
 
-| Status                         | Definition                                                              | Access Level                                                 |
-| ------------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `CREATED`                      | Initial status when customer is created without KYC data                | Wallet and payment account creation                          |
-| `UNDER_REVIEW`                 | KYC data submitted and being verified by providers                      | Wallet and payment account creation                          |
-| `NEEDS_ADDITIONAL_INFORMATION` | Additional documentation required to complete verification              | Wallet and payment account creation                          |
-| `ACTIVE`                       | Verification approved, customer ready to transact                       | All services including quotes/transactions and fiat accounts |
-| `REJECTED`                     | Verification rejected by providers (webhook includes rejection reasons) | No access to services                                        |
-| `DEACTIVATED`                  | Manually deactivated by customer, provider, or Fern                     | No access to services                                        |
+| Status                         | Definition                                                              |
+| ------------------------------ | ----------------------------------------------------------------------- |
+| `CREATED`                      | Initial status when customer is created without KYC data                |
+| `UNDER_REVIEW`                 | KYC data submitted and being verified by providers                      |
+| `NEEDS_ADDITIONAL_INFORMATION` | Additional documentation required to complete verification              |
+| `ACTIVE`                       | Verification approved, customer ready to transact                       |
+| `REJECTED`                     | Verification rejected by providers (webhook includes rejection reasons) |
+| `DEACTIVATED`                  | Manually deactivated by customer, provider, or Fern                     |
+
+**Notes:**
+
+- Crypto-to-crypto transactions are available for all customer statuses except `DEACTIVATED`. Fiat-related services require `ACTIVE` status.
+- Core customer information like first name, last name, and email address cannot be updated once set.
 
 ## API-Based KYC Process
 
