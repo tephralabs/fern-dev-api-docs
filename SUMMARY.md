@@ -44,6 +44,7 @@
 * [Country-specific requirements](guides/country-specific-requirements/README.md)
   * [Nigeria](guides/country-specific-requirements/nigeria.md)
 * [Automated offramps](guides/automated-offramps.md)
+* [Automated onramps](guides/automated-onramps.md)
 * [Exchange rates](guides/exchange-rates.md)
 * [SWIFT payouts](guides/swift-payouts.md)
 * [Whitelabelling email notifications](guides/whitelabelling-email-notifications.md)
@@ -55,6 +56,10 @@
 * [Quotes](api-reference/quotes.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Additional details](api-reference/transactions/introduction.md)
+
+***
+
+* [Exchange rates](exchange-rates.md)
 
 ## Advanced
 

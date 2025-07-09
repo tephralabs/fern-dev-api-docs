@@ -1,4 +1,4 @@
-# Virtual accounts
+# Fern virtual accounts
 
 Fern offers virtual accounts in several currencies for business and individual customers. Virtual accounts are named fiat accounts that can send and/or receive fiat currencies.
 
@@ -27,4 +27,8 @@ Fern offers virtual accounts in several currencies for business and individual c
 
 * USD
 * EUR
-* MXN
+* MXN\
+
+
+For more details on creating virtual accounts for automatic onramps refer to the [**Automed onramps**](../coverage/restricted-customer-geographies.md) section.
+
