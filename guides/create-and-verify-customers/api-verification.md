@@ -4,13 +4,13 @@
 
 Fern supports customer verification via API, allowing you to onboard users without redirecting them to Fern's hosted KYC forms. This guide explains how to use the API-based verification flow, when to use it, and how it differs from the hosted form approach.
 
-- For the traditional hosted form flow, see [Create and verify customers](./README.md).
+* For the traditional hosted form flow, see [Create and verify customers](./).
 
 ## Step-by-step guide
 
 {% stepper %}
 {% step %}
-### Create a customer with KYC data
+#### Create a customer with KYC data
 
 Create a customer via the [Customers API](../../api-reference/customers.md), including the `kycData` object in your request body.
 
@@ -75,17 +75,17 @@ You can generate a base64-encoded string from a file using the following command
 echo -n 'data:<mime-type>;base64,'$(base64 -i path/to/your-file | tr -d '\n')
 ```
 
-- Replace `<mime-type>` with the correct MIME type for your file (e.g., `image/jpeg`, `image/png`, `application/pdf`).
-- Replace `path/to/your-file` with your actual file path.
-- The output can be used for any field that requires a base64-encoded file.
-- **Recommended file size:** The encoded file should be **greater than 10KB and less than 3MB**.
+* Replace `<mime-type>` with the correct MIME type for your file (e.g., `image/jpeg`, `image/png`, `application/pdf`).
+* Replace `path/to/your-file` with your actual file path.
+* The output can be used for any field that requires a base64-encoded file.
+* **Recommended file size:** The encoded file should be **greater than 10KB and less than 3MB**.
 
 **⚠️ Make sure that the file type and the MIME type in the prefix match.** For example, if your file is a JPEG image, use `data:image/jpeg;base64,` and a `.jpg` or `.jpeg` file.
 {% endhint %}
 {% endstep %}
 
 {% step %}
-### Receive immediate feedback
+#### Receive immediate feedback
 
 If the request is valid, you'll receive a response with the customer ID, status, and a hosted KYC link (for fallback/manual completion).
 
@@ -135,23 +135,25 @@ If there are validation errors, you'll receive a detailed error response:
 {% endstep %}
 
 {% step %}
-### Monitor verification status
+#### Monitor verification status
 
 Check the customer status using the [Customers API](../../api-reference/customers.md) `GET` endpoint.
 
-See [Additional Details](./additional-details.md) for status definitions and other KYC-related information.
+See [Additional Details](additional-details.md) for status definitions and other KYC-related information.
 {% endstep %}
 
 {% step %}
-### Update KYC data
+#### Update KYC data
 
 If you need to add KYC data to an existing customer or if additional information is requested, you can update the customer using the PATCH endpoint.
+
 {% hint style="warning" %}
 **Important restrictions for KYC updates:**
 
-- You cannot update KYC data while verification is in progress
-- You can submit partial KYC data updates, only including the fields you want to add or update
+* You cannot update KYC data while verification is in progress
+* You can submit partial KYC data updates, only including the fields you want to add or update
 {% endhint %}
+
 **Update customer with KYC data PATCH request:**
 
 {% tabs %}
@@ -197,12 +199,12 @@ curl -X PATCH https://api.fernhq.com/customers/{customer_id} \
 ```
 {% endtab %}
 {% endtabs %}
-**Response:**
-The response will be the same as the create customer response, with the customer status updated to `UNDER_REVIEW` if the KYC data was successfully added.
+
+**Response:** The response will be the same as the create customer response, with the customer status updated to `UNDER_REVIEW` if the KYC data was successfully added.
 {% endstep %}
 
 {% step %}
-### Handle additional information requests
+#### Handle additional information requests
 
 If more information is needed, the status will change to `NEEDS_ADDITIONAL_INFORMATION`.
 
@@ -212,7 +214,7 @@ Currently, handling additional information requests requires manual intervention
 {% endstep %}
 
 {% step %}
-### Completion
+#### Completion
 
 Once approved, the customer status will be `ACTIVE`. If rejected, it will be `REJECTED`.
 {% endstep %}
@@ -220,11 +222,11 @@ Once approved, the customer status will be `ACTIVE`. If rejected, it will be `RE
 
 ## Key Points
 
-- All PII is encrypted
-- KYC data can only be submitted once per customer via API
-- You can use PATCH to add `kycData` to a customer that doesn't have it yet
-- Once submitted, KYC data cannot be modified via API
-- Hosted KYC link is always returned for fallback/manual completion
-- Status updates are available via API
-- The verification process starts automatically when KYC data is submitted
-- See [Additional Details](./additional-details.md) for status definitions and other KYC-related information
+* All PII is encrypted
+* KYC data can only be submitted once per customer via API
+* You can use PATCH to add `kycData` to a customer that doesn't have it yet
+* Once submitted, KYC data cannot be modified via API
+* Hosted KYC link is always returned for fallback/manual completion
+* Status updates are available via API
+* The verification process starts automatically when KYC data is submitted
+* See [Additional Details](additional-details.md) for status definitions and other KYC-related information

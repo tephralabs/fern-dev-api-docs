@@ -12,7 +12,7 @@
 {% step %}
 ### Create a payment account for a verified customer
 
-Once your customer has been created and successfully verified, you can use the [Payment Accounts](../api-reference/payment-accounts.md) endpoint to create a new payment account of type `FERN_AUTO_FIAT_ACCOUNT` for the customer. \
+Once your customer has been created and successfully verified, you can use the [Payment Accounts](../../api-reference/payment-accounts.md) endpoint to create a new payment account of type `FERN_AUTO_FIAT_ACCOUNT` for the customer. \
 \
 The destination payment account provided at creation must be a crypto wallet belonging to the customer that they wish any funds to settle into.\
 \
@@ -61,9 +61,9 @@ Funds should arrive into the account within the standard processing time of the 
 \
 Once the transaction is processing or completed a transaction will be created in the system to track the customer deposit.\
 \
-Track the progress of a transaction by calling the [**Transactions**](../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the [**Developer dashboard**](../overview/developer-dashboard.md).&#x20;
+Track the progress of a transaction by calling the [**Transactions**](../../api-reference/transactions/#api-v0-transactions-transactionid) endpoint or visiting the [**Developer dashboard**](../../overview/developer-dashboard.md).&#x20;
 
-For a full list of transaction statuses, refer to [**Transaction Statuses**](../api-reference/transactions/introduction.md#transaction-statuses).
+For a full list of transaction statuses, refer to [**Transaction Statuses**](../../api-reference/transactions/introduction.md#transaction-statuses).
 
 #### Request
 

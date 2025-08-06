@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# ❓ Webhooks
+# Webhooks
 
 Fern's webhooks enable you to receive real-time updates on Fern-related events.&#x20;
 

@@ -4,13 +4,13 @@
 
 Customers are your end users. Fern supports businesses and individuals as end users. Before your customer can transact with Fern, they must complete a customer verification process, i.e. **Know Your Customer (KYC) or Know Your Business (KYB)**. Fern manages this process to ensure secure and compliant funds transfers, giving you confidence in every transaction.
 
-- For a fully branded onboarding experience, see [Verify customers via API](./api-verification.md) for details.
+* For a fully branded onboarding experience, see [Verify customers via API](api-verification.md) for details.
 
 ## Step-by-step guide
 
 {% stepper %}
 {% step %}
-### Create a customer&#x20;
+#### Create a customer
 
 Create either a business or individual customer via the [Customers API](../../api-reference/customers.md). If the customer creation call succeeds, the response will include a hosted KYC/KYB link that you can share with your customer directly. Customer status will be `CREATED` .
 
@@ -64,13 +64,13 @@ Create either a business or individual customer via the [Customers API](../../ap
 {% endstep %}
 
 {% step %}
-### Customer completes verification via KYC link
+#### Customer completes verification via KYC link
 
 You can share the hosted KYC form link directly with your end user for completion, or your team can complete the form on your customer's behalf. Typically, it takes around 3 minutes for individuals to complete the form, and around 10-15 minutes for businesses. Once the customer completes the form, their status will change from `CREATED` to `PENDING` .
 {% endstep %}
 
 {% step %}
-### Get customer status
+#### Get customer status
 
 You can use the [Customers API](../../api-reference/customers.md) `GET` endpoint to check for updates to the customer status. Status updates will also be communicated via webhooks.
 
@@ -94,8 +94,5 @@ You can use the [Customers API](../../api-reference/customers.md) `GET` endpoint
 {% endtabs %}
 
 If any additional information is needed to verify your customer, the Fern compliance team will contact them directly to minimize compliance overhead for your team. Once the customer is fully approved, their status will change to `ACTIVE`. For a full list of customer statuses, refer to [Customer Statuses](additional-details.md#customer-statuses).
-
-
 {% endstep %}
 {% endstepper %}
-

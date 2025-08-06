@@ -30,5 +30,5 @@ Fern offers virtual accounts in several currencies for business and individual c
 * MXN\
 
 
-For more details on creating virtual accounts for automatic onramps refer to the [**Automed onramps**](../coverage/restricted-customer-geographies.md) section.
+For more details on creating virtual accounts for automatic onramps refer to the [**Automed onramps**](../../coverage/restricted-customer-geographies.md) section.
 
