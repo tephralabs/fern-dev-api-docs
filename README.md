@@ -18,7 +18,7 @@ Fern works with licensed liquidity providers and financial institutions to offer
 
 ## Getting started
 
-The Fern API is currently in **private beta**. If you're interested in building with the Fern API, please send us a note at [hello@fernhq.com](mailto:hello@fernhq.com) so we can discuss your use case. Once you've decided to build with Fern, onboarding is straightforward:
+The Fern API is currently in **private beta**. Once you've decided to build with Fern, onboarding is straightforward:
 
 {% stepper %}
 {% step %}
