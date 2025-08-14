@@ -15,4 +15,4 @@ Fern sends email notifications to your end users to confirm completion of their 
 
 
 
-If you're interested in fully whitelabelling email notifications, send us a note at support@fernhq.com or in your dedicated Slack channel.
+If you're interested in fully whitelabelling email notifications, send us a note through your preferred Support channel.

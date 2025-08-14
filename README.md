@@ -22,29 +22,27 @@ The Fern API is currently in **private beta**. If you're interested in building 
 
 {% stepper %}
 {% step %}
-### Undergo business verification (KYB)
+### Create your developer account
 
-Create an account at [app.fernhq.com](https://app.fernhq.com/), making sure to indicate that you plan to use Fern for your business. You'll see an option to complete KYB. It should take 10-15 min to complete. For more details on the information needed, refer to [Requirements - Businesses](guides/create-and-verify-customers/requirements-for-businesses.md).&#x20;
-
-In the meantime, we will set up a dedicated Slack or Telegram channel to connect you directly with our team.
+Create an account at [dashboard.fernhq.com](https://dashboard.fernhq.com/). Tell us a bit about your use case, and select a billing plan.&#x20;
 {% endstep %}
 
 {% step %}
-### Get full access to Fern Business and the Developer dashboard
+### Pre-fund your billing wallet, if needed
 
-Once verified and approved, you'll have full access to Fern. Get started by visiting the [Developer dashboard](overview/developer-dashboard.md). You can also leverage Fern's integrated on/offramps for your business needs and invite other team members to join your account.
+If you're a Builder tier subscriber, pre-fund your billing wallet with USDC to access certain API functionality such as KYC or wallet creation. For subscribers on all other tiers, you can pre-fund billing wallets if desired; otherwise, we invoice you monthly.
 {% endstep %}
 
 {% step %}
-### Commercials & API keys
+### Set up your API key
 
-Once you have finalized commercials with the Fern team, we will reach out to share your API keys with you securely. Be sure to copy and store the key safely, as you will not be able to see the key in your Developer dashboard or other Fern interface afterwards.
+You can create API keys for sandbox (coming soon), pre-production, and production environments.
 {% endstep %}
 
 {% step %}
 ### Start building
 
-Get started with creating your first customers and transactions! Feel free to reach out to the Fern team through Slack, Telegram, or email for any support.
+Get started integrating the Fern API!
 {% endstep %}
 {% endstepper %}
 
