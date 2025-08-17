@@ -32,6 +32,7 @@
   * [Verify customers via API](guides/create-and-verify-customers/api-verification.md)
   * [Additional details](guides/create-and-verify-customers/additional-details.md)
   * [Country codes](guides/create-and-verify-customers/country-codes.md)
+  * [Occupation codes](guides/create-and-verify-customers/occupation-codes.md)
 * [Create Fern wallets](guides/create-fern-wallets.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
