@@ -16,6 +16,8 @@ Fern’s webhooks are organized into several event categories based on the type 
 | Transaction Events     |                          | —                                                                                                                                                                                             |
 |                        | transaction.created      | Triggered when a transaction is initiated (created).                                                                                                                                          |
 |                        | transaction.updated      | Triggered when a transaction’s status changes (e.g. moves from created to processing, completed, etc). _(Status values include AWAITING\_TRANSFER, PROCESSING, COMPLETED, REFUNDED, FAILED.)_ |
+|                        | deposit.created          | <p>Triggered when a deposit is made to a customer's account (e.g FERN_CRYPTO_WALLET, FERN_FIAT_ACCOUNT)<br>Same payload as transaction.created.</p>                                           |
+|                        | deposit.updated          | <p>Triggered when a transaction corresponding to deposit has a status change.<br>Same payload as transaction.updated.</p>                                                                     |
 
 ### Event Structure:
 
