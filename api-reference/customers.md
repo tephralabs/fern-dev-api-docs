@@ -15,13 +15,13 @@ Fern supports two ways to verify your customers:
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi src="https://api.fernhq.com/json" path="/customers/{customerId}" method="get" %}
-[https://api.fernhq.com/json](https://api.fernhq.com/json)
-{% endopenapi %}
+{% openapi-operation spec="fern-api" path="/customers/{customerId}" method="get" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
 
-{% openapi src="https://api.fernhq.com/json" path="/customers" method="get" %}
-[https://api.fernhq.com/json](https://api.fernhq.com/json)
-{% endopenapi %}
+{% openapi-operation spec="fern-api" path="/customers" method="get" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
 
 {% openapi-operation spec="fern-api" path="/customers/{customerId}" method="patch" %}
 [OpenAPI fern-api](https://api.fernhq.com/json)

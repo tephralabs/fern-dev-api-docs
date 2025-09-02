@@ -7,9 +7,9 @@ description: >-
 
 # Quotes
 
-{% openapi src="https://api.fernhq.com/json" path="/quotes" method="post" %}
-[https://api.fernhq.com/json](https://api.fernhq.com/json)
-{% endopenapi %}
+{% openapi-operation spec="fern-api" path="/quotes" method="post" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
 
 
 
