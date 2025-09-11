@@ -34,6 +34,7 @@
   * [Country codes](guides/create-and-verify-customers/country-codes.md)
   * [Occupation codes](guides/create-and-verify-customers/occupation-codes.md)
   * [Business industry codes](guides/create-and-verify-customers/occupation-codes-1.md)
+  * [National identity types](guides/create-and-verify-customers/national-identity-types.md)
 * [Create Fern wallets](guides/create-fern-wallets.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
