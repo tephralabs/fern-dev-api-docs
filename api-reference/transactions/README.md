@@ -10,13 +10,17 @@ description: >-
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi src="https://api.fernhq.com/json" path="/transactions/{transactionId}" method="get" %}
-[https://api.fernhq.com/json](https://api.fernhq.com/json)
-{% endopenapi %}
+{% openapi-operation spec="fern-api" path="/transactions" method="post" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
 
-{% openapi src="https://api.fernhq.com/json" path="/transactions" method="get" %}
-[https://api.fernhq.com/json](https://api.fernhq.com/json)
-{% endopenapi %}
+{% openapi-operation spec="fern-api" path="/transactions/{transactionId}" method="get" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="fern-api" path="/transactions" method="get" %}
+[OpenAPI fern-api](https://api.fernhq.com/json)
+{% endopenapi-operation %}
 
 
 
