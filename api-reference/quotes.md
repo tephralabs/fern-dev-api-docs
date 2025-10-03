@@ -11,10 +11,6 @@ description: >-
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="fern-api" path="/quotes" method="post" %}
-[OpenAPI fern-api](https://api.fernhq.com/json)
-{% endopenapi-operation %}
-
 
 
 
