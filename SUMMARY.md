@@ -59,6 +59,7 @@
 * [Quotes](api-reference/quotes.md)
 * [Transactions](api-reference/transactions/README.md)
   * [Additional details](api-reference/transactions/introduction.md)
+* [Automation Rules](api-reference/automation-rules.md)
 
 ***
 
