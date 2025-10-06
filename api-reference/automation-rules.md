@@ -7,22 +7,22 @@ Typical use cases include:
 * Scheduled Cash-outs: Set a recurring schedule (daily, weekly, etc.) to automatically convert and transfer funds.
 * Threshold-based Sweeps: Automatically off-ramp once your wallet balance reaches a set amount.
 
-{% openapi-operation spec="fern-api" path="/automation_rules" method="post" %}
+{% openapi-operation spec="fern-api" path="/automation-rules/{ruleId}" method="get" %}
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="fern-api" path="/automation_rules" method="get" %}
+{% openapi-operation spec="fern-api" path="/automation-rules" method="get" %}
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="fern-api" path="/automation_rules/{ruleId}" method="get" %}
+{% openapi-operation spec="fern-api" path="/automation-rules" method="post" %}
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="fern-api" path="/automation_rules/{ruleId}" method="put" %}
+{% openapi-operation spec="fern-api" path="/automation-rules/{ruleId}" method="put" %}
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="fern-api" path="/automation_rules/{ruleId}" method="delete" %}
+{% openapi-operation spec="fern-api" path="/automation-rules/{ruleId}" method="delete" %}
 [OpenAPI fern-api](https://api.fernhq.com/json)
 {% endopenapi-operation %}
