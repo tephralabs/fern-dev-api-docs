@@ -51,6 +51,7 @@
 * [Exchange rates](guides/exchange-rates.md)
 * [SWIFT payouts](guides/swift-payouts.md)
 * [Whitelabelling email notifications](guides/whitelabelling-email-notifications.md)
+* [Automate Fund Transfers with Automation Rules](guides/automate-fund-transfers-with-automation-rules.md)
 
 ## API reference
 
