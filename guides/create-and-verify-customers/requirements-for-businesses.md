@@ -51,7 +51,7 @@ Business customers must complete verification of the nature of the business, bus
 
 **Typical completion time:** 10-15 min&#x20;
 
-**Typical time to approval:** 3-7 business days
+**Typical time to approval:** 4-7 business days
 
 If additional documents or information are needed (e.g., proof of business activities), our compliance team will contact your end-customer directly to complete the verification process.
 
