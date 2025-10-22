@@ -1,4 +1,4 @@
-# Requirements for Businesses
+# Requirements for businesses
 
 ## Overview
 
@@ -10,30 +10,48 @@ Business customers must complete verification of the nature of the business, bus
   * Business name
   * DBA name (if applicable)&#x20;
   * Business type
+  * Business industry
   * Whether the business is a DAO
-  * Business address
-  * Business registration number (Tax ID number / Employer Identification Number)
+  * Business registered address
+  * Business operating address
+    * If the business is remote, this can be the controller's address
+  * Country of business registration
+  * Business registration number
+  * Business formation date
   * Website
   * Description
+  * Any other links describing the business
 * **Source of funds**&#x20;
-  * Funds source
+  * Source of funds
+    * In some cases, depending on the nature of the business, we require proof of source of funds
+  * Description of source of funds
   * Compliance screening procedures (if your customer is transmitting funds on others' behalf)
+* **Account usage**
+  * Expected monthly transaction volume
+  * Account purpose
+    * If `OTHER` is selected, free text description of the account purpose is required
+  * Estimated annual revenue
+* **Risk information**
+  * Operation in prohibited countries
+  * High-risk activities & explanation of these activities
 * **Beneficial owner information**
   * Refer to **Individual** requirements
   * Email address
   * Percentage ownership
+  * Date relationship with the business began
 * **Controller information**
   * Refer to **Individual** requirements
   * Email address
   * Title
+  * Date relationship with the business began
 * **Business** **documents**
   * Formation documents
   * Ownership documents
-  * Business proof of address
+  * Business proof of physical address
 
 **Typical completion time:** 10-15 min&#x20;
 
-**Typical time to approval:** 1-3 business days
+**Typical time to approval:** 3-7 business days
 
 If additional documents or information are needed (e.g., proof of business activities), our compliance team will contact your end-customer directly to complete the verification process.
 
@@ -101,9 +119,6 @@ The Fern customer verification links will make it clear what information is requ
 **Accepted documents include:**
 
 * Bank statement
-* Utility bill
-* Government-issued letter
-* Office lease agreement (must be current, can be older than last 90 days)
 
 Note: DAOs may provide a proof of physical residential address for their verified control person if the DAO does not have its own physical operating address.
 

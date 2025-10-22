@@ -17,12 +17,6 @@
 * [Fiat currency support](fiat-currency-support.md)
 * [Cryptocurrency support](cryptocurrency-support.md)
 
-## Quickstart
-
-* [Your first transaction](quickstart/your-first-transaction.md)
-* [Webhooks](quickstart/webhooks.md)
-* [Authentication](quickstart/authentication.md)
-
 ## Guides
 
 * [Core API concepts](guides/core-api-concepts.md)
@@ -30,11 +24,14 @@
   * [Requirements for individuals](guides/create-and-verify-customers/requirements-for-individuals.md)
   * [Requirements for businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
   * [Verify customers via API](guides/create-and-verify-customers/api-verification.md)
+  * [Verify customers via hosted form](guides/create-and-verify-customers/verify-customers-via-hosted-form.md)
   * [Additional details](guides/create-and-verify-customers/additional-details.md)
   * [Country codes](guides/create-and-verify-customers/country-codes.md)
   * [Occupation codes](guides/create-and-verify-customers/occupation-codes.md)
   * [Business industry codes](guides/create-and-verify-customers/business-industry-codes.md)
   * [National identity types](guides/create-and-verify-customers/national-identity-types.md)
+  * [Government ID types](guides/create-and-verify-customers/government-id-types.md)
+  * [Proof of address type](guides/create-and-verify-customers/proof-of-address-type.md)
 * [Create Fern wallets](guides/create-fern-wallets.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)
