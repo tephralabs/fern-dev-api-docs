@@ -67,3 +67,4 @@
 
 * [Slippage and price impact](advanced/slippage-and-price-impact.md)
 * [Rate limits](advanced/rate-limits.md)
+* [Fees](advanced/fees.md)
