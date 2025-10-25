@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Fees
 
 Fees are applied to transactions based on the geographic region of the payment destination. These fees are calculated as a percentage of the transaction amount and vary by subscription tier.
