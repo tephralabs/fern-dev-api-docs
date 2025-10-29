@@ -25,6 +25,8 @@
   * [Requirements for businesses](guides/create-and-verify-customers/requirements-for-businesses.md)
   * [Verify customers via API](guides/create-and-verify-customers/api-verification.md)
   * [Verify customers via hosted form](guides/create-and-verify-customers/verify-customers-via-hosted-form.md)
+  * [Verify Business customers via hosted form](guides/create-and-verify-customers/verify-business-customers-via-hosted-form.md)
+  * [Verify Business customers via API](guides/create-and-verify-customers/verify-business-customers-via-api.md)
   * [Additional details](guides/create-and-verify-customers/additional-details.md)
   * [Country codes](guides/create-and-verify-customers/country-codes.md)
   * [Occupation codes](guides/create-and-verify-customers/occupation-codes.md)

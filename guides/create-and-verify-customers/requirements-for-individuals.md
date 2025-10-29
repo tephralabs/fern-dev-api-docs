@@ -6,13 +6,13 @@ Individual customers are required to provide certain information to complete ide
 
 ## Information collected
 
-* First name
+* Legal first name
 * Middle name (optional)
-* Last name
+* Legal last name
 * Phone number
-* Physical address
-* Date of birth
 * Nationality
+* Residential address
+* Date of birth
 * National ID issuing country
 * National ID number
 * Government ID issuing country
@@ -21,6 +21,7 @@ Individual customers are required to provide certain information to complete ide
 * Employment status
 * Most recent occupation (see [Occupation codes](occupation-codes.md))
 * Source of funds
+* Description of source of funds
 * Account purpose
   * If `OTHER` is selected, free text description of the account purpose is required
 * Expected monthly transaction volume (in USD)
@@ -29,8 +30,23 @@ Individual customers are required to provide certain information to complete ide
   * API makes it possible to provide this optionally; if not provided, Customer will not have access to SEPA rails
   * Fern-hosted KYC forms require the proof of address
 
-**Typical completion time:** <5 min&#x20;
+#### File Size Requirements
+
+* **File size:** Greater than 10KB and less than 5MB
+* **Total API request size:** Maximum 10MB
+* **Image resolution:** Minimum 200x200 pixels
+
+### Additional Information Requests (RFI)
+
+If Fern's compliance team needs additional information during the verification process, the customer status will change to `NEEDS_ADDITIONAL_INFORMATION`, and the customer will be contacted directly via email.
+
+**Common RFI scenarios for individuals:**
+
+* Expired or unclear government ID
+* Additional proof of address needed
+* Verification of source of funds
+* Enhanced due diligence for high-risk profiles
+
+Customers can submit additional documents through the same `verificationLink` provided in the initial response.
 
 **Typical time to approval:** <10min, unless we receive an RFI from partners (which requires manual intervention)
-
-If additional documents or information are needed (e.g. if the uploaded ID has expired), the Fern compliance team will contact your end customer directly to complete the verification process.

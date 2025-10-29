@@ -15,7 +15,7 @@ Below are example webhook payloads for each event type, illustrating the structu
     "customerType": "INDIVIDUAL",
     "name": "John Doe",
     "email": "johndoe@example.com",
-    "kycLink": "https://kyb.example.com/verify/abc123",
+    "verificationLink": "https://kyb.example.com/verify/abc123",
     "updatedAt": "2023-10-01T12:00:00Z",
     "organizationId": "8469411c-48c1-4e26-a032-44688be9cb4b"
   },
@@ -37,7 +37,7 @@ Below are example webhook payloads for each event type, illustrating the structu
     "customerType": "INDIVIDUAL",
     "name": "John Doe",
     "email": "johndoe@example.com",
-    "kycLink": "https://kyb.example.com/verify/abc123",
+    "verificationLink": "https://kyb.example.com/verify/abc123",
     "updatedAt": "2023-10-01T12:00:00Z",
     "organizationId": "8469411c-48c1-4e26-a032-44688be9cb4b"
   },

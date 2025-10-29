@@ -7,27 +7,29 @@ Business customers must complete verification of the nature of the business, bus
 ## Information collected
 
 * **Business details**
-  * Business name
+  * Legal business name
   * DBA name (if applicable)&#x20;
   * Business type
   * Business industry
   * Whether the business is a DAO
   * Business registered address
   * Business operating address
-    * If the business is remote, this can be the controller's address
+    * Can be different from registered address
   * Country of business registration
   * Business registration number
   * Business formation date
   * Website
-  * Description
-  * Any other links describing the business
+  * Business description
+  * Additional links
+    * Social media profiles
 * **Source of funds**&#x20;
   * Source of funds
     * In some cases, depending on the nature of the business, we require proof of source of funds
   * Description of source of funds
-  * Compliance screening procedures (if your customer is transmitting funds on others' behalf)
+  * Compliance screening procedures
+    * Required if transmitting funds on behalf of others
 * **Account usage**
-  * Expected monthly transaction volume
+  * Expected monthly transaction volume in USD
   * Account purpose
     * If `OTHER` is selected, free text description of the account purpose is required
   * Estimated annual revenue
@@ -49,13 +51,11 @@ Business customers must complete verification of the nature of the business, bus
   * Ownership documents
   * Business proof of physical address
 
-**Typical completion time:** 10-15 min&#x20;
-
 **Typical time to approval:** 4-7 business days
 
 If additional documents or information are needed (e.g., proof of business activities), our compliance team will contact your end-customer directly to complete the verification process.
 
-## Specific document requirements
+### Specific document requirements
 
 The Fern customer verification links will make it clear what information is required from the customer. Customers will be required to provide documents that meet these criteria:
 
@@ -124,3 +124,22 @@ Note: DAOs may provide a proof of physical residential address for their verifie
 
 </details>
 
+#### File Size Requirements
+
+* **File size:** Greater than 10KB and less than 5MB
+* **Total API request size:** Maximum 10MB
+* **Image resolution:** Minimum 200x200 pixels
+
+### Additional Information Requests (RFI)
+
+If Fern's compliance team needs additional information during the verification process, the customer status will change to `NEEDS_ADDITIONAL_INFORMATION`, and the customer will be contacted directly via email.
+
+**Common RFI scenarios for businesses:**
+
+* Unclear formation or ownership documents
+* Missing beneficial owner verification
+* Proof of business activities required
+* Enhanced due diligence documentation
+* Updated financial information
+
+Customers can submit additional documents through the same `verificationLink` provided in the initial response.
