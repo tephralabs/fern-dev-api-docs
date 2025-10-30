@@ -15,7 +15,7 @@
 ***
 
 * [Fiat currency support](fiat-currency-support.md)
-* [Cryptocurrency support](cryptocurrency-support.md)
+* [Cryptocurrency & chain support](cryptocurrency-support.md)
 
 ## Guides
 
