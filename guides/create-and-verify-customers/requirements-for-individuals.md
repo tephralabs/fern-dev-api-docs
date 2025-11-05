@@ -33,7 +33,7 @@ Individual customers are required to provide certain information to complete ide
 #### File Size Requirements
 
 * **File size:** Greater than 10KB and less than 5MB
-* **Total API request size:** Maximum 10MB
+* **Total API request size:** Maximum 100MB
 * **Image resolution:** Minimum 200x200 pixels
 
 ### Additional Information Requests (RFI)
