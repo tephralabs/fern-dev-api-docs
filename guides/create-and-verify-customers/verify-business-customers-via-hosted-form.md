@@ -7,6 +7,7 @@ Fern has hosted forms that simplify the KYC/KYB data collection for your Custome
 **Related verification guides:**
 
 * For using Fern's hosted KYB forms see [Verify Business customers via hosted form](verify-business-customers-via-hosted-form.md)
+* For detailed KYB integration guide see [Customer Verification (KYC/KYB)](../kyc-kyb-verification/integration-guides/kyb-integration.md)
 * For API-based individual (KYC) verification see [Verify Individual customers via API](api-verification.md)
 * For list of KYB requirements see [Requirements for businesses](requirements-for-businesses.md)
 
