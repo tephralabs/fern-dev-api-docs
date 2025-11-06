@@ -38,12 +38,10 @@
   * Integration guides
     * [KYC integration](guides/kyc-kyb-verification/integration-guides/kyc-integration.md)
     * [KYB integration](guides/kyc-kyb-verification/integration-guides/kyb-integration.md)
-    * [Webhooks](guides/kyc-kyb-verification/integration-guides/webhooks.md)
   * Concepts
     * [Customer states](guides/kyc-kyb-verification/concepts/customer-states.md)
     * [Verification workflow](guides/kyc-kyb-verification/concepts/verification-workflow.md)
   * Reference
-    * [Error codes](guides/kyc-kyb-verification/reference/error-codes.md)
     * [Glossary](guides/kyc-kyb-verification/reference/glossary.md)
 * [Create Fern wallets](guides/create-fern-wallets.md)
 * [First-party onramps](guides/first-party-onramps.md)

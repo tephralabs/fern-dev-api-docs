@@ -12,7 +12,7 @@ Step-by-step implementation guides for building customer verification workflows:
 
 * [KYC integration](integration-guides/kyc-integration.md) - Complete guide for verifying individual customers
 * [KYB integration](integration-guides/kyb-integration.md) - Detailed guide for verifying business customers and beneficial owners
-* [Webhooks](integration-guides/webhooks.md) - Implement event-driven verification status updates
+* [Webhooks](../webhooks/README.md) - Implement event-driven verification status updates
 
 ## Concepts
 
@@ -25,7 +25,6 @@ Understand the core concepts and workflows behind customer verification:
 
 Technical reference documentation for customer verification:
 
-* [Error codes](reference/error-codes.md) - Complete error reference with troubleshooting guidance
 * [Glossary](reference/glossary.md) - Terminology and definitions
 
 ## Related documentation

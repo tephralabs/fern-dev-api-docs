@@ -16,7 +16,7 @@ This integration enables you to verify customer identities before they access fi
 **Related customer verification guides:**
 
 * For business verification see [KYB integration guide](kyb-integration.md)
-* For webhook setup see [Webhook integration guide](webhooks.md)
+* For webhook setup see [Webhook integration guide](../../webhooks/README.md)
 * For customer state definitions see [Customer states](../concepts/customer-states.md)
 * For API reference see [Customer API reference](../../../api-reference/customers.md)
 
@@ -35,7 +35,7 @@ Before you begin, ensure you have:
 **Estimated integration time**: 4-6 hours for complete implementation
 
 {% hint style="info" %}
-This guide uses placeholder URLs like `api.example.com`. Replace these with your actual API base URLs when implementing.
+This guide uses placeholder URLs like `api.fernhq.com`. Replace these with your actual API base URLs when implementing.
 {% endhint %}
 
 ---
@@ -45,9 +45,9 @@ This guide uses placeholder URLs like `api.example.com`. Replace these with your
 Understanding the typical timeline helps set proper expectations:
 
 - **Data collection**: Immediate (user fills form in your application)
-- **Verification processing**: 1-5 business days after submission
+- **Verification processing**: Under 10 minutes after submission
 - **Additional information requests**: May add 2-3 days if documents need clarification
-- **Total time**: 1-7 business days from initial submission to approval
+- **Total time**: Under 15 minutes from initial submission to approval
 
 ### Customer state flow
 
@@ -69,179 +69,6 @@ For complete state definitions, see [Customer states](../concepts/customer-state
 
 Create a customer profile to begin the verification process. This initial step registers the customer in your system with basic information.
 
-<!-- PHASE6_API_UPDATE: ENDPOINT - Verify customer creation endpoint -->
-**Endpoint**: `POST /api/v1/customers`
-<!-- /PHASE6_API_UPDATE -->
-
-{% tabs %}
-{% tab title="JavaScript" %}
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify production API base URL -->
-```javascript
-async function createIndividualCustomer(email, firstName, lastName) {
-  const response = await fetch('https://api.example.com/api/v1/customers', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.API_KEY}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      type: 'INDIVIDUAL',
-      email: email,
-      firstName: firstName,
-      lastName: lastName
-    })
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(`Failed to create customer: ${error.message}`);
-  }
-
-  const customer = await response.json();
-  console.log('Customer created:', customer.id);
-  console.log('Status:', customer.status); // "CREATED"
-
-  return customer;
-}
-
-// Usage
-const customer = await createIndividualCustomer(
-  'jane.smith@example.com',
-  'Jane',
-  'Smith'
-);
-```
-<!-- /PHASE6_API_UPDATE -->
-{% endtab %}
-
-{% tab title="Python" %}
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify production API base URL -->
-```python
-import requests
-import os
-
-def create_individual_customer(email, first_name, last_name):
-    response = requests.post(
-        'https://api.example.com/api/v1/customers',
-        headers={
-            'Authorization': f'Bearer {os.environ["API_KEY"]}',
-            'Content-Type': 'application/json'
-        },
-        json={
-            'type': 'INDIVIDUAL',
-            'email': email,
-            'firstName': first_name,
-            'lastName': last_name
-        }
-    )
-
-    response.raise_for_status()
-    customer = response.json()
-
-    print(f"Customer created: {customer['id']}")
-    print(f"Status: {customer['status']}")  # "CREATED"
-
-    return customer
-
-# Usage
-customer = create_individual_customer(
-    'jane.smith@example.com',
-    'Jane',
-    'Smith'
-)
-```
-<!-- /PHASE6_API_UPDATE -->
-{% endtab %}
-
-{% tab title="Go" %}
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify production API base URL -->
-```go
-package main
-
-import (
-    "bytes"
-    "encoding/json"
-    "fmt"
-    "io"
-    "net/http"
-    "os"
-)
-
-type CreateCustomerRequest struct {
-    Type      string `json:"type"`
-    Email     string `json:"email"`
-    FirstName string `json:"firstName"`
-    LastName  string `json:"lastName"`
-}
-
-type Customer struct {
-    ID     string `json:"id"`
-    Status string `json:"status"`
-    // Add other fields as needed
-}
-
-func createIndividualCustomer(email, firstName, lastName string) (*Customer, error) {
-    reqBody := CreateCustomerRequest{
-        Type:      "INDIVIDUAL",
-        Email:     email,
-        FirstName: firstName,
-        LastName:  lastName,
-    }
-
-    jsonData, err := json.Marshal(reqBody)
-    if err != nil {
-        return nil, err
-    }
-
-    req, err := http.NewRequest("POST",
-        "https://api.example.com/api/v1/customers",
-        bytes.NewBuffer(jsonData))
-    if err != nil {
-        return nil, err
-    }
-
-    req.Header.Set("Authorization", "Bearer "+os.Getenv("API_KEY"))
-    req.Header.Set("Content-Type", "application/json")
-
-    client := &http.Client{}
-    resp, err := client.Do(req)
-    if err != nil {
-        return nil, err
-    }
-    defer resp.Body.Close()
-
-    if resp.StatusCode != http.StatusCreated {
-        body, _ := io.ReadAll(resp.Body)
-        return nil, fmt.Errorf("failed to create customer: %s", body)
-    }
-
-    var customer Customer
-    if err := json.NewDecoder(resp.Body).Decode(&customer); err != nil {
-        return nil, err
-    }
-
-    fmt.Printf("Customer created: %s\n", customer.ID)
-    fmt.Printf("Status: %s\n", customer.Status)
-
-    return &customer, nil
-}
-
-// Usage
-func main() {
-    customer, err := createIndividualCustomer(
-        "jane.smith@example.com",
-        "Jane",
-        "Smith",
-    )
-    if err != nil {
-        panic(err)
-    }
-}
-```
-<!-- /PHASE6_API_UPDATE -->
-{% endtab %}
-{% endtabs %}
-
 <!-- PHASE6_API_UPDATE: RESPONSE_SCHEMA - Validate customer creation response -->
 **Sample response:**
 ```json
@@ -252,7 +79,7 @@ func main() {
   "email": "jane.smith@example.com",
   "firstName": "Jane",
   "lastName": "Smith",
-  "verificationLink": "https://app.example.com/verify-customer/abc123...",
+  "verificationLink": "https://forms.fernhq.com/verify-customer/:customerID",,
   "createdAt": "2025-11-05T10:00:00Z"
 }
 ```
@@ -289,248 +116,6 @@ For the best user experience, collect information progressively rather than requ
 
 Once you've collected all required data, submit it using the PATCH endpoint to initiate verification.
 
-<!-- PHASE6_API_UPDATE: ENDPOINT - Verify customer update endpoint -->
-**Endpoint**: `PATCH /api/v1/customers/:customerId`
-<!-- /PHASE6_API_UPDATE -->
-
-{% tabs %}
-{% tab title="JavaScript" %}
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify production API base URL -->
-```javascript
-async function submitKycData(customerId, kycData) {
-  const response = await fetch(
-    `https://api.example.com/api/v1/customers/${customerId}`,
-    {
-      method: 'PATCH',
-      headers: {
-        'Authorization': `Bearer ${process.env.API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ kycData })
-    }
-  );
-
-  if (!response.ok) {
-    const error = await response.json();
-
-    // Handle state-based restrictions
-    if (error.error === 'PATCH_NOT_ALLOWED') {
-      console.error('Cannot update: verification in progress');
-      console.error('Current status:', error.customerStatus);
-      throw new Error('Customer data locked during verification');
-    }
-
-    throw new Error(`Failed to submit KYC data: ${error.message}`);
-  }
-
-  const customer = await response.json();
-  console.log('KYC data submitted');
-  console.log('New status:', customer.status); // Should transition to "UNDER_REVIEW"
-
-  return customer;
-}
-
-// Usage - complete KYC data example
-const kycData = {
-  legalFirstName: 'Jane',
-  legalLastName: 'Smith',
-  phoneNumber: '+14155551234',
-  dateOfBirth: '1990-05-15',
-  address: {
-    addressLine1: '123 Main Street',
-    addressLine2: 'Apt 4B',
-    city: 'San Francisco',
-    state: 'California',
-    stateCode: 'CA',
-    postalCode: '94102',
-    country: 'US',
-    locale: 'en-US'
-  },
-  nationalIdType: 'SSN',
-  nationalIdNumber: '123-45-6789',
-  nationalIdIssuingCountry: 'US',
-  nationality: 'US',
-  employmentStatus: 'EMPLOYED',
-  mostRecentOccupation: 'Software Engineer',
-  sourceOfFunds: 'EMPLOYMENT',
-  accountPurpose: 'PERSONAL_USE',
-  expectedMonthlyPaymentsUsd: 'UNDER_10K',
-  isIntermediary: false,
-  documents: [
-    {
-      type: 'PASSPORT',
-      number: 'P12345678',
-      issuingCountry: 'US',
-      expirationDate: '2030-12-31',
-      frontImageUrl: 'https://your-storage.com/passport-front.jpg'
-    }
-  ]
-};
-
-const updatedCustomer = await submitKycData('customer_abc123', kycData);
-```
-<!-- /PHASE6_API_UPDATE -->
-{% endtab %}
-
-{% tab title="Python" %}
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify production API base URL -->
-```python
-def submit_kyc_data(customer_id, kyc_data):
-    response = requests.patch(
-        f'https://api.example.com/api/v1/customers/{customer_id}',
-        headers={
-            'Authorization': f'Bearer {os.environ["API_KEY"]}',
-            'Content-Type': 'application/json'
-        },
-        json={'kycData': kyc_data}
-    )
-
-    if not response.ok:
-        error = response.json()
-
-        # Handle state-based restrictions
-        if error.get('error') == 'PATCH_NOT_ALLOWED':
-            print('Cannot update: verification in progress')
-            print(f'Current status: {error.get("customerStatus")}')
-            raise ValueError('Customer data locked during verification')
-
-        raise Exception(f'Failed to submit KYC data: {error["message"]}')
-
-    customer = response.json()
-    print('KYC data submitted')
-    print(f'New status: {customer["status"]}')  # Should be "UNDER_REVIEW"
-
-    return customer
-
-# Usage - complete KYC data example
-kyc_data = {
-    'legalFirstName': 'Jane',
-    'legalLastName': 'Smith',
-    'phoneNumber': '+14155551234',
-    'dateOfBirth': '1990-05-15',
-    'address': {
-        'addressLine1': '123 Main Street',
-        'addressLine2': 'Apt 4B',
-        'city': 'San Francisco',
-        'state': 'California',
-        'stateCode': 'CA',
-        'postalCode': '94102',
-        'country': 'US',
-        'locale': 'en-US'
-    },
-    'nationalIdType': 'SSN',
-    'nationalIdNumber': '123-45-6789',
-    'nationalIdIssuingCountry': 'US',
-    'nationality': 'US',
-    'employmentStatus': 'EMPLOYED',
-    'mostRecentOccupation': 'Software Engineer',
-    'sourceOfFunds': 'EMPLOYMENT',
-    'accountPurpose': 'PERSONAL_USE',
-    'expectedMonthlyPaymentsUsd': 'UNDER_10K',
-    'isIntermediary': False,
-    'documents': [
-        {
-            'type': 'PASSPORT',
-            'number': 'P12345678',
-            'issuingCountry': 'US',
-            'expirationDate': '2030-12-31',
-            'frontImageUrl': 'https://your-storage.com/passport-front.jpg'
-        }
-    ]
-}
-
-updated_customer = submit_kyc_data('customer_abc123', kyc_data)
-```
-<!-- /PHASE6_API_UPDATE -->
-{% endtab %}
-
-{% tab title="Go" %}
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify production API base URL -->
-```go
-type Address struct {
-    AddressLine1 string `json:"addressLine1"`
-    AddressLine2 string `json:"addressLine2,omitempty"`
-    City         string `json:"city"`
-    State        string `json:"state"`
-    StateCode    string `json:"stateCode"`
-    PostalCode   string `json:"postalCode"`
-    Country      string `json:"country"`
-    Locale       string `json:"locale"`
-}
-
-type KycDocument struct {
-    Type           string `json:"type"`
-    Number         string `json:"number"`
-    IssuingCountry string `json:"issuingCountry"`
-    ExpirationDate string `json:"expirationDate"`
-    FrontImageUrl  string `json:"frontImageUrl"`
-}
-
-type KycData struct {
-    LegalFirstName             string        `json:"legalFirstName"`
-    LegalLastName              string        `json:"legalLastName"`
-    PhoneNumber                string        `json:"phoneNumber"`
-    DateOfBirth                string        `json:"dateOfBirth"`
-    Address                    Address       `json:"address"`
-    NationalIdType             string        `json:"nationalIdType"`
-    NationalIdNumber           string        `json:"nationalIdNumber"`
-    NationalIdIssuingCountry   string        `json:"nationalIdIssuingCountry"`
-    Nationality                string        `json:"nationality"`
-    EmploymentStatus           string        `json:"employmentStatus"`
-    MostRecentOccupation       string        `json:"mostRecentOccupation"`
-    SourceOfFunds              string        `json:"sourceOfFunds"`
-    AccountPurpose             string        `json:"accountPurpose"`
-    ExpectedMonthlyPaymentsUsd string        `json:"expectedMonthlyPaymentsUsd"`
-    IsIntermediary             bool          `json:"isIntermediary"`
-    Documents                  []KycDocument `json:"documents"`
-}
-
-type PatchRequest struct {
-    KycData KycData `json:"kycData"`
-}
-
-func submitKycData(customerID string, kycData KycData) (*Customer, error) {
-    reqBody := PatchRequest{KycData: kycData}
-
-    jsonData, err := json.Marshal(reqBody)
-    if err != nil {
-        return nil, err
-    }
-
-    url := fmt.Sprintf("https://api.example.com/api/v1/customers/%s", customerID)
-    req, err := http.NewRequest("PATCH", url, bytes.NewBuffer(jsonData))
-    if err != nil {
-        return nil, err
-    }
-
-    req.Header.Set("Authorization", "Bearer "+os.Getenv("API_KEY"))
-    req.Header.Set("Content-Type", "application/json")
-
-    client := &http.Client{}
-    resp, err := client.Do(req)
-    if err != nil {
-        return nil, err
-    }
-    defer resp.Body.Close()
-
-    if resp.StatusCode != http.StatusOK {
-        body, _ := io.ReadAll(resp.Body)
-        return nil, fmt.Errorf("failed to submit KYC data: %s", body)
-    }
-
-    var customer Customer
-    if err := json.NewDecoder(resp.Body).Decode(&customer); err != nil {
-        return nil, err
-    }
-
-    fmt.Printf("KYC data submitted. New status: %s\n", customer.Status)
-    return &customer, nil
-}
-```
-<!-- /PHASE6_API_UPDATE -->
-{% endtab %}
-{% endtabs %}
-
 {% hint style="warning" %}
 Customer status will automatically transition to `UNDER_REVIEW` upon successful data submission. You cannot modify data while status is `UNDER_REVIEW` (verification in progress). Always handle `PATCH_NOT_ALLOWED` errors gracefully.
 {% endhint %}
@@ -539,173 +124,20 @@ Customer status will automatically transition to `UNDER_REVIEW` upon successful 
 {% step %}
 ### Monitor verification status
 
-Monitor the customer's verification status using webhooks (recommended) or polling.
+Monitor the customer's verification status using webhooks.
 
-#### Option A: Webhooks (recommended)
+See the complete [Webhook integration guide](../../webhooks/README.md) for setup instructions.
 
-Set up a webhook endpoint to receive real-time status updates:
 
-<!-- PHASE6_API_UPDATE: WEBHOOK_EVENTS - Verify webhook event structure -->
-```javascript
-// Express.js webhook handler example
-app.post('/webhooks/customer-status', async (req, res) => {
-  const event = req.body;
-
-  // Verify webhook signature (see Webhook guide)
-  // ... signature verification code ...
-
-  if (event.type === 'customer.state_changed') {
-    const { customerId, oldStatus, newStatus } = event.payload;
-
-    console.log(`Customer ${customerId} status changed: ${oldStatus} → ${newStatus}`);
-
-    switch (newStatus) {
-      case 'ACTIVE':
-        console.log('Verification approved! Customer can now use services.');
-        await enableCustomerFeatures(customerId);
-        await sendApprovalEmail(customerId);
-        break;
-
-      case 'NEEDS_ADDITIONAL_INFORMATION':
-        console.log('Additional information required');
-        await sendRFINotification(customerId, event.payload.requiredDocuments);
-        break;
-
-      case 'REJECTED':
-        console.log('Verification rejected');
-        await sendRejectionNotification(customerId, event.payload.reason);
-        break;
-
-      case 'UNDER_REVIEW':
-        console.log('Verification in progress');
-        await sendProgressUpdate(customerId);
-        break;
-    }
-  }
-
-  res.status(200).json({ received: true });
-});
-```
-<!-- /PHASE6_API_UPDATE -->
-
-See the complete [Webhook integration guide](webhooks.md) for setup instructions.
-
-#### Option B: Polling
-
-If webhooks aren't available, poll the customer status periodically:
-
-```javascript
-async function pollCustomerStatus(customerId, maxAttempts = 50) {
-  const pollInterval = 30000; // 30 seconds
-
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    const response = await fetch(
-      `https://api.example.com/api/v1/customers/${customerId}`,
-      {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_KEY}`
-        }
-      }
-    );
-
-    const customer = await response.json();
-    console.log(`Status check ${attempt + 1}: ${customer.status}`);
-
-    // Terminal states - stop polling
-    if (['ACTIVE', 'REJECTED'].includes(customer.status)) {
-      console.log('Verification complete:', customer.status);
-      return customer;
-    }
-
-    // Continue polling for in-progress states
-    if (['UNDER_REVIEW', 'NEEDS_ADDITIONAL_INFORMATION'].includes(customer.status)) {
-      await new Promise(resolve => setTimeout(resolve, pollInterval));
-      continue;
-    }
-
-    // Unexpected state
-    console.warn('Unexpected status:', customer.status);
-    return customer;
-  }
-
-  throw new Error('Polling timeout: verification still in progress');
-}
-```
-
-{% hint style="warning" %}
-Polling is less efficient than webhooks and may delay your application's response to status changes. Use webhooks when possible.
-{% endhint %}
-{% endstep %}
-
-{% step %}
 ### Handle requests for additional information
 
 When verification status becomes `NEEDS_ADDITIONAL_INFORMATION`, the verification provider needs additional documents or clarifications.
 
 **What to do:**
 
-1. Retrieve customer details to see what's needed:
-
-```javascript
-async function handleRFI(customerId) {
-  const response = await fetch(
-    `https://api.example.com/api/v1/customers/${customerId}`,
-    {
-      headers: {
-        'Authorization': `Bearer ${process.env.API_KEY}`
-      }
-    }
-  );
-
-  const customer = await response.json();
-
-  if (customer.status === 'NEEDS_ADDITIONAL_INFORMATION') {
-    console.log('Additional information required:');
-
-    // Check customer object for guidance on what's needed
-    // (specific fields depend on verification provider feedback)
-
-    // Notify customer via email/app notification
-    await notifyCustomer(customerId, {
-      message: 'Please provide additional documentation for verification',
-      requiredActions: [
-        'Upload clear photo of government-issued ID',
-        'Verify residential address matches ID',
-        'Provide proof of address document'
-      ]
-    });
-  }
-}
-```
-
+1. Refer to webhook notifications for more detail on what is required
 2. Collect additional data from customer
-
-3. Resubmit updated data using PATCH:
-
-```javascript
-// Customer can update data when status is NEEDS_ADDITIONAL_INFORMATION
-const updatedKycData = {
-  documents: [
-    {
-      type: 'DRIVERS_LICENSE',
-      number: 'D1234567',
-      issuingCountry: 'US',
-      expirationDate: '2028-05-15',
-      frontImageUrl: 'https://your-storage.com/license-front.jpg',
-      backImageUrl: 'https://your-storage.com/license-back.jpg'
-    },
-    {
-      type: 'UTILITY_BILL',
-      issueDate: '2025-10-01',
-      frontImageUrl: 'https://your-storage.com/utility-bill.jpg'
-    }
-  ]
-};
-
-const updatedCustomer = await submitKycData(customerId, updatedKycData);
-console.log('Updated data submitted. New status:', updatedCustomer.status);
-// Status should return to UNDER_REVIEW for re-evaluation
-```
+3. Resubmit updated data using PATCH
 
 {% hint style="info" %}
 Request for Additional Information (RFI) typically occurs when document quality is poor or information doesn't match across sources. Providing clear instructions to customers upfront reduces RFI rates.
@@ -716,41 +148,6 @@ Request for Additional Information (RFI) typically occurs when document quality 
 ### Verification complete
 
 When verification is approved, customer status becomes `ACTIVE` and the customer can access your platform's services.
-
-```javascript
-async function activateCustomer(customerId) {
-  // Verify customer is active
-  const response = await fetch(
-    `https://api.example.com/api/v1/customers/${customerId}`,
-    {
-      headers: {
-        'Authorization': `Bearer ${process.env.API_KEY}`
-      }
-    }
-  );
-
-  const customer = await response.json();
-
-  if (customer.status === 'ACTIVE') {
-    console.log('Customer verification complete!');
-
-    // Enable platform features for this customer
-    await enablePaymentAccounts(customerId);
-    await grantAPIAccess(customerId);
-
-    // Notify customer
-    await sendEmail({
-      to: customer.email,
-      subject: 'Verification Complete - Account Activated',
-      body: 'Your identity verification is complete. You can now access all platform features.'
-    });
-
-    return { success: true, customer };
-  } else {
-    return { success: false, status: customer.status };
-  }
-}
-```
 
 {% hint style="success" %}
 Once a customer is `ACTIVE`, they remain verified unless circumstances require re-verification. Store the customer ID for all future transactions.
@@ -777,16 +174,17 @@ Once a customer is `ACTIVE`, they remain verified unless circumstances require r
 
 | Field | Type | Required | Description | Example |
 |-------|------|----------|-------------|---------|
-| `addressLine1` | string | Yes | Street address | "123 Main Street" |
-| `addressLine2` | string | No | Apartment, suite, unit | "Apt 4B" |
+| `streetLine1` | string | Yes | Street address | "123 Main Street" |
+| `streetLine2` | string | No | Apartment, suite, unit | "Apt 4B" |
 | `city` | string | Yes | City name | "San Francisco" |
-| `state` | string | Yes | State/province name | "California" |
-| `stateCode` | string | Yes | 2-letter state code | "CA" |
+| `stateRegionProvince` | string | Yes | 2-letter state code | "CA" |
 | `postalCode` | string | Yes | Zip/postal code | "94102" |
-| `country` | string | Yes | ISO 3166-1 alpha-2 code | "US" |
-| `locale` | string | Yes | Language and region | "en-US" |
+| `countryCode` | string | Yes | ISO 3166-1 alpha-2 code | "US" |
+| `locale` | string | No | Language and region | "en-US" |
 
 ### National identification
+
+**Note:** When patching this data in, all three fields are required together in a single patch.
 
 | Field | Type | Required | Description | Example |
 |-------|------|----------|-------------|---------|
@@ -817,28 +215,34 @@ At least one government-issued ID document is required. See [Document requiremen
 
 **Minimum**: 1 government-issued photo ID
 
+Please refer to [Customer API reference](../../../api-reference/customers.md) for more detail.
+
 **Accepted ID types:**
-* Passport
-* Driver's License
-* National ID Card
-* Residence Permit
-* State ID Card
+* GOVERNMENT_ID
+* PROOF_OF_ADDRESS
+
+**Sample of Accepted ID subtypes:**
+* PASSPORT
+* NATIONAL_ID
 
 **Additional documents** (recommended to speed up verification):
-* Proof of Address (utility bill, bank statement, lease agreement)
-* Additional ID for cross-verification
+* Proof of Address (bank statement)
 
 ### Document format
 
 <!-- PHASE6_API_UPDATE: REQUEST_PAYLOAD - Validate document structure -->
 ```javascript
 {
-  type: 'PASSPORT',              // Document type (see types above)
-  number: 'P12345678',           // Document number
-  issuingCountry: 'US',          // ISO 3166-1 alpha-2 code
+  type: 'GOVERNMENT_ID',         // Document type (see types above)
+  subtype: 'PASSPORT',           // Document subtype (see types above)
+  documentIdNumber: 'P12345678', // Document number
+  countryCode: 'US',             // ISO 3166-1 alpha-2 code
+  issuanceDate: '2030-12-31',    // ISO 8601 date
   expirationDate: '2030-12-31',  // ISO 8601 date
-  frontImageUrl: 'https://...',  // URL to front image
-  backImageUrl: 'https://...'    // URL to back image (if applicable)
+  frontIdImage: 'text',          // BASE64 encoded image data
+  backIdImage: 'text'            // BASE64 encoded image data
+  proofOfAddressImage: 'text'    // BASE64 encoded image data
+  description: 'text'    // Notes about the document
 }
 ```
 <!-- /PHASE6_API_UPDATE -->
@@ -852,8 +256,8 @@ Poor quality images are the number one cause of verification delays. Ensure all 
 **Technical requirements:**
 * **Format**: JPG, PNG, or PDF
 * **Size**: 100 KB - 10 MB per file
-* **Resolution**: Minimum 300 DPI recommended
-* **Color**: Full color (no black and white)
+* **Resolution**: Minimum 200x200 pixels
+* **Color**: Full color advised (no black and white)
 
 **Quality guidelines:**
 * Clear and legible - All text must be readable
@@ -862,47 +266,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
 * Unobstructed - No fingers or objects covering document
 * Current - Not expired
 * Avoid blurry, dark, cropped, or screenshot images
-
-### Image upload process
-
-1. Customer uploads image to your storage (S3, Cloudinary, etc.)
-2. Generate secure URL (temporary or permanent with access control)
-3. Include URL in KYC data when submitting via PATCH
-
-```javascript
-async function uploadDocumentImage(file) {
-  // Upload to your storage service
-  const formData = new FormData();
-  formData.append('file', file);
-
-  const uploadResponse = await fetch('https://your-storage-api.com/upload', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${YOUR_STORAGE_API_KEY}`
-    },
-    body: formData
-  });
-
-  const { url } = await uploadResponse.json();
-  return url; // Return URL to include in KYC data
-}
-
-// Usage
-const passportFrontUrl = await uploadDocumentImage(passportFrontFile);
-
-const kycData = {
-  // ... other fields
-  documents: [
-    {
-      type: 'PASSPORT',
-      number: 'P12345678',
-      issuingCountry: 'US',
-      expirationDate: '2030-12-31',
-      frontImageUrl: passportFrontUrl
-    }
-  ]
-};
-```
 
 ---
 
@@ -927,25 +290,6 @@ const kycData = {
 
 **Solution**: Wait for verification to complete. Check customer status before attempting PATCH.
 
-```javascript
-async function safePatchKycData(customerId, kycData) {
-  // Check current status first
-  const customer = await getCustomer(customerId);
-
-  const allowedStatuses = ['CREATED', 'NEEDS_ADDITIONAL_INFORMATION', 'REJECTED'];
-
-  if (!allowedStatuses.includes(customer.status)) {
-    throw new Error(
-      `Cannot update customer: status is ${customer.status}. ` +
-      `Updates only allowed in: ${allowedStatuses.join(', ')}`
-    );
-  }
-
-  // Proceed with PATCH
-  return await submitKycData(customerId, kycData);
-}
-```
-
 #### Validation errors (400)
 
 <!-- PHASE6_API_UPDATE: ERROR_CODES - Verify validation error structure -->
@@ -963,46 +307,6 @@ async function safePatchKycData(customerId, kycData) {
 
 **Solution**: Validate data client-side before submission:
 
-```javascript
-function validateKycData(kycData) {
-  const errors = [];
-
-  // Phone number validation (E.164 format)
-  if (kycData.phoneNumber && !/^\+[1-9]\d{1,14}$/.test(kycData.phoneNumber)) {
-    errors.push('Phone number must be in E.164 format (e.g., +14155551234)');
-  }
-
-  // Date of birth validation (ISO 8601 YYYY-MM-DD)
-  if (kycData.dateOfBirth && !/^\d{4}-\d{2}-\d{2}$/.test(kycData.dateOfBirth)) {
-    errors.push('Date of birth must be in YYYY-MM-DD format');
-  }
-
-  // Age validation (must be 18+)
-  if (kycData.dateOfBirth) {
-    const age = calculateAge(kycData.dateOfBirth);
-    if (age < 18) {
-      errors.push('Customer must be at least 18 years old');
-    }
-  }
-
-  // Country code validation (ISO 3166-1 alpha-2)
-  if (kycData.address?.country && kycData.address.country.length !== 2) {
-    errors.push('Country must be ISO 3166-1 alpha-2 code (e.g., "US")');
-  }
-
-  return errors;
-}
-
-// Usage
-const errors = validateKycData(kycData);
-if (errors.length > 0) {
-  console.error('Validation errors:', errors);
-  return; // Don't submit
-}
-
-await submitKycData(customerId, kycData);
-```
-
 #### Authentication errors (401)
 
 <!-- PHASE6_API_UPDATE: ERROR_CODES - Verify authentication error structure -->
@@ -1017,122 +321,6 @@ await submitKycData(customerId, kycData);
 <!-- /PHASE6_API_UPDATE -->
 
 **Solution**: Verify your API key is correct and not expired. Implement token refresh logic for JWT tokens.
-
-```javascript
-async function makeAuthenticatedRequest(url, options) {
-  let response = await fetch(url, options);
-
-  // If unauthorized, try refreshing token
-  if (response.status === 401) {
-    console.log('Token expired, refreshing...');
-    const newToken = await refreshAuthToken();
-
-    // Retry with new token
-    options.headers['Authorization'] = `Bearer ${newToken}`;
-    response = await fetch(url, options);
-  }
-
-  return response;
-}
-```
-
----
-
-## Testing in sandbox
-
-### Sandbox environment
-
-<!-- PHASE6_API_UPDATE: BASE_URL - Verify sandbox API base URL -->
-**Base URL**: `https://api.sandbox.example.com/api/v1`
-<!-- /PHASE6_API_UPDATE -->
-
-The sandbox environment simulates verification flows for testing without processing real customer data.
-
-### Test scenarios
-
-#### Scenario 1: Successful verification
-
-```javascript
-// Create customer and submit complete, valid KYC data
-const customer = await createIndividualCustomer(
-  'test-success@example.com',
-  'Test',
-  'Success'
-);
-
-const kycData = {
-  // ... complete valid KYC data
-};
-
-await submitKycData(customer.id, kycData);
-
-// In sandbox, status will transition: CREATED → UNDER_REVIEW → ACTIVE
-// Timeline: ~30 seconds (simulated)
-```
-
-#### Scenario 2: Request for additional information
-
-```javascript
-// Submit incomplete data to trigger RFI
-const customer = await createIndividualCustomer(
-  'test-rfi@example.com',
-  'Test',
-  'RFI'
-);
-
-const incompleteKycData = {
-  legalFirstName: 'Test',
-  legalLastName: 'RFI',
-  phoneNumber: '+14155551234',
-  // Missing: address, documents, etc.
-};
-
-await submitKycData(customer.id, incompleteKycData);
-
-// Status will become: NEEDS_ADDITIONAL_INFORMATION
-
-// Then submit complete data
-const completeKycData = {
-  ...incompleteKycData,
-  address: { /* complete address */ },
-  documents: [ /* valid documents */ ]
-};
-
-await submitKycData(customer.id, completeKycData);
-
-// Status should transition: UNDER_REVIEW → ACTIVE
-```
-
-#### Scenario 3: Verification rejected
-
-```javascript
-// Use specific test email to simulate rejection
-const customer = await createIndividualCustomer(
-  'test-rejected@example.com',
-  'Test',
-  'Rejected'
-);
-
-const kycData = {
-  // ... complete KYC data
-};
-
-await submitKycData(customer.id, kycData);
-
-// Status will become: REJECTED
-```
-
-### Sandbox test data
-
-**Test email addresses** (sandbox only):
-* `test-success@example.com` - Automatic approval
-* `test-rfi@example.com` - Triggers RFI
-* `test-rejected@example.com` - Automatic rejection
-* `test-delay@example.com` - Simulates long processing (5 minutes)
-
-{% hint style="info" %}
-Sandbox verification completes in seconds or minutes instead of days. Use this to test your integration flow rapidly.
-{% endhint %}
 
 ---
 
@@ -1157,10 +345,7 @@ Before going live with KYC verification:
 - [ ] Age verification (18+ requirement)
 
 ### Document upload
-- [ ] Document image upload implemented
 - [ ] Image quality validation (size, resolution, format)
-- [ ] Secure image storage with access control
-- [ ] Image URL generation for API submission
 - [ ] Support for multiple document types
 
 ### Verification monitoring
@@ -1205,7 +390,7 @@ Before going live with KYC verification:
 
 ## Next steps
 
-* Set up webhooks - [Webhook integration guide](webhooks.md)
+* Set up webhooks - [Webhook integration guide](../../webhooks/README.md)
 * Understand customer states - [Customer states documentation](../concepts/customer-states.md)
 * Business verification - [KYB integration guide](kyb-integration.md)
 * API reference - [Customer API reference](../../../api-reference/customers.md)

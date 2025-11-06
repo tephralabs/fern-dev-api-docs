@@ -92,7 +92,7 @@ Trade name or fictitious business name under which a company operates, different
 Tax identification number assigned by the IRS to businesses operating in the United States. Required for Know Your Business (KYB) verification of US businesses.
 
 ### Endpoint
-Specific URL path in the API that accepts requests for a particular operation (e.g., `/api/v1/customers` for creating customers).
+Specific URL path in the API that accepts requests for a particular operation (e.g., `customers` for creating customers).
 
 **Browse**: [API endpoints](../api-reference/overview.md#api-resources)
 
@@ -208,7 +208,7 @@ Method of splitting large result sets into smaller pages for efficient data retr
 ### Production Environment
 Live API environment for real customer verification with actual processing times and verification results.
 
-**Base URL**: `https://api.example.com/api/v1`
+**Base URL**: `https://api.fernhq.com`
 
 **Learn more**: [Environments](../api-reference/overview.md#base-urls)
 
