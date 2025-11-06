@@ -253,35 +253,6 @@ Process where verification provider requests additional information or documents
 
 ## S
 
-### Sandbox Environment
-Testing API environment with simulated verification responses, instant state transitions, and ability to use fake data safely.
-
-**Base URL**: `https://api.sandbox.example.com/api/v1`
-
-**Learn more**: [Testing](../api-reference/overview.md#testing)
-
-### Scope
-Permission level assigned to API keys or JWT tokens that determines which operations are authorized.
-
-**Available scopes**:
-- `ADMIN`: Full read/write access
-- `READ_ONLY`: Read-only access
-- `WRITE`: Create and update operations
-- `WEBHOOK_ONLY`: Webhook management only
-
-**Learn more**: [Scope-based authorization](../authentication.md#scope-based-authorization)
-
-### SDK (Software Development Kit)
-Pre-built library that simplifies API integration for specific programming languages.
-
-**Available SDKs**:
-- JavaScript/TypeScript: `@customer-verification-api/node`
-- Python: `customer-verification-api`
-- Go: `github.com/customer-verification-api/go`
-- Ruby: `customer-verification-api`
-
-**Learn more**: [SDKs](../api-reference/overview.md#sdks-and-libraries)
-
 ### SSN (Social Security Number)
 Nine-digit tax identification number issued to U.S. citizens and residents. Required for Know Your Customer (KYC) verification of individuals in the United States.
 
@@ -307,7 +278,7 @@ Generic term for tax identification numbers, including Employer Identification N
 Customer status indicating verification is actively being processed. Customer data is locked and cannot be updated during this state.
 
 **Typical duration**:
-- KYC: 1-3 business days
+- KYC: Under 10 minutes, up to 3 business days with manual intervention.
 - KYB: 3-7 business days
 
 **Learn more**: [Customer states](../concepts/customer-states.md#under_review)

@@ -9,8 +9,8 @@ Understanding this workflow helps you build better integrations, set appropriate
 **Related guides:**
 
 * For verification states see [Customer states](customer-states.md)
-* For webhook notifications see [Webhook integration](../integration-guides/webhooks.md)
-* For API operations see [<!-- PHASE6_API_REFERENCE: Customer API -->](../../../api-reference/customers.md)
+* For webhook notifications see [Webhook integration](../../webhooks/README.md)
+* For API operations see [Customer API](../../../api-reference/customers.md)
 
 ## What is verification
 

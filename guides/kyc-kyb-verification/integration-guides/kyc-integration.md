@@ -69,7 +69,6 @@ For complete state definitions, see [Customer states](../concepts/customer-state
 
 Create a customer profile to begin the verification process. This initial step registers the customer in your system with basic information.
 
-<!-- PHASE6_API_UPDATE: RESPONSE_SCHEMA - Validate customer creation response -->
 **Sample response:**
 ```json
 {
@@ -83,7 +82,6 @@ Create a customer profile to begin the verification process. This initial step r
   "createdAt": "2025-11-05T10:00:00Z"
 }
 ```
-<!-- /PHASE6_API_UPDATE -->
 
 {% hint style="success" %}
 Customer is created with status `CREATED`. Save the `customer.id` - you'll need it for the next steps.
@@ -230,7 +228,6 @@ Please refer to [Customer API reference](../../../api-reference/customers.md) fo
 
 ### Document format
 
-<!-- PHASE6_API_UPDATE: REQUEST_PAYLOAD - Validate document structure -->
 ```javascript
 {
   type: 'GOVERNMENT_ID',         // Document type (see types above)
@@ -245,7 +242,6 @@ Please refer to [Customer API reference](../../../api-reference/customers.md) fo
   description: 'text'    // Notes about the document
 }
 ```
-<!-- /PHASE6_API_UPDATE -->
 
 ### Document image requirements
 
@@ -275,7 +271,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
 
 #### PATCH not allowed (400)
 
-<!-- PHASE6_API_UPDATE: ERROR_CODES - Verify error response structure -->
 **Error:**
 ```json
 {
@@ -284,7 +279,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
   "statusCode": 400
 }
 ```
-<!-- /PHASE6_API_UPDATE -->
 
 **Cause**: Attempting to update customer data while status is `UNDER_REVIEW`, `ACTIVE`, or `DEACTIVATED`.
 
@@ -292,7 +286,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
 
 #### Validation errors (400)
 
-<!-- PHASE6_API_UPDATE: ERROR_CODES - Verify validation error structure -->
 **Error:**
 ```json
 {
@@ -301,7 +294,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
   "statusCode": 400
 }
 ```
-<!-- /PHASE6_API_UPDATE -->
 
 **Cause**: Invalid data format (e.g., phone number not in E.164 format, invalid date format).
 
@@ -309,7 +301,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
 
 #### Authentication errors (401)
 
-<!-- PHASE6_API_UPDATE: ERROR_CODES - Verify authentication error structure -->
 **Error:**
 ```json
 {
@@ -318,7 +309,6 @@ Poor quality images are the number one cause of verification delays. Ensure all 
   "statusCode": 401
 }
 ```
-<!-- /PHASE6_API_UPDATE -->
 
 **Solution**: Verify your API key is correct and not expired. Implement token refresh logic for JWT tokens.
 

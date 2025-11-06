@@ -10,7 +10,7 @@ Every customer has a `status` field that indicates their current verification st
 
 * For verification process see [Verification workflow](verification-workflow.md)
 * For webhook notifications see [Webhook integration](../integration-guides/webhooks.md)
-* For API operations see [<!-- PHASE6_API_REFERENCE: Customer API -->](../../../api-reference/customers.md)
+* For API operations see [Customer API](../../../api-reference/customers.md)
 
 ## State overview
 
@@ -48,7 +48,7 @@ The six possible states represent different phases of the verification lifecycle
 - Default state for new customers
 
 **Developer actions:**
-- Use <!-- PHASE6_API_REFERENCE: PATCH customers/:id --> to update customer data
+- Use PATCH customers/:id to update customer data
 - Add or update KYC/KYB information
 - Upload identity documents
 - Prepare customer for verification submission
@@ -68,7 +68,7 @@ The six possible states represent different phases of the verification lifecycle
 - No action required from developer (monitoring only)
 
 **Developer actions:**
-- Monitor status via <!-- PHASE6_API_REFERENCE: GET customers/:id -->
+- Monitor status via GET customers/:id
 - Set up webhooks to receive status change notifications
 - Display "Verification in progress" status to user
 - Cannot update customer data (PATCH will return error)
@@ -93,7 +93,7 @@ You cannot update customer data while verification is in progress. Wait for the 
 - Customer must take action to proceed
 
 **Developer actions:**
-- Use <!-- PHASE6_API_REFERENCE: PATCH customers/:id --> to update customer data
+- Use PATCH customers/:id to update customer data
 - Upload additional documents
 - Review webhook payload for specific requirements
 - After updates, verification automatically re-submits
