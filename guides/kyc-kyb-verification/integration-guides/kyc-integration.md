@@ -114,6 +114,28 @@ For the best user experience, collect information progressively rather than requ
 
 Once you've collected all required data, submit it using the PATCH endpoint to initiate verification.
 
+**Endpoint:** `PATCH /customers/:customerId`
+
+For complete request/response schemas, see [Customer API reference](../../../api-reference/customers.md).
+
+#### When you can use PATCH
+
+**PATCH is allowed when:**
+- Customer status is `CREATED` - freely update data before verification starts
+- Customer status is `NEEDS_ADDITIONAL_INFORMATION` - update requested data to resolve verification issues
+
+**PATCH is blocked when:**
+- Customer status is `UNDER_REVIEW` - verification in progress, data is locked
+- Customer status is `ACTIVE`, `REJECTED`, or `DEACTIVATED` - contact support for changes
+
+When PATCH is blocked, the API returns a `PATCH_NOT_ALLOWED` error (400 status code).
+
+#### Using PATCH
+
+The PATCH endpoint accepts the same customer data fields documented in [Required data fields](#required-data-fields). You can submit all data at once or update specific fields.
+
+To submit data, make a PATCH request to `/customers/:customerId` with the customer data in the request body. The API reference provides the complete schema.
+
 {% hint style="warning" %}
 Customer status will automatically transition to `UNDER_REVIEW` upon successful data submission. You cannot modify data while status is `UNDER_REVIEW` (verification in progress). Always handle `PATCH_NOT_ALLOWED` errors gracefully.
 {% endhint %}

@@ -88,7 +88,31 @@ See the [Required data fields](#required-data-fields) section for complete field
 
 Once you've collected all required data, submit it using the PATCH endpoint to initiate verification.
 
-**Endpoint**: `PATCH customers/:customerId`
+**Endpoint:** `PATCH /customers/:customerId`
+
+For complete request/response schemas, see [Customer API reference](../../../api-reference/customers.md).
+
+#### When you can use PATCH
+
+**PATCH is allowed when:**
+- Business status is `CREATED` - freely update data before verification starts
+- Business status is `NEEDS_ADDITIONAL_INFORMATION` - update requested data to resolve verification issues
+
+**PATCH is blocked when:**
+- Business status is `UNDER_REVIEW` - verification in progress, data is locked
+- Business status is `ACTIVE`, `REJECTED`, or `DEACTIVATED` - contact support for changes
+
+When PATCH is blocked, the API returns a `PATCH_NOT_ALLOWED` error (400 status code).
+
+#### Using PATCH for business customers
+
+The PATCH endpoint accepts business data including:
+- Business information (name, type, tax ID, incorporation details)
+- Business address and contact information
+- Beneficial owners (all individuals with 25%+ ownership or control)
+- Business documents
+
+See [Required data fields](#required-data-fields) for complete field definitions. The API reference provides the complete schema including beneficial owner structure.
 
 **Important notes:**
 
@@ -96,6 +120,7 @@ Once you've collected all required data, submit it using the PATCH endpoint to i
 * You cannot modify data while status is `UNDER_REVIEW` (verification in progress)
 * Missing or incomplete beneficial owner data is the most common cause of requests for additional information
 * Always include all beneficial owners in a single submission
+* Always handle `PATCH_NOT_ALLOWED` errors gracefully
 
 {% endstep %}
 
