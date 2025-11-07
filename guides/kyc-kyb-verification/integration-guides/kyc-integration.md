@@ -9,7 +9,7 @@ description: "Complete end-to-end guide for integrating individual customer veri
 
 Know Your Customer (KYC) verification is the process of verifying the identity of individual customers to comply with anti-money laundering (AML) and financial regulations. This comprehensive guide walks you through integrating KYC verification for individual customers into your application, from creating customer profiles to handling document uploads and monitoring verification status.
 
-By the end of this guide, you'll understand how to create customers, collect required data, submit information for verification, monitor verification status, and respond to requests for additional information. The entire process typically takes 1-7 business days from initial submission to approval.
+By the end of this guide, you'll understand how to create customers, collect required data, submit information for verification, monitor verification status, and respond to requests for additional information. The entire process typically takes under 10 minutes from initial submission to approval. If manual intervention occurs, then the overall process can take between 1-3 business days.
 
 This integration enables you to verify customer identities before they access financial services, ensuring compliance while maintaining a smooth user experience. You'll implement a complete verification flow using API endpoints, webhooks, and document uploads.
 
@@ -236,6 +236,8 @@ At least one government-issued ID document is required. See [Document requiremen
 **Minimum**: 1 government-issued photo ID
 
 Please refer to [Customer API reference](../../../api-reference/customers.md) for more detail.
+
+**Note**: Documents must be an image of the actual document. There is a high-chance of failure with any copy of a document being submitted. The image must be clear with all edges visible.
 
 **Accepted ID types:**
 * GOVERNMENT_ID

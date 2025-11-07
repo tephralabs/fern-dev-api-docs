@@ -78,7 +78,7 @@ You cannot update customer data while verification is in progress. Wait for the 
 **What it means:** The verification provider requires additional information, documents, or clarifications (Request for Information - RFI).
 
 **Characteristics:**
-- Verification process is paused
+- Verification process is reset as critical details require correcting
 - Specific issues or missing data have been flagged
 - Customer must take action to proceed
 
@@ -188,13 +188,13 @@ REJECTED is typically a permanent status. Contact support if you believe this wa
 
 ```
 ┌──────────┐
-│ CREATED  │ ◄─────────────────────┐
-└────┬─────┘                       │
-     │ Submit data                 │
-     │ Verification starts         │ Data updated
-     ▼                             │ Re-submit
-┌──────────────┐                   │
-│ UNDER_REVIEW │───────────────────┘
+│ CREATED  │
+└────┬─────┘
+     │ Submit data
+     │ Verification starts
+     ▼
+┌──────────────┐
+│ UNDER_REVIEW │
 └──────┬───────┘
        │
        ├─────► All checks pass

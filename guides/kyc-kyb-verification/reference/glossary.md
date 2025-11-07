@@ -68,7 +68,7 @@ An individual (INDIVIDUAL type) or business entity (BUSINESS type) undergoing id
 **Learn more**: [Customer API](../api-reference/customers.md)
 
 ### Customer ID
-Unique identifier assigned to each customer record, formatted as `cus_` followed by alphanumeric characters (e.g., `cus_1a2b3c4d5e6f`).
+Unique identifier assigned to each customer record, formatted as `cus_` followed by alphanumeric characters (e.g., `c65e9fc6-2e65-4db2-b765-0ad5ada68316`).
 
 ---
 
