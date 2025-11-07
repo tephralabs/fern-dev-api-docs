@@ -39,7 +39,7 @@
     * [KYC integration](guides/kyc-kyb-verification/integration-guides/kyc-integration.md)
     * [KYB integration](guides/kyc-kyb-verification/integration-guides/kyb-integration.md)
   * Concepts
-    * [Customer states](guides/kyc-kyb-verification/concepts/customer-states.md)
+    * [Customer statuses](guides/kyc-kyb-verification/concepts/customer-statuses.md)
     * [Verification workflow](guides/kyc-kyb-verification/concepts/verification-workflow.md)
   * Reference
     * [Glossary](guides/kyc-kyb-verification/reference/glossary.md)

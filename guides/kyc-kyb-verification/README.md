@@ -18,7 +18,7 @@ Step-by-step implementation guides for building customer verification workflows:
 
 Understand the core concepts and workflows behind customer verification:
 
-* [Customer states](concepts/customer-states.md) - Verification lifecycle and state transitions
+* [Customer statuses](concepts/customer-statuses.md) - Verification lifecycle and status transitions
 * [Verification workflow](concepts/verification-workflow.md) - End-to-end verification process overview
 
 ## Reference

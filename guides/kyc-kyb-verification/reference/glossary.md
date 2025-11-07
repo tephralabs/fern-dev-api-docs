@@ -7,7 +7,7 @@ description: "Definitions of key terms and concepts used in the Customer Verific
 
 ## Overview
 
-This glossary provides definitions of key terms and concepts used throughout the Customer Verification API documentation. Use this reference to understand terminology related to Know Your Customer (KYC) and Know Your Business (KYB) verification, API authentication, customer states, webhooks, and more.
+This glossary provides definitions of key terms and concepts used throughout the Customer Verification API documentation. Use this reference to understand terminology related to Know Your Customer (KYC) and Know Your Business (KYB) verification, API authentication, customer status, webhooks, and more.
 
 Terms are organized alphabetically for easy lookup. Each definition includes links to relevant documentation where you can learn more about the concept.
 
@@ -22,7 +22,7 @@ Can't find a term? Contact [support](../../../overview/help-and-support.md) for 
 ### ACTIVE
 Customer status indicating verification has been successfully completed and approved. Customers in ACTIVE status can access all platform features and create transactions.
 
-**Learn more**: [Customer states](../concepts/customer-states.md)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md)
 
 ### API Key
 Long-lived authentication credential used for server-to-server API requests. API keys provide full access to your account's resources and should be stored securely.
@@ -58,9 +58,9 @@ Individual who owns 25% or more of a business or exercises control over business
 ## C
 
 ### CREATED
-Initial customer status immediately after creation. In this state, customer data can be freely updated, and verification has not yet been initiated.
+Initial customer status immediately after creation. In this status, customer data can be freely updated, and verification has not yet been initiated.
 
-**Learn more**: [Customer states](../concepts/customer-states.md#created)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md#created)
 
 ### Customer
 An individual (INDIVIDUAL type) or business entity (BUSINESS type) undergoing identity or business verification through the Customer Verification API.
@@ -77,7 +77,7 @@ Unique identifier assigned to each customer record, formatted as `cus_` followed
 ### DEACTIVATED
 Customer status indicating the account has been administratively closed. This can occur due to compliance holds, customer requests, or terms of service violations.
 
-**Learn more**: [Customer states](../concepts/customer-states.md#deactivated)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md#deactivated)
 
 ### DBA (Doing Business As)
 Trade name or fictitious business name under which a company operates, different from its legal registered name.
@@ -178,9 +178,9 @@ Identity verification process that validates an individual's identity using gove
 ## N
 
 ### NEEDS_ADDITIONAL_INFORMATION
-Customer status indicating the verification provider requires additional information or documents (Request for Information - RFI). Customer data can be updated in this state.
+Customer status indicating the verification provider requires additional information or documents (Request for Information - RFI). Customer data can be updated in this status.
 
-**Learn more**: [Customer states](../concepts/customer-states.md#needs_additional_information)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md#needs_additional_information)
 
 ### ngrok
 Tool for exposing local development servers to the internet via secure tunnels. Useful for testing webhooks locally.
@@ -229,7 +229,7 @@ Restriction on the number of API requests allowed within a specific time period 
 ### REJECTED
 Customer status indicating verification permanently failed due to compliance concerns, document issues, or inability to verify identity. Contact support for resolution.
 
-**Learn more**: [Customer states](../concepts/customer-states.md#rejected)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md#rejected)
 
 ### Request ID
 Unique identifier for each API request, included in response headers as `X-Request-Id`. Essential for debugging and support requests.
@@ -247,7 +247,7 @@ Process where verification provider requests additional information or documents
 - Document quality issues
 - Insufficient address verification
 
-**Learn more**: [RFI handling](../concepts/customer-states.md#needs_additional_information)
+**Learn more**: [RFI handling](../concepts/customer-statuses.md#needs_additional_information)
 
 ---
 
@@ -257,11 +257,11 @@ Process where verification provider requests additional information or documents
 Nine-digit tax identification number issued to U.S. citizens and residents. Required for Know Your Customer (KYC) verification of individuals in the United States.
 
 ### State Machine
-System design where a customer progresses through defined states based on verification workflow events. The Customer Verification system uses a 6-state machine.
+System design where a customer progresses through defined statuses based on verification workflow events. The Customer Verification system uses a 6-status machine.
 
-**States**: CREATED → UNDER_REVIEW → [NEEDS_ADDITIONAL_INFORMATION] → ACTIVE / REJECTED / DEACTIVATED
+**Statuses**: CREATED → UNDER_REVIEW → [NEEDS_ADDITIONAL_INFORMATION] → ACTIVE / REJECTED / DEACTIVATED
 
-**Learn more**: [Customer states](../concepts/customer-states.md)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md)
 
 ---
 
@@ -275,13 +275,13 @@ Generic term for tax identification numbers, including Employer Identification N
 ## U
 
 ### UNDER_REVIEW
-Customer status indicating verification is actively being processed. Customer data is locked and cannot be updated during this state.
+Customer status indicating verification is actively being processed. Customer data is locked and cannot be updated during this status.
 
 **Typical duration**:
 - KYC: Under 10 minutes, up to 3 business days with manual intervention.
 - KYB: 3-7 business days
 
-**Learn more**: [Customer states](../concepts/customer-states.md#under_review)
+**Learn more**: [Customer statuses](../concepts/customer-statuses.md#under_review)
 
 ---
 

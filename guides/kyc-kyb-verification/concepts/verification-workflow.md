@@ -8,7 +8,7 @@ Understanding this workflow helps you build better integrations, set appropriate
 
 **Related guides:**
 
-* For verification states see [Customer states](customer-states.md)
+* For verification statuses see [Customer statuses](customer-statuses.md)
 * For webhook notifications see [Webhook integration](../../webhooks/README.md)
 * For API operations see [Customer API](../../../api-reference/customers.md)
 
@@ -102,7 +102,7 @@ Customer verification is the process of confirming identity and compliance requi
 2. **Implement idempotency:** Handle duplicate webhook deliveries gracefully
 3. **Validate data before submission:** Reduce RFI likelihood with client-side validation
 4. **Set user expectations:** Inform users about typical verification timelines
-5. **Handle all states:** Build UI for CREATED, UNDER_REVIEW, RFI, ACTIVE, and REJECTED
+5. **Handle all statuses:** Build UI for CREATED, UNDER_REVIEW, RFI, ACTIVE, and REJECTED
 6. **Log everything:** Maintain audit logs of verification attempts and status changes
 7. **Test error paths:** Test RFI and rejection flows, not just happy path
 

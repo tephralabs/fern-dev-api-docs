@@ -16,7 +16,7 @@ KYB verification is more complex than individual verification due to the need to
 
 * For individual verification see [Individual customer verification (KYC)](kyc-integration.md)
 * For webhook integration see [Webhook integration guide](../../webhooks/README.md)
-* For customer states reference see [Customer states documentation](../concepts/customer-states.md)
+* For customer statuses reference see [Customer statuses documentation](../concepts/customer-statuses.md)
 
 ---
 
@@ -304,7 +304,7 @@ See [Individual customer verification (KYC)](kyc-integration.md) for PATCH restr
 
 * [ ] Webhook endpoint configured
 * [ ] Webhook signature verification
-* [ ] Status change handling for all states
+* [ ] Status change handling for all statuses
 * [ ] Business contact notifications
 * [ ] Request for additional information handling workflow
 * [ ] Re-submission flow for additional data
@@ -350,7 +350,7 @@ See [Individual customer verification (KYC)](kyc-integration.md) for PATCH restr
 ## Related resources
 
 * For webhook setup see [Webhook integration guide](../../webhooks/README.md)
-* For customer state definitions see [Customer states documentation](../concepts/customer-states.md)
+* For customer status definitions see [Customer statuses documentation](../concepts/customer-statuses.md)
 * For individual verification see [Individual customer verification (KYC)](kyc-integration.md)
 * For API reference see [Customer API reference](../../../api-reference/customers.md)
 * For troubleshooting see [Help & support](../../../overview/help-and-support.md)

@@ -1,10 +1,10 @@
-# Customer states
+# Customer Statuses
 
 ## Overview
 
-The customer verification engine manages customer verification through a well-defined state machine with six states. Understanding these states helps you build better integrations and provide clear user experiences. Each state represents a distinct phase in the verification lifecycle, from initial creation through final approval or rejection.
+The customer verification engine manages customer verification through a well-defined state machine with six statuses. Understanding these statuses helps you build better integrations and provide clear user experiences. Each status represents a distinct phase in the verification lifecycle, from initial creation through final approval or rejection.
 
-Every customer has a `status` field that indicates their current verification state. This status determines what actions you can perform and what your customer can access on your platform.
+Every customer has a `customerStatus` field that indicates their current verification status. This status determines what actions you can perform and what your customer can access on your platform.
 
 **Related guides:**
 
@@ -12,30 +12,20 @@ Every customer has a `status` field that indicates their current verification st
 * For webhook notifications see [Webhook integration](../integration-guides/webhooks.md)
 * For API operations see [Customer API](../../../api-reference/customers.md)
 
-## State overview
+## Status overview
 
-Every customer has a `status` field that indicates their current verification state:
+The six possible statuses represent different phases of the verification lifecycle:
 
-```json
-{
-  "id": "cus_1a2b3c4d5e6f",
-  "status": "UNDER_REVIEW",
-  "type": "INDIVIDUAL"
-}
-```
-
-The six possible states represent different phases of the verification lifecycle:
-
-| State | Description | Can Update Data? |
+| Status | Description | Can Update Data? |
 |-------|-------------|------------------|
-| `CREATED` | Initial state, verification not started | Yes |
+| `CREATED` | Initial status, verification not started | Yes |
 | `UNDER_REVIEW` | Verification in progress | No |
 | `NEEDS_ADDITIONAL_INFORMATION` | Additional information required (RFI) | Yes |
 | `ACTIVE` | Verification approved, customer verified | No |
 | `REJECTED` | Verification permanently failed | No |
 | `DEACTIVATED` | Account administratively deactivated | No |
 
-## State definitions
+## Status definitions
 
 ### CREATED
 
@@ -45,7 +35,7 @@ The six possible states represent different phases of the verification lifecycle
 - No verification process initiated
 - Customer data collection phase
 - All fields can be freely updated
-- Default state for new customers
+- Default status for new customers
 
 **Developer actions:**
 - Use PATCH customers/:id to update customer data
@@ -55,7 +45,7 @@ The six possible states represent different phases of the verification lifecycle
 
 **When it transitions:**
 - Customer data is submitted and verification is automatically initiated
-- State changes to `UNDER_REVIEW` when verification begins
+- Status changes to `UNDER_REVIEW` when verification begins
 
 ### UNDER_REVIEW
 
@@ -80,7 +70,7 @@ The six possible states represent different phases of the verification lifecycle
 **Typical duration:** Less than 10 minutes for individuals (1 to 3 business days if manual intervention is required), 4-7 business days for businesses
 
 {% hint style="warning" %}
-You cannot update customer data while verification is in progress. Wait for the state to transition or monitor via webhooks.
+You cannot update customer data while verification is in progress. Wait for the status to transition or monitor via webhooks.
 {% endhint %}
 
 ### NEEDS_ADDITIONAL_INFORMATION
@@ -110,10 +100,10 @@ You cannot update customer data while verification is in progress. Wait for the 
 2. **Review requirements** indicated in the response
 3. **Update customer data** using PATCH endpoint
 4. **Verification automatically re-initiates** after update
-5. **State transitions to UNDER_REVIEW** when resubmitted
+5. **Status transitions to UNDER_REVIEW** when resubmitted
 
 {% hint style="success" %}
-This is a recoverable state. Most RFI cases can be resolved by providing the requested information.
+This is a recoverable status. Most RFI cases can be resolved by providing the requested information.
 {% endhint %}
 
 ### ACTIVE
@@ -138,7 +128,7 @@ This is a recoverable state. Most RFI cases can be resolved by providing the req
 - **To `REJECTED`:** Post-approval compliance issues detected (rare)
 
 {% hint style="success" %}
-Customers in ACTIVE state have passed all compliance and identity checks. You can proceed with full platform functionality.
+Customers in ACTIVE status have passed all compliance and identity checks. You can proceed with full platform functionality.
 {% endhint %}
 
 ### REJECTED
@@ -166,7 +156,7 @@ Customers in ACTIVE state have passed all compliance and identity checks. You ca
 - Customer-requested cancellation during verification
 
 {% hint style="warning" %}
-REJECTED is typically a permanent state. Contact support if you believe this was an error or if circumstances have changed.
+REJECTED is typically a permanent status. Contact support if you believe this was an error or if circumstances have changed.
 {% endhint %}
 
 ### DEACTIVATED
@@ -194,7 +184,7 @@ REJECTED is typically a permanent state. Contact support if you believe this was
 - Inactivity-based closure
 - Terms of service violation
 
-## State transition diagram
+## Status transition diagram
 
 ```
 ┌──────────┐
@@ -239,11 +229,11 @@ REJECTED is typically a permanent state. Contact support if you believe this was
 | ACTIVE | DEACTIVATED | Administrative action | Manual |
 | ACTIVE | REJECTED | Post-approval issues | Manual |
 
-## Testing customer states
+## Testing customer statuses
 
 ### Test checklist
 
-Test your integration handles all states:
+Test your integration handles all statuses:
 
 - CREATED - Show profile completion UI
 - UNDER_REVIEW - Show waiting/progress indicator

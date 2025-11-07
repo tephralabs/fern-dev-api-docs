@@ -17,7 +17,7 @@ This integration enables you to verify customer identities before they access fi
 
 * For business verification see [KYB integration guide](kyb-integration.md)
 * For webhook setup see [Webhook integration guide](../../webhooks/README.md)
-* For customer state definitions see [Customer states](../concepts/customer-states.md)
+* For customer status definitions see [Customer statuses](../concepts/customer-statuses.md)
 * For API reference see [Customer API reference](../../../api-reference/customers.md)
 
 ---
@@ -49,7 +49,7 @@ Understanding the typical timeline helps set proper expectations:
 - **Additional information requests**: May add 2-3 days if documents need clarification
 - **Total time**: Under 15 minutes from initial submission to approval
 
-### Customer state flow
+### Customer status flow
 
 ```
 CREATED → UNDER_REVIEW → ACTIVE
@@ -57,7 +57,7 @@ CREATED → UNDER_REVIEW → ACTIVE
           NEEDS_ADDITIONAL_INFORMATION → (update data) → UNDER_REVIEW
 ```
 
-For complete state definitions, see [Customer states](../concepts/customer-states.md).
+For complete status definitions, see [Customer statuses](../concepts/customer-statuses.md).
 
 ---
 
@@ -363,7 +363,7 @@ Before going live with KYC verification:
 ### Verification monitoring
 - [ ] Webhook endpoint configured (if using webhooks)
 - [ ] Webhook signature verification implemented
-- [ ] Status change handling for all states
+- [ ] Status change handling for all statuses
 - [ ] Customer notifications for status changes
 - [ ] RFI handling workflow implemented
 
@@ -403,7 +403,7 @@ Before going live with KYC verification:
 ## Next steps
 
 * Set up webhooks - [Webhook integration guide](../../webhooks/README.md)
-* Understand customer states - [Customer states documentation](../concepts/customer-states.md)
+* Understand customer statuses - [Customer statuses documentation](../concepts/customer-statuses.md)
 * Business verification - [KYB integration guide](kyb-integration.md)
 * API reference - [Customer API reference](../../../api-reference/customers.md)
 * Get help - [Help & support](../../../overview/help-and-support.md)
