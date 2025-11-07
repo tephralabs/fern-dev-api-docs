@@ -34,6 +34,15 @@
   * [National identity types](guides/create-and-verify-customers/national-identity-types.md)
   * [Government ID types](guides/create-and-verify-customers/government-id-types.md)
   * [Proof of address type](guides/create-and-verify-customers/proof-of-address-type.md)
+* [Customer Verification (KYC/KYB)](guides/kyc-kyb-verification/README.md)
+  * Integration guides
+    * [KYC integration](guides/kyc-kyb-verification/integration-guides/kyc-integration.md)
+    * [KYB integration](guides/kyc-kyb-verification/integration-guides/kyb-integration.md)
+  * Concepts
+    * [Customer statuses](guides/kyc-kyb-verification/concepts/customer-statuses.md)
+    * [Verification workflow](guides/kyc-kyb-verification/concepts/verification-workflow.md)
+  * Reference
+    * [Glossary](guides/kyc-kyb-verification/reference/glossary.md)
 * [Create Fern wallets](guides/create-fern-wallets.md)
 * [First-party onramps](guides/first-party-onramps.md)
 * [First-party offramps](guides/first-party-offramps.md)

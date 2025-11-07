@@ -1,14 +1,5 @@
 # Additional details
 
-## Customer Statuses
-
-| Status         | Definition                                               |
-| -------------- | -------------------------------------------------------- |
-| `CREATED`      | Initial status when customer is created without KYC data |
-| `UNDER_REVIEW` | KYC data submitted and being verified by providers       |
-| `ACTIVE`       | Verification approved, customer ready to transact        |
-| `REJECTED`     | Verification rejected by providers                       |
-
 **Notes:**
 
 * Crypto-to-crypto transactions are available for all customer statuses. Fiat-related services require `ACTIVE` status.
